@@ -39,7 +39,8 @@ On the **Insert** tab, click or tap **Text** to insert a text box. The new text 
 
 **Note:** The top template in the gallery is larger than the others, but the gallery adjusts when opened in Preview mode.
 
-With the **Items** property selected, add the **GroupBy** function. In the formula bar, type the following:
+## Group together specific data in the gallery
+With the **Items** property selected for the gallery, add the **GroupBy** function. In the formula bar, type the following:
 **GroupBy(CitySales,"Country","Cities")**
 
 The data from **CitySales** is grouped by country with **Cities** as the name of the group you've created. The values for **column_name** and **group_name** must be in quotes.
