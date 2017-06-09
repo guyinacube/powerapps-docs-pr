@@ -21,7 +21,7 @@
 
 Group together specific data in a gallery based on certain values using the **GroupBy** function.
 
-In the **CitySales** example, we want to group the sales data by country so that each country would be only a single row with all of the data for that country displayed in the one row.
+In the **CitySales** example, we want to group the sales data by country so that each country is displayed in a single row with all of the data for that country displayed in the one row.
 
 ## Create a gallery with flexible height
 On the **Insert** tab, click or tap **New screen** to create a new screen.
@@ -30,7 +30,7 @@ On the **Insert** tab, click or tap **New screen** to create a new screen.
 On the **Insert** tab, click or tap **Gallery**, and then click or tap **Flexible height**. The gallery that appears doesn't have any custom templates associated with it, so you'll need to format the flexible gallery.
 <!-- add screenshot here-->
 
-In the left-hand pane, click or tap the **Items** property (it may be already selected). In the formula bar, replace **CustomGallerySample** with **CitySales**. Now the gallery is connected to the **CitySales** collection.
+In the left-hand pane, click or tap **Items** in the property list (it may already be selected). In the formula bar, replace **CustomGallerySample** with **CitySales**. Now the gallery is connected to the **CitySales** collection.
 
 In the upper left-hand corner of the gallery, click or tap the pencil icon to select the gallery template.
 
