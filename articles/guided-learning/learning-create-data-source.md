@@ -1,6 +1,6 @@
 <properties
    pageTitle="Create a data source by using a formula | Microsoft PowerApps"
-   description="Build a data source using only a formula"
+   description="Build a data source using only a formula and, later, use the data source to build galleries."
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -33,14 +33,15 @@ To create a collection that you'll use in the galleries, first select all of the
   **Note:** It's recommended that you use NotePad when copying and pasting the data because if you use another application, some of the text that you copy could be altered and won't work in PowerApps (for example, curly quotes).
 
 2. Open PowerApps, and in the left-hand pane, click or tap **New**, and then click or tap **Phone Layout**. After you do this, a new screen in PowerApps appears.
+<!-- add screenshot here? -->
 
-3. From the **Property** drop-down list in the left-hand pane, click or tap the **OnVisible** property to build the collection.
+3. Click or tap **OnVisible** in the **Property** list in the left-hand pane.
 
-4. In the formula bar, <!--verify what this UI area should be called. Should it be formula bar or formula text area? --> paste the data you copied from *CollectionDataFormula.txt*. Scroll to the right and make the formula text area larger. Notice that the information you pasted is in different colors to help you make sure that the information was correctly copied over.
+4. In the formula bar, <!--verify what this UI area should be called. Should it be formula bar or formula text area? --> paste the data you copied from *CollectionDataFormula.txt* (the data contains the function **ClearCollect** with a list of sales figures from several countries and cities). To see the entire formula, scroll to the right and make the formula bar larger. The information you pasted appears in different colors to help you make sure that the information was correctly copied over. <!-- add screenshot with the formula text here? The formula text is really long though -->
 
 5. On the **Insert** tab, click or tap **New Screen** near the top of the PowerApps window to create a new screen. This creates a trigger for the **OnVisible** property so that the collection is built.
 
-6. On the **Content** tab, look in **Collection** and you'll see the table you created. You won't see all of the data, you'll only see the first 5 rows. Review the table to make sure that you have all the data you need.
+6. On the **Content** tab, look in **Collection** and you'll see the table you created. You won't see all of the data, but you'll see the first five rows. Review the table to make sure that you have all the data you need.
 
 <!--Audrie ends the video by not saving the app, and she starts the next video by having you save the app created in the first video. I thought it would be best to include a step here on saving your app -->
 
