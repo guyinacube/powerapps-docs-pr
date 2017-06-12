@@ -1,6 +1,6 @@
 <properties
-   pageTitle="Integrating PowerBI with the Common Data Service | Microsoft PowerApps"
-   description="How to use perspectives to create PowerBI reports"
+   pageTitle="Integrating Power BI with the Common Data Service | Microsoft PowerApps"
+   description="How to use perspectives to create Power BI reports"
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -21,15 +21,15 @@
    ms.author="v-brbene"/>
 
 # Integrating Other Services
-As we saw earlier, one of the major benefits of building with the Common Data Service is that we do all the work in the background to connect the rest of Microsoft’s applications and services with any of the data that you have in the Common Data Service.  The PowerBI Service is a great example of how this works.
+As we saw earlier, one of the major benefits of building with the Common Data Service is that we do all the work in the background to connect the rest of Microsoft’s applications and services with any of the data that you have in the Common Data Service.  The Power BI service is a great example of how this works.
 
-The PowerBI Service talks to the Common Data Service via **Perspectives**. Perspectives are groupings of entities, and their related entities, that make sense for building reports.  The following image shows the set of standard perspectives that we provide out of the box. You can also create your own custom Perspectives, which we’ll do next. 
+The Power BI service talks to the Common Data Service via **perspectives**. Perspectives are groupings of entities, and their related entities, that make sense for building reports.  The following image shows the set of standard perspectives that we provide out of the box. You can also create your own custom perspectives, which we’ll do next. 
 
 ![Perspective list](./media/learning-common-data-service-incorporate-powerbi/perspective-list.png)
 
 
 # Create a New Perspective
-To create a new Perspective, open **PowerApps**, and in the left navigation pane, under **Common Data Service**, click **Perspectives**.  In the upper right-hand corner of the Perspectives page, click **New Perspective**. 
+To create a new perspective, open **PowerApps**, and in the left navigation pane, under **Common Data Service**, click **Perspectives**.  In the upper right-hand corner of the page, click **New Perspective**. 
 
 
 ![Create new perspective list](./media/learning-common-data-service-incorporate-powerbi/perspective-list-create-new.png)
@@ -48,9 +48,9 @@ The **Flooring Estimates** perspective now shows up with the other standard pers
 
 
 
-# Configure PowerBI
+# Configure Power BI
 
-Next, open the **PowerBI Desktop** client. Click **Get Dat**a, then click **More…**, and then click **Online Services**. Select **Common Data Service**, and then click **Connect**.
+Next, open the **Power BI Desktop** client. Click **Get Dat**a, then click **More…**, and then click **Online Services**. Select **Common Data Service**, and then click **Connect**.
   
 ![Connect to Common Data Service](./media/learning-common-data-service-incorporate-powerbi/pbi-getdata.png)
 
@@ -63,7 +63,7 @@ On the **Navigator** page, expand your test environment, select the **SalesOrder
 
 ![Select the perspective](./media/learning-common-data-service-incorporate-powerbi/pbi-navigator.png)
 
-In the PowerBI Desktop client, in the **Fields** column on the right-hand side, expand **Opportunity**. 
+In the Power BI Desktop client, in the **Fields** column on the right-hand side, expand **Opportunity**. 
 
 ![Data fields](./media/learning-common-data-service-incorporate-powerbi/data-fields.png)
 
@@ -71,4 +71,4 @@ Drag the **EstimatedClosing**, **IndustryCode**, and **Name** fields to the desk
 
 ![Build a report](./media/learning-common-data-service-incorporate-powerbi/build-report.png)
 
-This feature is currently in preview. Please let us know if you have any feedback, and check back often because we add content over time. PowerBI is the first of many experiences that we expect to share over the coming months to demonstrate how the Common Data Service can help you build your apps quickly and effectively. 
+This feature is currently in preview. Please let us know if you have any feedback, and check back often because we add content over time. Power BI is the first of many experiences that we expect to share over the coming months to demonstrate how the Common Data Service can help you build your apps quickly and effectively. 
