@@ -1,5 +1,5 @@
 <properties
-   pageTitle="The Common Data Servic: Overview | Microsoft PowerApps"
+   pageTitle="The Common Data Service: Overview | Microsoft PowerApps"
    description="An overview of this powerful way to store and model data"
    services=""
    suite="powerapps"
