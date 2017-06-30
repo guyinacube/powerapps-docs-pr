@@ -40,7 +40,6 @@ Remove the border around the list box. On the **Home** tab, click or tap **Borde
 Move the city list box by dragging it closer to the *country* field (which is the **United States** in the example). You can do this because the *country* field is shown across one line in the gallery.
 
 Adjust the width of fields to make room for another field. With the *country* field selected in the gallery, click or tap **Width** in the property list, and then type **Gallery2.TemplateWidth/2** in the formula bar.
-<!-- add a screenshot of the formula here? -->
 
 **Gallery2** is the name of the gallery you have open, and when you type **TemplateWidth/2**, you are dividing the template width in half. The *country* field is reduced by half.
 

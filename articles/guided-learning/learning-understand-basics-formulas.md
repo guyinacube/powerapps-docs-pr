@@ -31,7 +31,7 @@ On the formula bar, click or tap the **Fx** button to browse available functions
 
 ![Fx button on the formula bar](./media/learning-understand-basics-formulas/formula-fx-button.png)
 
-On the **Insert** tab, click or tap **Text box**. When it appears in the form, move the text box to a location where it doesn't cover any other fields.
+On the **Insert** tab, click or tap **Label**. When it appears in the form, move the text box to a location where it doesn't cover any other fields.
 
 Click or tap the **Fx** button, and in the list of options under **Text**, click or tap **Left**. The **Left** function appears in the formula bar and will extract the left portion of some text. In the formula bar, type:
 
