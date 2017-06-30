@@ -32,20 +32,25 @@ In this section, we'll add a cascading drop-down control because, when a zone is
 
 2. Under **Connect to a SharePoint site**, copy and paste the URL for the SharePoint site (in the example, it's https://microsoft.sharepoint.com/teams/PlanningTeamSite), and then click or tap **Go**.
 
-  PowerApps searches for all of the lists that are available on the SharePoint site. In the list, find **Zones** and click or tap it to select it. Then, click or tap **Connect**. In the right-hand pane, notice that there are now two data sources in the list.
+  PowerApps searches for all of the lists that are available on the SharePoint site. In the list, find **Zones** and select it. Then, click or tap **Connect**. In the right-hand pane, notice that there are now two data sources in the list.
 
   **Note:** With PowerApps, you can add many types of connections. For example, you can add a connection to Dynamics 365 and include account data from Dynamics 365 at the same time you're submitting data to a SharePoint list. You can also add connections to third-party applications.
 
-## Add a cascading drop-down lists ##
-Now that you've added the **Zones** connection, add the cascading drop-down lists.
+## Add cascading drop-down lists ##
+Now that you've added the **Zones** connection, add the cascading drop-down lists to the form.
 
-1. Add a custom card. At the bottom of the form, click or tap **Add a custom card**.
+1. At the bottom of the form, click or tap **Add a custom card** to add a custom card to the form.
 
-2. On the **Insert** tab, click or tap **Controls** and then click or tap **Drop down**. We'll add two drop-down lists, one for the top-level zones, and the second for the subcodes.
+2. On the **Insert** tab, click or tap **Controls** and then click or tap **Drop down**.
+
+  ![Insert drop-down](./media/learning-add-data-dropdown/insert-control-dropdown.png)
+
+  We'll add two drop-down lists, one for the top-level **Zones**, and the second for **Subcodes**.
 
   When creating the second drop-down list, copy the first one and move it down. Name the first drop-down list **ddZones** and the second one **ddSubCodes**.
 
-3. Click or tap the first drop-down list, **ddZones**, and go to **Items** in the property list. In the formula bar next to **Items**, type **Distinct(Zones,Title)**. The **Distinct** property is needed because the title **Zones** is repeated in the form.
+3. Click or tap the first drop-down list, **ddZones**, and go to **Items** in the property list. In the formula bar next to **Items**, type **Distinct(Zones,Title)**.
+The **Distinct** property is needed because the title **Zones** is repeated in the form.
 
 4. Click or tap the second drop-down list, **ddSubCodes**, and go to **Items** in the property list. In the formula bar next to **Items**, type the following:
   **Filter(Zones,Title=ddZones.Selected.Value).SubCode**

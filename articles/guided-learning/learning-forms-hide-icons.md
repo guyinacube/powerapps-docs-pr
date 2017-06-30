@@ -11,14 +11,14 @@
    featuredVideoId=
    courseDuration=/>
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="get-started-article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/28/2017"
-   ms.author="v-subohe
+   <tags
+      ms.service="powerapps"
+      ms.devlang="na"
+      ms.topic="get-started-article"
+      ms.tgt_pltfrm="na"
+      ms.workload="na"
+      ms.date="06/28/2017"
+      ms.author="v-subohe"/>
 
 In the past few videos, we've learned about the basic fields in forms, how to add a cascading drop-down list, and how to manage default fields (edit form versus new form). The app we've created is working properly both in a web browser and on a mobile device.
 

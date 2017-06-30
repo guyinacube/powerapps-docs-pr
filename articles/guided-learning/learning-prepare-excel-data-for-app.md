@@ -27,10 +27,10 @@ Use a data source that let's you set up tabular data. In the example, we'll use 
 
 As a best practice when using an Excel spreadsheet as a data source, first select the data range in the Excel spreadsheet and then format it as a table.
 
-On the **Home** tab, click or tap **Format as Table** and select a style.
+1. On the **Home** tab in Excal, click or tap **Format as Table** and select a style.
 
-**Note:** Having the data range formatted as a table helps PowerApps know exactly what range of data to use. Since Excel normally has hundreds of columns and rows, the data can be anywhere. By defining a data range, we're telling PowerApps that this is the data we'd like to use for our app.
+  **Note:** Having the data range formatted as a table helps PowerApps know exactly what range of data to use. Since Excel normally has hundreds of columns and rows, the data can be anywhere. By defining a data range, we're telling PowerApps that this is the data we'd like to use for our app.
 
-On the **Formulas** tab in Excel, click or tap **Name Manager**. In **Name Manager**, the default name for the range is **Table**. Click or tap **Edit** and rename the data range to **Videos**.
+2. On the **Formulas** tab in Excel, click or tap **Name Manager**. In **Name Manager**, the default name for the range is **Table**. Click or tap **Edit** and rename the data range to **Videos**.
 
-Save the data range. The data source is ready to use when we build our app.
+3. Save the data range. The data source is ready to use when we build our app.

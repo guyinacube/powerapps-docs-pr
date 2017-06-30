@@ -30,7 +30,7 @@ In previous video, we discussed how to prepare our data in SharePoint and create
 
 3. Click or tap **Create**.
 
-  **Note:** Because we've already created fields like **DivisionCodes** and **Zones** that collect data, we can connect Power BI to the list and get specific information, such as how often installation issues occur and which zones the issues occur in.
+  **Note:** Because we've already created the fields **DivisionCodes** and **Zones** that collect data, we can connect Power BI to the list and get specific information, such as how often installation issues occur and which zones the issues occur in.
 
 4. After the app is created, add at least one item to the list before adding all the data because it'll make it easier to customize the gallery later.
 
@@ -43,13 +43,13 @@ In previous video, we discussed how to prepare our data in SharePoint and create
   ![Pencil icon](./media/learning-understand-basics-forms/edit-template.png)
 
 ## Create a form ##
-Create a form so that we can add a cascading drop-down control. Eventually, we want to create a cascading drop-down control so when a zone is selected, the correct division codes for that zone appear in the list.
+Create a form to add a cascading drop-down control. Eventually, we want to have a cascading drop-down control so that when a zone is selected, the correct division codes for that zone appear in the list.
 
 1. In **IssuesLog**, click or tap the plus sign (+) in the upper right-hand corner to create a new item. A new blank form appears.
 
   **Note:** When working with forms, you're working with independent sections of the form called data cards. When you select the form, you'll see at the lower left-hand corner a file called **EditForm1** that has several different data cards in it. Each data card is independent and can have its own unique formatting. This is different from a gallery where if you make a change to one section, it affects the entire gallery.
 
-2. Select the title of a data card in the form and then drag the data card to a different location in the form. In the example, the **Title** data card is moved to the top of the form. You can also move data cards from the right-hand pane in the same way.
+2. Select the title of a data card in the form and then drag the data card to a different location in the form. In the example, the **Title** data card is moved to the top of the form. You can also move data cards by using options in the right-hand pane.
 
 3. Click or tap **Comments** to select that data card and, in the right-hand pane, click or tap **Edit Multiline Text**. The size of the **Comments** data card automatically expands.
 
@@ -57,4 +57,6 @@ Create a form so that we can add a cascading drop-down control. Eventually, we w
 
 5. Click or tap **Unlock** to change properties. By default, PowerApps locks the ability to change properties to help minimize accidental mistakes.
 
-6. In the form, edit the title. To make the gallery larger, drag the lower edge of the gallery down since, by default, it's not a flexible height gallery.
+6. In the form, edit the title.
+
+7. To make the gallery larger, drag the lower edge of the gallery down since, by default, it's not a flexible height gallery.
