@@ -18,20 +18,22 @@
    ms.date="05/30/2017"
    ms.author="v-subohe"/>
 
-Another way to search for data in a gallery is to use a filter drop down control. If you're using a drop down filter in a phone application, however, drop down controls are not always the best choice since they require precision. For phone applications, it's better to use a radio button or a control that's larger.
+Another way to search for data in a gallery is to use a filter drop-down control. If you're using a drop-down filter in an app for mobile devices, however, drop-down controls are not always the best choice since they require precision. For mobile devices, it's better to use a radio button or a control that's larger.
 
 ## Create a drop down control
-On the **Insert** tab, click or tap **Controls**, and then click or tap **Drop down**. When the drop down control appears in the gallery, resize or move the drop down control to where you want it.
-<!-- add screen shot here -->
+1. On the **Insert** tab, click or tap **Controls** and then click or tap **Drop down**. When the drop-down control appears in the gallery, resize or move the drop-down control to an appropriate location.
 
-Under **Dropdown** in the upper left-hand pane, type a name for the drop down control so you can easily find it. For this example, the drop down control is named **ddCountry**.
-<!-- add screen shot here -->
+  ![Insert drop-down control](./media/learning-filter-gallery-dropdown/insert-control-dropdown.png)
 
-## Select data to filter on
-Determine the data you want to filter on (for example, filter by country). In the formula bar next to the **Items** property, change the value to **CitySales**, which is the data in the collection. It's a best practice to add the **Distinct** function to the **Items** property to make sure the data that's retrieved is filtered on specific items. To filter the **CitySales** data by the column **Country**, type the following in the formula bar:
+2. In the left-hand pane, search for **Dropdown1** and type a name for the drop-down control so that it's easy to find. For this example, the drop-down control is named **ddCountry**.
+
+## Select data to filter
+1. Determine the data that should be filtered on (for example, filter by country). Go to **Items** in the property list, and, in the formula bar, change the value to **CitySales**, which is the data in the collection.
+
+2. It's a best practice to add the **Distinct** function to the **Items** property to make sure the data that's retrieved is filtered on specific items. To filter the **CitySales** data by the column **Country**, type the following in the formula bar:
 **Distinct(CitySales,Country)**
 
-Connect the drop down control to the gallery by changing the value in the **Items** property for the gallery. Click or tap the gallery and make sure that **BrowseGallery1** is selected in the right-hand pane. In the left-hand pane, click or tap the **Items** property and then, in the formula bar, delete all of the text next for the **Items** property and type the following:
+3. Connect the drop-down control to the gallery by changing the value in the **Items** property for the gallery. Click or tap the gallery and make sure that **BrowseGallery1** is selected in the right-hand pane. In the left-hand pane, go to **Items** in the property list. In the formula bar, delete all of the text for the **Items** property and type the following:
 **Filter(CitySales,ddCountry.Selected.Value in Country)**
 
-The drop down control is set to automatically filter the **CitySales** data by country.
+The drop-down control is set to automatically filter the **CitySales** data by country.

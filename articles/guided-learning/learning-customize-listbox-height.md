@@ -37,13 +37,13 @@ On the **Home** tab, click or tap the arrow next to the **Size** icon and then c
 Remove the border around the list box. On the **Home** tab, click or tap **Border** and then click or tap **Border Style** and select **None**.
 
 ### Move a list box to accommodate more fields
-Move the city list box by dragging it closer to the *country* field (which is the **United States** in the example). You can do this because the *country* field is shown across one line in the gallery.
+Move the city list box by dragging it closer to the **country** field (which is the **United States** in the example).
 
-Adjust the width of fields to make room for another field. With the *country* field selected in the gallery, click or tap **Width** in the property list, and then type **Gallery2.TemplateWidth/2** in the formula bar.
+Adjust the width of fields to make room for another field. With the **country** field selected in the gallery, click or tap **Width** in the property list, and then type **Gallery2.TemplateWidth/2** in the formula bar.
 
-**Gallery2** is the name of the gallery you have open, and when you type **TemplateWidth/2**, you are dividing the template width in half. The *country* field is reduced by half.
+**Gallery2** is the name of the gallery that's open, and when you type **TemplateWidth/2**, you are dividing the template width in half. The **country** field is reduced by half.
 
-Copy the *country* field (Ctrl+C) and move the copy to the other side of the gallery template on the same line. The copy of this field will be *sales*. <!-- note that the item selected in the property list automatically changes to Text when the copy is moved)--> Then, create a math function that aggregates the total sales for all four cities in the country that's selected.
+Copy the **country** field (Ctrl+C) and move the copy to the other side of the gallery template on the same line. The copy of this field will be **sales**. <!-- note that the item selected in the property list automatically changes to Text when the copy is moved)--> Then, create a math function that aggregates the total sales for all four cities in the country that's selected.
 With **Text** selected in the property list, type the following in the formula bar:
 
 **Text(Sum(Filter(CitySales,Country=ThisItem.Country),Sales, "$#,###")**
