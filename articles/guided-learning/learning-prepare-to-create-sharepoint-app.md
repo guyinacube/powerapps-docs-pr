@@ -18,6 +18,7 @@
    ms.date="06/07/2017"
    ms.author="v-subohe"/>
 
+# Building a SharePoint list to use in an app
 We've already created two apps for Contoso hardwood flooring. The first app we created was to estimate the cost of the flooring for the size of the room, and we created the second app to display the sales figures for the cities and countries. Next, we're going to create an app for people who are out installing the flooring. When they're installing flooring, issues can occur, so this app let's them log the problems they encounter. The new app will store the data on SharePoint, and people can continue to add issues to the SharePoint list using the app.
 
 ## Add a new SharePoint app ##

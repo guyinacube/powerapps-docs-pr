@@ -18,6 +18,7 @@
    ms.date="05/30/2017"
    ms.author="v-subohe"/>
 
+# Using a filter drop-down control in a gallery
 Another way to search for data in a gallery is to use a filter drop-down control. If you're using a drop-down filter in an app for mobile devices, however, drop-down controls are not always the best choice since they require precision. For mobile devices, it's better to use a radio button or a control that's larger.
 
 ## Create a drop down control

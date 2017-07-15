@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="6/9/2017"
+   ms.date="06/9/2017"
    ms.author="v-brbene"/>
 
 # Integrating Other Services

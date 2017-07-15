@@ -18,7 +18,7 @@
    ms.date="05/31/2017"
    ms.author="v-subohe"/>
 
-
+# Sorting data in a gallery using the GroupBy function
 Group together specific data in a gallery based on certain values using the **GroupBy** function.
 
 In the **CitySales** example, we want to group the sales data by country so that each country is displayed in a single row with all of the data for that country displayed in the same row.

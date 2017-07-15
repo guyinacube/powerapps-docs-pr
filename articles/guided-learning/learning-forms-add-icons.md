@@ -18,6 +18,7 @@
    ms.date="06/25/2017"
    ms.author="v-subohe"/>
 
+# Adding icons to forms
 When creating apps for devices with smaller screens, such as mobile devices, drop-down lists aren't the ideal way for users to interact with an app. Instead, on a mobile device, it works better to use something such as large buttons or obvious images to select options in an app.
 
 In this example, we'll add icons to our app so that when users select an option for **Contact Type**, they'll click or tap an icon. This is a better solution than making a drop-down list for the **Contact Type** field.<!--Should it be 'card' instead of 'field? Audrie has been using both references in her videos' -->

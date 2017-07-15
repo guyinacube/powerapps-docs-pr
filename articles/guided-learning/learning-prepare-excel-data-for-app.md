@@ -20,6 +20,7 @@
    ms.date="06/29/2017"
    ms.author="v-subohe"/>
 
+# Preparing Excel data to use in an app
 In this section, we'll discuss how PowerApps expedites building apps. We'll eventually create an app for the sales associates of Contoso Flooring company to use on their mobile devices. The app will be used to show the customers how the installation process works. Before we create the app, we need to create a data source.
 
 ## Create a data source

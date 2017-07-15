@@ -18,6 +18,7 @@
    ms.date="05/15/2017"
    ms.author="v-subohe"/>
 
+# Create a gallery from the data in a collection
 In this topic, we'll create a gallery using the data in a collection and then change some of the fields in the gallery template.
 
 If the app created in the previous topic isn't saved, save it now. In the left-hand pane, click or tap **Save As** (or press Ctrl-S). Make sure to save the app to the cloud, give it an appropriate name, and provide a description.

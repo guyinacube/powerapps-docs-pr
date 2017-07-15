@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="6/9/2017"
+   ms.date="06/09/2017"
    ms.author="v-brbene"/>
 
 # The Common Data Service

@@ -20,6 +20,7 @@
       ms.date="06/28/2017"
       ms.author="v-subohe"/>
 
+# Hiding icons in a form
 In the past few videos, we've learned about the basic fields in forms, how to add a cascading drop-down list, and how to manage default fields (edit form versus new form). The app we've created is working properly both in a web browser and on a mobile device.
 
 ## Show or hide icons at different times ##

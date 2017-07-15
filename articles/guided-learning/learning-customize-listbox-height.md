@@ -18,6 +18,7 @@
    ms.date="06/05/2017"
    ms.author="v-subohe"/>
 
+# Customize the height of list boxes in a gallery
 In the previous section, we created a flexible height gallery and used the **GroupBy** function to group the data by countries. Then, we added a list box to the gallery and displayed the cities for each country. Because we created a flexible height gallery, the list boxes are set to a predefined height. Some of the list boxes are too large for the data that's shown in them. In this section, we're going make the height settings for the list boxes variable.
 
 ## Make the height of list boxes variable

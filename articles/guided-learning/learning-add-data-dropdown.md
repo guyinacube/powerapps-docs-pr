@@ -18,6 +18,7 @@
    ms.date="06/20/2017"
    ms.author="v-subohe"/>
 
+#Cascading drop-down lists
 In the last video, we learned some basic information about forms and how forms combine with columns in our SharePoint lists. We also learned about locking and unlocking property settings in order to customize forms.
 
 In this section, we'll add a cascading drop-down control because, when a zone is selected, we want the correct division codes <!--subcodes?--> for that zone to appear in the drop-down list. The subcode that's selected needs to be automatically added to the list under the **DivisionCode** column. To do this, we'll need to connect to the data source that has the data needed for the cascading drop-down lists.
