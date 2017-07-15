@@ -20,6 +20,7 @@
    ms.date="06/28/2017"
    ms.author="v-subohe"/>
 
+# Using formulas in PowerApps
 This section provides a close up look at the formula bar and how to use it.
 
 At the top of PowerApps, the formula bar is similar to what you'd see in Excel. Formulas in PowerApps are also based on the formulas in Excel.

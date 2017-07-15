@@ -18,6 +18,7 @@
    ms.date="05/15/2017"
    ms.author="v-subohe"/>
 
+# Customize a gallery template
 Customize the gallery template by formatting fields, aligning multiple fields, or changing a background color.
 
 ## Format fields

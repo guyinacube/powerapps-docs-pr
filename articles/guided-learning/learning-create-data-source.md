@@ -18,6 +18,7 @@
    ms.date="05/15/2017"
    ms.author="v-subohe"/>
 
+# Create a data source using a formula
 In this section, we'll add a data source by using a formula, and eventually, we'll use the data source we created to build galleries. The steps in this section are intended for PowerApps Desktop. When using PowerApps in a web browser, the steps will vary slightly.
 
 ## Create a data source

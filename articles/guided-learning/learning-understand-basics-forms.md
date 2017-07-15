@@ -20,6 +20,7 @@
    ms.date="06/15/17"
    ms.author="v-subohe"/>
 
+# Creating forms in an app
 In previous video, we discussed how to prepare our data in SharePoint and created two lists: **IssuesLog** to store data the app is collecting, and **Zones** to store data on zones. The **Zones** list will be used to create a cascading drop-down control. In this section, we'll discuss the basics of creating forms.
 
 ## Create a new app in SharePoint

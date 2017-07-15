@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="6/20/2017"
+   ms.date="06/20/2017"
    ms.author="v-brbene"/>
 
 # Building advanced applications with the Common Data Service

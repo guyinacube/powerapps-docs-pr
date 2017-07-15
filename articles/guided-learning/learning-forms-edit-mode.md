@@ -18,9 +18,11 @@
    ms.date="06/23/17"
    ms.author="v-subohe"/>
 <!--In Video 10, Audrie gives some background info around edit and new forms, and it was more difficult to translate into content. It would be easier for the user to just watch the video-->
+
+# Understand the difference between an edit form and a new form
 In the previous video, we discussed how to create cascading drop-down lists. In this section, we'll discuss some differences between an edit form and a new form and why it's important for the cascading drop-down lists.
 
-## Understand the difference between an edit form and a new form ##
+## Edit forms and a new forms 
 When you add an edit form, you're basically adding two forms at the same time because an edit form can convert to a new form when it needs to. With an existing item in a SharePoint list, if you click or tap the pencil icon, the item is in edit form. It's the same exact form but in a mode called edit. When you click the plus sign (+) in an item, you create a new form. In edit form, you want the SharePoint list to look at the data that's currently set. Be careful when you make changes to the default values as you need to be aware of what mode the form is in.
 
 ## Determine whether a form is in edit mode

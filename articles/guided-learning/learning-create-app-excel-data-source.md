@@ -20,6 +20,7 @@
    ms.date="06/29/2017"
    ms.author="v-subohe"/>
 
+# Using an Excel data source
 In this section, we'll build an app for the sales associates of Contoso Flooring company. The app will help the sales associates show customers how the installation process works. Several videos detailing the installation process have been recorded, and now we want to use the videos to help the sales force. In the previous video, we prepared the Excel data that we'll use to build the app. At part of building the app, we'll embed the Excel data in the app.
 
 ## Create an app using a data source from Excel ##
