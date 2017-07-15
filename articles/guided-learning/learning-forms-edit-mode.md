@@ -15,9 +15,9 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/23/17"
+   ms.date="06/23/2017"
    ms.author="v-subohe"/>
-<!--In Video 10, Audrie gives some background info around edit and new forms, and it was more difficult to translate into content. It would be easier for the user to just watch the video-->
+
 
 # Understand the difference between an edit form and a new form
 In the previous video, we discussed how to create cascading drop-down lists. In this section, we'll discuss some differences between an edit form and a new form and why it's important for the cascading drop-down lists.

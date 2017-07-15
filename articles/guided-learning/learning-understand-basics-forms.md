@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/15/17"
+   ms.date="06/15/2017"
    ms.author="v-subohe"/>
 
 # Creating forms in an app

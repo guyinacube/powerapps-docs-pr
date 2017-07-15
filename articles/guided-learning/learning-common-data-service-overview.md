@@ -37,7 +37,7 @@ In the image above, we have a flooring app which shows the various types of floo
 
 With the Common Data Service, you don’t necessarily need to maintain or invest in expensive and intricate systems. We have put in the time and effort to create a service that ties together data from disparate systems. With the Common Data Service, we do the heavy lifting for you, so you can focus on what matters most – building apps, driving compelling experiences, and gaining valuable insights. With the Common Data Service, your apps are smarter, because they can pull data from other apps. 
 
-# What is the Common Data Service?
+## What is the Common Data Service?
 
 ![What is the Common Data Service](./media/learning-common-data-service-overview/what-is-cds.png)
 

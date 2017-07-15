@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/9/2017"
+   ms.date="06/09/2017"
    ms.author="v-brbene"/>
 
 # Integrating Other Services
@@ -28,7 +28,7 @@ The Power BI service talks to the Common Data Service via **perspectives**. Pers
 ![Perspective list](./media/learning-common-data-service-incorporate-powerbi/perspective-list.png)
 
 
-# Create a New Perspective
+## Create a New Perspective
 To create a new perspective, open **PowerApps**, and in the left navigation pane, under **Common Data Service**, click **Perspectives**.  In the upper right-hand corner of the page, click **New Perspective**. 
 
 
@@ -48,7 +48,7 @@ The **Flooring Estimates** perspective now shows up with the other standard pers
 
 
 
-# Configure Power BI
+## Configure Power BI
 
 Next, open the **Power BI Desktop** client. Click **Get Dat**a, then click **More…**, and then click **Online Services**. Select **Common Data Service**, and then click **Connect**.
   
