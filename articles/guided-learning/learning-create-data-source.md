@@ -19,16 +19,20 @@
    ms.author="v-subohe"/>
 
 # Create a data source using a formula
-In this section, you'll create a data source by using a formula, and eventually, you'll use the data source  to build galleries. The steps in this section are intended for PowerApps Desktop. When using PowerApps in a web browser, the steps may vary slightly.
+In this section, you'll use a formula to create a data source, which you'll then use to build a gallery in the next section. The steps in this section are intended for PowerApps Studio for Windows. When using PowerApps Studio for Web, the steps may vary slightly.
 
-## Create a data source
+## Collections and records
 <!--Add a link to the resources text file here with the link on the word 'resources' in 1st sentence -->
 In resources, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection, or table, that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll create a collection named **CitySales**.
 
-**Note:** The data in the text file is formatted for the **ClearCollect** function as follows:
+**Note:** The data in the text file is formatted specifically for the **ClearCollect** function. As an example, the complete row for Seattle sales is shown here:
+
+  ![Example of a single record](./media/learning-create-data-source/single-record.png)
   - The data between each set of curly braces "**{ }**" is a single record, or row. 
   - Column names are immediately followed by a colon (**:**), for example "**City:**".
   - The value for each column in a record comes after the colon (**:**) and ends with a comma (**,**). Numerical values are written without quotes, but text values must be in quotes, for example, **City:"Seattle",** and **Sales:1657500**. 
+
+## Create a collection
 
 To create a collection to use in the galleries, first select all of the data in the text file.
 

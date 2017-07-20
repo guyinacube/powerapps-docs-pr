@@ -21,7 +21,9 @@
    ms.author="v-subohe"/>
 
 # Using an Excel data source
-In this section, we'll build an app for the sales associates of Contoso Flooring company. The app will help the sales associates show customers how the installation process works. Several videos detailing the installation process have been recorded, and now we want to use the videos to help the sales force. In the previous video, we prepared the Excel data that we'll use to build the app. As part of building the app, we'll embed the Excel data in the app.
+In this section, we'll build an app for the sales associates of Contoso Flooring company. The app will let the sales associates show customers different videos on how the installation process works. 
+
+In our previous session, we prepared the Excel data that we'll use to build the app. As part of building the app, we'll embed the Excel data in the app.
 
 You can either download and use the example data source, **YouTubeVideosFinal.xls**, or create your own data source in Excel. Use the column names from the following example, and add a few sample rows with some YouTube links. Be sure to select the header row and the all the data rows, and then format the selection as a table named **Videos** before saving and closing your Excel file. 
 
@@ -46,9 +48,9 @@ You can either download and use the example data source, **YouTubeVideosFinal.xl
 
 1. At the lower edge of the right-hand pane, click or tap **Connect**. **Videos** appears as a new data source in the right-hand pane.
 
-   ![BB](./media/learning-create-app-excel-data-source/add-data-source.png)
+   ![Add the video data source](./media/learning-create-app-excel-data-source/add-data-source.png)
 
-## Add a graphic to the top of the app 
+## Add an image to the media collection
 1. On the **View** tab, click or tap **Media** and then click or tap **Images**.
 
 1. Click **Browse** to find an image to add and open it. In the example, the image is called **guyontrain**.
@@ -58,26 +60,26 @@ You can either download and use the example data source, **YouTubeVideosFinal.xl
 ## Insert the controls for the app 
 1. On the **Insert** tab, click or tap **Media**, and then click or tap **Image**.  A field for the image appears at the top of the app.
 
-   ![Insert image](./media/learning-create-app-excel-data-source/insert-media-image.png)
+   ![Insert image control](./media/learning-create-app-excel-data-source/insert-media-image.png)
  
 
 1. Select **Image** in the property list, and in the formula bar, replace **SampleImage** with **guyontrain**. The image we added earlier appears at the top of the app. Resize the image so that it fits at the top of the app.
 
-   ![BB](./media/learning-create-app-excel-data-source/select-image.png)
+   ![Insert the top image](./media/learning-create-app-excel-data-source/select-image.png)
 
 1. On the **Insert** tab, click or tap **Gallery** and then click or tap **Blank vertical**. This will be the gallery for the videos.
 
-   ![BB](./media/learning-create-app-excel-data-source/select-gallery.png)
+   ![Select a blank gallery](./media/learning-create-app-excel-data-source/select-gallery.png)
 
 1. Drag the gallery to the lower half of the form, and in the right-hand pane, select **Data**, and click the drop-down for **Layout**. Select **Title, subtitle, and body**.
 
-   ![BB](./media/learning-create-app-excel-data-source/format-gallery.png)
+   ![Format the gallery style](./media/learning-create-app-excel-data-source/format-gallery.png)
 
 1. With the new gallery still selected, click **Items** in the property list and then replace **TextualGallerySample** with **Videos** in the formula bar. The gallery will load all of the content from the **Videos** data source.
 
-   ![BB](./media/learning-create-app-excel-data-source/select-video.png)
+   ![Select the video source](./media/learning-create-app-excel-data-source/select-video.png)
 
-1. Format the **Title**, **Language**, and **Length** fields as follows:
+1. Format the **Title**, **Language**, and **Length** fields so it looks similar to the version below:
 
    1. Arrange the fields in the top template so the **Title** field is on top, the **Language** field is on the lower left, and the **Length** field is on the lower right. Note that the other items in the gallery all change their layouts to match. 
 
@@ -92,7 +94,7 @@ You can either download and use the example data source, **YouTubeVideosFinal.xl
 
     1. Adjust all three fields so they are evenly spaced. 
 
-       ![BB](./media/learning-create-app-excel-data-source/gallery-formatted.png)
+       ![Final formatting](./media/learning-create-app-excel-data-source/gallery-formatted.png)
 
 1. Increase the size of the gallery template by dragging the lower edge down. While holding down the **Ctrl key**, click or tap all three fields (**Title**, **Language**, and **Length**) and move them to the bottom. Now we have more space at the top to insert the videos.
 
@@ -108,4 +110,6 @@ You can either download and use the example data source, **YouTubeVideosFinal.xl
 
 1. With the video control selected, click **Media** in the property list, and in the formula bar, type **ThisItem.VideoURL**.
 
-Preview the app to see how it works. Users can scroll through the list of videos to find the video they're looking for.
+Preview the app to see how it works. Users can scroll through the list of videos to find and play the video they're looking for.
+
+![Preview of the app](./media/learning-create-app-excel-data-source/app-preview.png)

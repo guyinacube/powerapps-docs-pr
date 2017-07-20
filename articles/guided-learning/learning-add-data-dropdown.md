@@ -25,9 +25,8 @@ In this section, we'll add a set of cascading drop-down controls so that when a 
 
 ## Add a data source to use for the cascading drop-down list 
 
-First, we'll need to connect to the data source that has the data we need for the cascading drop-down lists.
+We already have a data source connection to **IssuesLog** that was created in the previous video. Next, we'll connect to the **Zones** data source that has the data we'll need for the cascading drop-down lists.
 
-**Note:** There's already a data source connection to **IssuesLog** that was created in the previous video.
 
 1. In the right-hand pane, click or tap **Add data source**. In the list of connections, click or tap the connection you want to use.
 
@@ -46,10 +45,7 @@ First, we'll need to connect to the data source that has the data we need for th
 ## Add cascading drop-down lists
 Now that you've added the **Zones** connection, add the cascading drop-down lists to the form.
 
-1. In the left-hand pane, select the icon to switch to thumbnail view, and select **EditScreen1**. 
-
-   ![Toggle thumbnail](./media/learning-add-data-dropdown/toggle-thumbnail.png)
-
+1. In the left-hand pane, select **EditScreen1**. 
 
 1. With **EditForm1 selected**, select **Data** in the right-hand pane, and then select **+ Add custom field**.
 
@@ -77,7 +73,7 @@ Now that you've added the **Zones** connection, add the cascading drop-down list
 
    **Filter(Zones,Title=ddZones.Selected.Value).SubCode**
 
-   This function retrieves the data in **Zones** where the **Title** field is equal to the value in **ddZones** and returns the subcodes, or Division Codes.
+   This function retrieves the data in **Zones** where the **Title** field is equal to the value in **ddZones** and returns the subcodes.
 
       ![Configure subcodes](./media/learning-add-data-dropdown/configure-subcodes.png)
 
@@ -90,7 +86,7 @@ Next, we'll configure the app to automatically update the **Division Code** fiel
 
    ![Move data card](./media/learning-add-data-dropdown/move-card.png)
 
-2. Click or tap the **Divison Code** field, select **Fx Advanced** in the right-hand pane, and unlock the field. Select **Default** in the property list, and in the formula bar, type the following: 
+2. Click or tap the **Divison Code** field, select **Advanced** in the right-hand pane, and unlock the field. Select **Default** in the property list, and in the formula bar, type the following: 
 
     **ddSubCodes.Selected.Value**.
 
