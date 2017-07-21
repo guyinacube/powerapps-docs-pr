@@ -22,7 +22,7 @@
 In this section, you'll use a formula to create a data source, which you'll then use to build a gallery in the next section. The steps in this section are intended for PowerApps Studio for Windows. When using PowerApps Studio for Web, the steps may vary slightly.
 
 ## Collections and records
-<!--Add a link to the resources text file here with the link on the word 'resources' in 1st sentence -->
+
 In resources, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection, or table, that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll create a collection named **CitySales**.
 
 **Note:** The data in the text file is formatted specifically for the **ClearCollect** function. As an example, the complete row for Seattle sales is shown here:
@@ -69,4 +69,4 @@ To create a collection to use in the galleries, first select all of the data in 
 
    ![Save as](./media/learning-create-data-source/save-as.png)
 
-<!--Audrie ends the video by not saving the app, and she starts the next video by having you save the app created in the first video. I thought it would be best to include a step here on saving your app -->
+
