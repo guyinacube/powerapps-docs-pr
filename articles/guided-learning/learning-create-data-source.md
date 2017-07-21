@@ -19,36 +19,54 @@
    ms.author="v-subohe"/>
 
 # Create a data source using a formula
-In this section, we'll add a data source by using a formula, and eventually, we'll use the data source we created to build galleries. The steps in this section are intended for PowerApps Desktop. When using PowerApps in a web browser, the steps will vary slightly.
+In this section, you'll use a formula to create a data source, which you'll then use to build a gallery in the next section. The steps in this section are intended for PowerApps Studio for Windows. When using PowerApps Studio for Web, the steps may vary slightly.
 
-## Create a data source
-<!--Add a link to the resources text file here with the link on the word 'resources' in 1st sentence -->
-In resources, there's a text file called *CollectionDataFormula.txt*. This file contains a large formula that we'll use to create a table of data that lists the sales figures for each city. The formula uses the function **ClearCollect** to delete all records from a collection and then add a different set of records to the same collection. In this example, **CitySales** will be the name of the collection we create.
+## Collections and records
 
-**Note:** In the text file, some words, such as **City**, are followed by a colon(:). These words represent column headers in a table. The words that follow the column headers are in quotes and represent the value for that column header.
+In resources, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection, or table, that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll create a collection named **CitySales**.
+
+**Note:** The data in the text file is formatted specifically for the **ClearCollect** function. As an example, the complete row for Seattle sales is shown here:
+
+  ![Example of a single record](./media/learning-create-data-source/single-record.png)
+  - The data between each set of curly braces "**{ }**" is a single record, or row. 
+  - Column names are immediately followed by a colon (**:**), for example "**City:**".
+  - The value for each column in a record comes after the colon (**:**) and ends with a comma (**,**). Numerical values are written without quotes, but text values must be in quotes, for example, **City:"Seattle",** and **Sales:1657500**. 
+
+## Create a collection
 
 To create a collection to use in the galleries, first select all of the data in the text file.
 
-1. With *CollectionDataFormula.txt* open, select all of the text in the file (for example, press Ctrl+A), copy it (Ctrl+C), and then paste (Ctrl+V) the text into NotePad.
+1. Use NotePad to open *CollectionDataFormula.txt*, select all of the text in the file (for example, press Ctrl+A), and copy it (Ctrl+C).
 
-  **Note:** It's recommended to use NotePad when copying and pasting the data because if another application is used, some of the copied text could be altered and won't work in PowerApps (for example, curly quotes).
+   **Note:** It's recommended to use a text editor such as NotePad to open and copy the data. Using a word processor, such as Word, can introduce unintended formatting into the text which PowerApps won't recognize, for example, curly quotes.
+   
 
 2. Open PowerApps, click or tap **New** on the **File** menu (near the left-hand edge).
 
 3. On the **Blank app** tile, click or tap **Phone layout**.
 
-  ![Insert drop-down](./media/learning-create-data-source/blank-app.png)
+   ![Insert drop-down](./media/learning-create-data-source/blank-app.png)
 
-  After you do this, a new screen in PowerApps appears.
+   A new app with a blank screen will open in the PowerApps workspace.
 
-4. Go to **OnVisible** in the **Property** list in the left-hand pane.
+4. Select **OnVisible** in the **Property** list drop-down.
 
-5. In the formula bar next to **OnVisible**, paste the data that's copied from *CollectionDataFormula.txt* (the data contains the function **ClearCollect** with a list of sales figures from several countries and cities). To see the entire formula, scroll to the right and make the formula bar larger. The pasted information appears in different colors to help us make sure that the information was correctly copied over.
+   ![Set OnVisible property](./media/learning-create-data-source/onvisible.png)
 
-6. On the **Insert** tab, click or tap **New Screen** near the top of the PowerApps window to create a new screen. This creates a trigger for the **OnVisible** property so that the collection is built.
+5. In the formula bar next to **OnVisible**, paste the data that you copied from *CollectionDataFormula.txt*. (The data contains the  **ClearCollect** function with a list of sales figures from several countries and cities). To see the entire formula, expand the formula bar by dragging down the bottom edge. Notice that the information displays in different colors - column names in black, text values in red, and so on - to make it easier to see the information.
 
-7. On the **View** tab, click or tap **Collections** and make sure the table we created is there. We won't see all of the data in the table, only the first five rows. Review the table to make sure we have all of the data.
+   ![Copy data](./media/learning-create-data-source/copy-data.png)
 
-8. In the left-hand pane, click or tap **Save As** (or press Ctrl-S) to save the app we created. Make sure to save the app to the cloud, give it an appropriate name, and provide a description. A helpful tip when saving an app is to change the icon. This makes the app stand out in the list and people can easily find it.
+6. On the **Insert** tab, click or tap **New Screen**, and select **Blank** to create a new screen. In the left-hand pane, select **Screen1**. Going back to **Screen1** this way triggers the **OnVisible** property of the screen so that the collection is built.
 
-<!--Audrie ends the video by not saving the app, and she starts the next video by having you save the app created in the first video. I thought it would be best to include a step here on saving your app -->
+   ![New screen](./media/learning-create-data-source/new-screen.png)
+
+7. On the **View** tab, click or tap **Collections** and make sure the table was created. You won't see all of the data in the table, only the first five rows. Review the table to make sure all of the data is there.
+
+   ![View collection](./media/learning-create-data-source/view-collection.png)
+
+8. In the left-hand pane, click or tap **Save As** (or press Ctrl-Shift-S) to save the app. Make sure to save the app to the cloud, give it an appropriate name, and provide a description. A helpful tip when saving an app is to change the icon. This makes the app stand out in the list and people can easily find it.
+
+   ![Save as](./media/learning-create-data-source/save-as.png)
+
+
