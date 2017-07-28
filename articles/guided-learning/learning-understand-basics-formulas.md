@@ -8,7 +8,7 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=
+   featuredVideoId=123
    courseDuration=/>
 
 <tags
@@ -21,50 +21,94 @@
    ms.author="v-subohe"/>
 
 # Using formulas in PowerApps
-This section provides a close up look at the formula bar and how to use it.
 
-At the top of PowerApps, the formula bar is similar to what you'd see in Excel. Formulas in PowerApps are also based on the formulas in Excel.
+**Note:** To try out the examples in this session, open or create any basic app in PowerApps. For this session, the examples start with a blank phone app.
+
+This section provides a look at the formula bar, formulas, and how to use them in PowerApps.
+
+The formula bar is located at the top of PowerApps, and is similar to what you'd see in Excel. Formulas in PowerApps are also based on the formulas in Excel.
 
 ![Formula bar](./media/learning-understand-basics-formulas/formula-bar1.png)
 
 ## Find available functions on the formula bar
-On the formula bar, click or tap the **Fx** button to browse available functions. For example, under the **Text** property, the options listed below it are typically used with text, such as **Concatenate**.
+On the formula bar, click or tap the **Fx** button to browse available functions. For example, under the **Text** property, the options listed below it are typically used with text, such as **Left** or **Concatenate**.
 
 ![Fx button on the formula bar](./media/learning-understand-basics-formulas/formula-fx-button.png)
 
-On the **Insert** tab, click or tap **Label**. When it appears in the form, move the text box to a location where it doesn't cover any other fields.
+Let's look at the **Left** function first, which returns a specified number of characters from the left side of a text string.
 
-Click or tap the **Fx** button, and in the list of options under **Text**, click or tap **Left**. The **Left** function appears in the formula bar and will extract the left portion of some text. In the formula bar, type:
+1. Add two text boxes to your screen.
+1. Type something into the first text field, for example **Marketing**.
+1. In the **Text** property of the second text field, type:
 
-**Left(txtDepartment.Text,3)**
+**Left(Label1.Text, 3)**
 
-This function takes the name of another field called **Marketing**, and then extracts only the initial three characters: **Mar**.
+This function will return the first three characters of the text in the **Label1** field. 
 
-Click or tap the **Fx** button, and in the list of options under **Text**, click or tap **Concatenate**. In the formula bar, type:
+![Left function](./media/learning-understand-basics-formulas/left-function.png) 
 
-**Concatenate(txtDepartment.Text, "Book")**
+The **Concatenate** function combines two text strings together into one string. The strings can either be the value of a field, or a literal string, enclosed in quotes.
 
-This function takes the name of the field called **Marketing** and concatenates (or adds) the word "Book": **MarketingBook**.
+1. Add a third text field to your screen, and enter some text, for example **M101**.
+1. Change the **Text** formula in the previous text field to:
 
-To see another example using the **Text** property, type the following in the formula bar:
+**Concatenate(Label1.Text, Label3.Text)**
 
-**"Department: " & txtDepartment.Text**
+If you need to make it more readable, you can insert a space in between:
 
-This function adds the word **Department** to help the user identify the value, such as **Department: Marketing**.
+**Concatenate(Label1.Text, " ", Label3.Text)**
 
-**Note:** The formula bar uses color coding to help identify the values. For example, click or tap **txtDepartment** in the formula bar. It appears in the color red to help verify the correct control is selected. If a red dot appears in the formula bar, that means a closing parentheses is needed.
+![Concatenate](./media/learning-understand-basics-formulas/concatenate.png) 
 
-## Use formulas for SharePoint lists
-Open a gallery that we used for a SharePoint list. We're going to add two fields to the gallery that are for two complex fields in SharePoint. Notice that in the right-hand pane, the drop-down lists we created earlier are not listed. For example, the drop-down list called **Follow** is not listed.
+You can also concatenate text strings using the ampersand, "**&**". Replace the formula with this:
 
-To work around this issue, go to **Text** in the property list, and in the formula bar, it currently displays **ThisItem.Comments**. Delete the word **Comments**.
+**"Department: " & Label1.Text**
 
-Click or tap the dot to view all of the fields on SharePoint.
+![Ampersand](./media/learning-understand-basics-formulas/concatenate-2.png)
 
-Click or tap to select **Follow** from the list. Notice that it's still red. This is because the formula needs an additional step. In the formula bar, type:
+## Formula bar colors
 
-**ThisItem.Follow.Value**
+The formula bar uses color coding to help identify the types of values - strings, fields, numbers, etc. - and to help validate your formulas.
 
-**Value** is needed for complex lists, especially lists that require users to select an item, such as a drop-down list.
+In the last example, notice that when you highlighted **Label1**, the related text field is highlighted as well to help you verify that it's the correct field. 
 
-**Note:** When a red line or squiggly red line appears in the formula, it means something's missing. Click or tap the dot to find other properties that are available to use.
+![Color highlight](./media/learning-understand-basics-formulas/highlight-1.png)
+
+If you add another text string to the formula, **"Department: " & Label1.Text & " " & Label3.Text**, it highlights the second field in a different color.
+
+![Two color highlight](./media/learning-understand-basics-formulas/highlight-2.png)
+
+## Working with galleries
+
+**Note**: The next few examples use a gallery that has a SharePoint list as a data source. To follow along, add a gallery to your screen, and connect to a SharePoint list. The last example uses a **Choice** drop-down list in SharePoint. 
+
+Select any field in the gallery, and you'll see that **ThisItem** is highlighted in red to show that this is a data source field.
+
+![Data source item](./media/learning-understand-basics-formulas/data-source-item.png)
+
+You can also apply functions to data source fields, for example:
+
+**Left(ThisItem.Department,4)**
+
+will work the same as it did with a literal text string.   
+
+![Data source function](./media/learning-understand-basics-formulas/data-source-function.png)
+
+The color coding also warns you about invalid formatting. For example, if you leave off a closing parentheses, a red dot will remind you that something is missing. Also, notice the color coding here: the function name is blue, the data source is red, and the number is dark yellow.
+
+![Data source function](./media/learning-understand-basics-formulas/missing-paren.png)
+
+For our last example, we'll add a field for a drop-down item in the SharePoint list. It's named **FollowUp**, and it's a Choice drop-down with three values. These are the field values as configured in SharePoint:
+
+![Choice field](./media/learning-understand-basics-formulas/sharepoint-list.png)
+
+In your gallery template, add a new text field, and set the **Text** field for:
+
+**ThisItem.FollowUp**
+
+![Choice field incomplete](./media/learning-understand-basics-formulas/choice-field-incomplete.png)
+
+Even though **FollowUp** is available as a field, it is still invalid, as shown by the tooltip. If you add a period, the formula bar will provide a list of the available fields. Select **Value** to complete the formula.
+
+![Choice field complete](./media/learning-understand-basics-formulas/choice-field-complete.png)
+

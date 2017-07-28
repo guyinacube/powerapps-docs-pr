@@ -21,29 +21,39 @@
 # Adding icons to forms
 When creating apps for devices with smaller screens, such as mobile devices, drop-down lists aren't the ideal way for users to interact with an app. Instead, on a mobile device, it works better to use something such as large buttons or obvious images to select options in an app.
 
-In this example, we'll add icons to our app so that when users select an option for **Contact Type**, they'll click or tap an icon. This is a better solution than making a drop-down list for the **Contact Type** field.<!--Should it be 'card' instead of 'field? Audrie has been using both references in her videos' -->
+In this example, you'll add icons to your app so that users can select an option for **Contact Type** by clicking or tapping an icon. This is a better solution for mobile devices than making a drop-down list for the **Contact Type** field.
 
 ## Add icons to the form ##
-1. In **IssuesLog**, click or tap the **Contact Type** field, select the lower edge of the field, and then drag it to make the space large enough to add three icons.
+On the **IssuesLog** edit form, click or tap the **Contact Type** data card, select the lower edge of the field, and then drag it down to make the space large enough for the icons.
 
-2. On the **Insert** tab, click or tap **Icons**. In the list of icons, search for the **Mail** icon, and then click or tap it. When the **Mail** icon appears in the **Contact Type** field, move the icon down to a location at the bottom of the field.
+On the **Insert** tab, click or tap **Icons**. Scroll down to locate the **Mail** icon, select it, and position it under the **Contact Type** field.
 
   ![Add Mail icon](./media/learning-forms-add-icons/add-mail-icon.png)
 
-3. To add the second icon, in the list, search for the **Phone** icon, and then click or tap it. When the **Phone** icon appears, move it down to the bottom next to the **Mail** icon.
+Add the **Phone** and **People** icons, and arrange all three under the **Contact Type** field.
 
-4. To add the third icon, in the list, search for the **People** icon, and then click or tap it. When the **People** icon appears on the field, move it down to the bottom field next to the **Mail** and **Phone** icons.
+  ![Add Mail icon](./media/learning-forms-add-icons/arrange-icons.png)
 
 ## Add a variable to the icons
-Use a variable so that when a user clicks or taps an icon in the **Contact Type** field, the contact type is selected.
 
-1. Click or tap all three icons to select them and then go to the **OnSelect** property in the property list. In the formula bar, type the following:
-  * For **Mail** icon, type **UpdateContext({ContactMethod:"eMail"})**
-  * For **Phone** icon, type **UpdateContext({ContactMethod:"Telephone"})**
-  * For **People** icon, type **UpdateContext({ContactMethod:"In Person"})**
+Use the **UpdateContext** function to create a variable so that when a user clicks or taps an icon,  **Contact Type** is automatically filled in.
 
-2. Click or tap the **Contact Type** field to select it and then go to the **Default** property in the property list. In the formula bar, type **ContactMethod**.
+Select the **Mail** icon and add the following formula to the **OnSelect** property:
 
-3. To test how it works, click or tap each icon and then make sure the selected type appears in the **Contact Type** space.
+**UpdateContext({ContactMethod:"eMail"})**
 
-This is a 'finger friendly' way to design an app for mobile devices. The app doesn't need to always match the SharePoint list, we can modify the app to match our needs.
+  ![Add Mail icon](./media/learning-forms-add-icons/configure-variable.png)
+
+Update the **OnSelect** property for the remaining icons:
+
+- **UpdateContext({ContactMethod:"Telephone"})**
+- **UpdateContext({ContactMethod:"In Person"})**
+
+Select the **Contact Type** field, and type the variable name, **ContactMethod**, into the **Default** property.
+
+Test the app by selecting each icon and making sure that the selected value appears in **Contact Type**.
+
+  ![Add Mail icon](./media/learning-forms-add-icons/final-form.png)
+
+This is just one way to design your app to look more professional, and to be mobile friendly for your users. 
+

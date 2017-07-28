@@ -1,4 +1,4 @@
-<properties
+  <properties
    pageTitle="Add data to SharePoint to prepare to create an app | Microsoft PowerApps"
    description="Build additional data into SharePoint to prepare for creating an app"
    services=""
@@ -19,60 +19,75 @@
    ms.author="v-subohe"/>
 
 # Building a SharePoint list to use in an app
-We've already created two apps for Contoso hardwood flooring. The first app we created was to estimate the cost of the flooring for the size of the room, and we created the second app to display the sales figures for the cities and countries. Next, we're going to create an app for people who are out installing the flooring. When they're installing flooring, issues can occur, so this app let's them log the problems they encounter. The new app will store the data on SharePoint, and people can continue to add issues to the SharePoint list using the app.
+In previous sessions, you created two apps for Contoso hardwood flooring. The first app estimated the cost of the flooring for the size of the room, and the second displayed sales figures for the cities and countries. Next, you'll create an app for the workers who are installing the flooring. This app lets them log any issues they encounter on a job. It will store the data on your SharePoint site, and workers can add issues to SharePoint using the app.
 
-## Add a new SharePoint app ##
-1. In the SharePoint site, click or tap the **Setting** icon in the upper right-hand corner of the web browser, and then click or tap **Add an app**.
+## Add a new SharePoint list 
 
-2. In the list of template apps that are displayed, select **Custom List**. If you don't see the **Custom List** template, search for it in the **Search** box.
+In this session, you'll create two SharePoint lists that you'll use to build the app over the next several sessions.  
 
-3. In **Add Custom List**, type **IssuesLog** as the name for the app, and then click or tap **Create** to create the log where the data will be stored.
+On your SharePoint site, create a new custom list, and name it **IssuesLog**.  After SharePoint creates it, open the **IssuesLog** list from the contents page. 
 
-  When you create a new app in SharePoint using the Custom List template, it shows up in a list under **Contents**. In the list, find **IssuesLog** and open the file.
+## Add columns to the list 
 
-  When the file opens, it displays a list <!-- actually, it looks like a table, but Audrie is using the word 'list' here --> with a **Title** column and a plus sign **(+)** column.
+In the **IssuesLog** list, create six new columns.
 
-## Add columns to the list ##
-In **IssuesLog**, create six new columns to add more data to the list.
-<!-- It would be helpful to have access to the SharePoint site Audrie's using, which is https://microsoft.sharepoint.com/teams/PlanningTeamSite/Lists/IssuesLog. This will help me take screenshots related to these steps. -->
-1. To add a new single line column, click or tap **(+)** and then click or tap **Single line of text**. In **New text column**, type **ContactType** for the name, and then click or tap **Create**. The new column provides data on how the contact was made for the issue, such as by a phone call, in person, or through an email.
+Column 1
+- Type: **Single line of text**
+- Column name: **ContactType**
 
-2. To add a column named **AssignedTo**, click or tap **(+)** and then click or tap **Person**. In **New person column**, type **AssignedTo** for the name, and then click or tap **Create**. This column allows you to assign different issues to different people.
+Column 2
+- Type: **Person**
+- Column name: **AssignedTo**
 
-3. To add a column named **Vendor**, click or tap **(+)** and then click or tap **More...** to add a choice list.
+Column 3
+- Type: **Choice**
+- Column name: **Vendor**
+- Additional column settings: **Type each choice on a separate line**
+  - **Vendor Name 1** (Default value)
+  - **Vendor Name 2**
+  - **Vendor Name 3**
 
-  In **Name and Type**, under the **Column name**, type **Vendor**.
+Column 4
+- Type: **Single line of text**
+- Column name: **DivisionCode**
 
-  Under **Type of information listed in the column**, click or tap **Choice (menu to choose from)**.
+Column 5
+- Type: **Yes/No**
+- Column name: **Resolved**
 
-  In **Additional column settings**, in the box under **Type each choice on a separate line**, type the following:
-  **Vendor Name 1**
-  **Vendor Name 2**
-  **Vendor Name 3**
+Column 6
+- Type: **Multiple lines of text**
+- Column name: **Comments**
 
-  In **Default value**, type **Vendor Name 1** for the default because it's the name that will be used the most. Click or tap **OK** to see how the columns look.
+Add one new item to the list so that something displays when you build the app. Click or tap **New** in the upper left-hand corner, and in **New Item**, add some data in each field in the list. Click or tap **Save** to save the item.
 
-4. To add a column with a division code, click or tap **(+)** and then click or tap **Single line of text**. In **New text column**, type **DivisionCode** for the name, and then click or tap **Create**.
+After creating the columns and adding an item, your SharePoint list should look similar to this:
 
-5. To add a column named **Resolved**, click or tap **(+)** and then click or tap **Yes/No**. In **New text column**, type **Resolved** for the name, and then click or tap **Create**.
+![IssuesLog](./media/learning-prepare-to-create-sharepoint-app/issuelog-finish.png)
 
-6. To add a column for comments, click or tap **(+)** and then click or tap **Multiple lines of text**. In **New multiline text column**, type **Comments for the name**, and then click or tap **Create**.
+## Add another list for the DivisionCode field 
 
-7. Before starting to work on the app, add one line of data to assess the layout of the fields. Click or tap **New** in the upper left-hand corner, and in **New Item**, add some data in each field in the list. Click or tap **Save** to save the item.
+Contoso Flooring uses three division zones, and each zone has multiple codes. In the app, you'll want to be able to select a zone and see only the codes for that zone. You'll do this in the app by using a cascading drop-down list. To populate the drop-down list, you need to add another SharePoint list.
 
-## Add a cascading drop-down list for the DivisionCode field ##
-There are three division zones and each zone has different codes. We want to be able to pick a zone and then show only the codes for that zone using a cascading drop-down list. To do this, you need to add a new SharePoint app.
+Create a new custom list, and name it **Zones**.  After SharePoint creates it, open the **Zones** list from the contents page.
 
-1. In the SharePoint site, click or tap the **Setting** icon in the upper right-hand corner of the web browser, and then click or tap **Add an app**.
+Add one new column to the list:
+- Type: **Single line of text**
+- Column name: **SubCodes**
 
-2. In the list of template apps that are displayed, select **Custom List**. If you don't see the **Custom List** template, search for it in the **Search** box.
+Click or tap **Quick edit** in the upper left-hand side to add the zones. In the table that appears, under the **Title** column, type each zone, and, under the **SubCode** column, type each subcode. For example:
 
-3. In **Add Custom List**, type **Zones** as the name for the app, and then click or tap **Create**.
+- **Zone 1** : **101**
+- **Zone 1** : **102**
+- **Zone 1** : **103**
+- **Zone 2** : **201**
+- **Zone 2** : **202**
+- **Zone 2** : **203**
+- **Zone 3** : **301**
+- **Zone 3** : **302** 
 
-4. With the new app **Zones** open, create a single line column. Click or tap **(+)** and then click or tap **Single line of text**. In **New text column**, type **SubCodes** for the name, and then click or tap **Create**.
+After saving the edits, your SharePoint list should look similar to this:
 
-5. Click or tap **Quick edit** in the upper left-hand side to add the zones. In the table that appears, under the **Title** column, type each zone, and, under the **SubCode** column, type each subcode. In the example, the initial two zones have three subcodes, and the third zone has two. Use this list as a basis for the cascading drop-down list.
+![Zones](./media/learning-prepare-to-create-sharepoint-app/zones-finish.png)
 
-6. Click or tap **Site Contents** in the left-hand pane, and then open **IssuesLog**.
-
-In the next video, we'll discuss how to build the app.
+In the next session, we'll discuss how to build the app.

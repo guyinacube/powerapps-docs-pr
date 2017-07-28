@@ -19,52 +19,94 @@
    ms.author="v-subohe"/>
 
 # Customize a gallery template
-Customize the gallery template by formatting fields, aligning multiple fields, or changing a background color.
+In this section, you'll see how to customize the gallery template by formatting fields, aligning multiple fields, or changing a background color.
 
 ## Format fields
-1. In the **Flooring Sales** example we've been discussing, the sales figure as it's currently formatted may be difficult to recognize as currency. To reformat the sales figure to make it clearer, highlight the field that shows the sales figure in the gallery. In the formula bar, click or tap directly in front of **ThisItem** and enter this **Text** function around **ThisItem.Sales**:
+1. In the **Flooring Sales** example we've been discussing, the sales figure may be difficult to recognize as currency in its current format. To reformat the sales figure to make it clearer that it's currency, highlight the field that shows the sales figure in the gallery. The value that exists for each sales item is represented as **ThisItem.Sales**.
 
-  **Text(ThisItem.Sales,"$#,#00")**
+   In the formula bar, click or tap directly in front of **ThisItem** and enter this **Text** function around **ThisItem.Sales**:
 
-  **ThisItem.Sales** represents the value that exists for each sales item.
+   **Text(ThisItem.Sales,"$#,#00")**
 
-  **Note:** If you're familiar with Microsoft Excel, the custom number formats in PowerApps are similar.
+   The sales figures now display in a currency format.  
 
-2. To make the sales figure appear more clearly as currency, directly in front of **Text**, enter the following in the formula bar:
+     ![Currency format](./media/learning-customize-gallery-template/currency-format.png)
 
-  **"Total Sales: " & Text(ThisItem.Sales,"$#,#00")**
+   **Note:** If you're familiar with Microsoft Excel, the custom number formats in PowerApps are similar.
 
-  Adding the **Total Sales** label will help users view the sales figures as currency.
+2. To further clarify what the currency value represents, you can add a text label in front of the value. Modify the formula as follows:
 
-3. To view the gallery with these changes, open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).
+   **"Total Sales: " & Text(ThisItem.Sales,"$#,#00")**
 
-## Reduce the size of fields in a template
-Change the width (or length) of any field in the gallery template to reduce the amount of space some fields occupy on the screen (such as the **City** and **City code** fields in this example).
+     ![Text label](./media/learning-customize-gallery-template/currency-label.png)
 
-**Note:** In PowerApps, use one control as a reference to set the property of another control.
 
-1. In the left-hand pane, go to **Width** in the property list. In the formula bar, notice that **Parent.TemplateWidth** is set to minus 45, which is the default value. One of the ways to change the width is by dividing it by 2 to use only half of the width of the template or by 4 to use only a quarter of the width of the template. For example, select the **City** field and enter **Parent.TemplateWidth/2** in the formula bar, and the field occupies only half of the template width.
+## Arranging the fields in a template
 
-2. After reducing the size of the **City** and **City code** fields, move the fields to other parts of the template to make more space for other fields. As fields are moved around on the screen, PowerApps automatically helps to center it.
+When data is loaded into a gallery template, it's not necessarily formatted or laid out the way you may want it. In this section, you'll arrange the fields so that it's more readable for the user.
+
+First, we'll change the width of the **City** and **Short** fields so they don't overlap with other fields.
+
+1. Select the **City** field, and in the left-hand pane, select **Width** in the property list. By default, this is set to **Parent.TemplateWidth - xx**. One of the ways to change the width of fields consistently is to divide it by 2 or 4, so that it only uses half or one-quarter of the width of the template. For this example, enter **Parent.TemplateWidth/4** in the formula bar, so the field occupies only one-quarter of the template width. Make the same changes to the **Short** field. 
+
+2. After reducing the size of the **City** and **Short** fields, move the **Short** field to the upper right of the template, and move the **City** field underneath it.
+
+     ![Move fields](./media/learning-customize-gallery-template/city-short-move.png)
+
+3. Select the **Country** field and increase the font size. Move the **Country** field toward the top of the template. Select the **Sales** field, and move it underneath the **Country** field. 
+
+     ![Increase font](./media/learning-customize-gallery-template/increase-font.png)
+
+4. Move the **City** field down so that it's lined up with the **Sales** field. Note that as you drag a field, or any control, PowerApps displays alignment guides. In this example, the **City** field aligns horizontally with the **Sales** field, and vertically, the left edge aligns with the **Short** field.  
+
+     ![Align fields](./media/learning-customize-gallery-template/align-fields.png)
+
 
 ## Align multiple fields in a template
-1. Use the Ctrl key to select multiple fields to align. On the **Home** tab, click or tap **Align** (on the far right-hand side) and then click or tap **Align Top** to ensure both fields are equally aligned at the top.
 
-  **Warning:** Fields may overlap, so be careful to make sure this doesn't occur. For example, if the **City** field is moved next to the **Sales figure** field, and the **Sales figure** field contains a very large number, it may hide the city name. To reduce the size of the field that's overlapping another field, using a corner of a field, drag it to make it smaller; or, to move a field, grab the edge and move it. As the field is moved, PowerApps automatically aligns it.
+In addition to the built-in alignment guides, you can use the Crtl key to select multiple fields to align. Say, for example, while arranging fields, you moved the **Sales** field too far to the right.
 
-2. Since we've resized and moved around fields, the template now has too much blank space. Use the edges of the template to reduce the overall size.
+ ![Align fields](./media/learning-customize-gallery-template/out-of-alignment.png)
 
-## Change the background color and padding of a template
-1. To change the background color of the template, in the left-hand pane, go to **TemplateFill** in the property list. In the formula bar, delete the current color and change it to a different color, such as **LightGray**. The background changes to light gray.
+Hold down the Ctrl key and select both the **Country** and **Sales** fields. Then, on the **Home** tab, click or tap **Align**, and select **Align left**.
 
-2. The padding is the space around the edge of the template. To add a padding to a template, go to **TemplatePadding** in the property list and set the padding size in the formula bar, such as **10** or **20** points.
+![Align fields](./media/learning-customize-gallery-template/align-left.png)
 
-3. Another way to use **TemplateFill** is to use a different color for a selected item. To highlight the selected item with a different color, type the following in the formula bar:
+  **Note:** As you move fields around the template, be careful that fields don't overlap each other. For example, if the **City** field is moved next to the **Sales** field, and the **Sales** field contains a very large number, it may hide the city name. To reduce the size of the field that's overlapping another field, using a corner of a field, drag it to make it smaller; or, to move a field, grab the edge and move it. As the field is moved, PowerApps automatically aligns it.
 
-  **If(ThisITem.IsSelected,LightBlue)**
+After arranging the fields, if the template has too much blank space, you can drag the bottom edge of the template up to reduce the overall size.
 
-  When the item is selected, the background color changes to light blue.
+## Change the background color, padding, and size of a template
 
-4. To add an **Or** statement, type the following in the formula bar:
-**If(ThisITem.IsSelected,LightBlue.White)**
+There are three gallery template properties that are particularly useful when laying out your gallery: **TemplateFill**, **TemplatePadding**, and **TemplateSize**. 
+
+### TemplateFill
+To change the background color of the template, select **TemplateFill** in the property list. In the formula bar, delete the current color and change it to a different color, such as **LightGray**. The background changes to light gray.
+
+![Template color](./media/learning-customize-gallery-template/template-fill.png)
+
+Another way to use the **TemplateFill** property is to change the color of an item when it is selected. You can use an **If** function to set the color of an item when it is selected, and then set it back to the origianl color when it's not. Add this formula to the **TemplateFill** property: 
+
+  **If(ThisItem.IsSelected,LightBlue,White)**
+
+  ![Highlight selected item](./media/learning-customize-gallery-template/highlight-selected.png)
+
 When the item is selected, the background color changes to light blue, otherwise, it remains white.
+
+
+### TemplatePadding
+The **TemplatePadding** is the space around the edge of the template. To add padding to a template, select **TemplatePadding** in the property list and set the padding size in the formula bar. The following example shows a **TemplateFill** of **LightGray**, and a **TemplatePadding** of **20**.
+
+![Template padding](./media/learning-customize-gallery-template/template-padding.png)
+
+### TemplateSize
+
+You saw earlier how to drag the handles of the template to change the size. However, you can set the size of the template to adjust automatically to the size of the data that it displays. In the **TemplateSize** property, enter this formula: 
+
+**subtitle1.height + label1.height + 20**
+
+**Note:** This example assumes the **City** field is named **subtitle1** and the **Sales** field is named **label1**. Use the names that apply to your app.
+
+![Adjust size](./media/learning-customize-gallery-template/auto-adjust-size.png)
+
+This formula adds the height of the **City** field and the height of the **Sales** field, plus a buffer of **20**. If either field expands to accommodate a large of amount of data, the template will expand automatically, too. 

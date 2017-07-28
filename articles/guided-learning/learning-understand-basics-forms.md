@@ -21,43 +21,45 @@
    ms.author="v-subohe"/>
 
 # Creating forms in an app
-In previous video, we discussed how to prepare our data in SharePoint and created two lists: **IssuesLog** to store data the app is collecting, and **Zones** to store data on zones. The **Zones** list will be used to create a cascading drop-down control. In this section, we'll discuss the basics of creating forms.
+In the previous session, you prepared data in SharePoint and created two lists: **IssuesLog** to store the data the app is collecting, and **Zones** to store the data on division zones and subcodes. The **Zones** list will be used to create a cascading drop-down control. This section discusses the basics of creating forms.
 
-## Create a new app in SharePoint
+## Create a new PowerApp from SharePoint
 
-1. Open **IssuesLog**, and at the top, click or tap **PowerApps** and then click or tap **Create an app**.
+1. Open the **IssuesLog** list, and at the top, click or tap **PowerApps**, and then click or tap **Create an app**.
 
-2. In **Create an app**, under **Name**, type a name for the app. In the example, the name is **Installation issues**.
+    ![Create PowerApp](./media/learning-understand-basics-forms/create-powerapp.png)
 
-3. Click or tap **Create**.
+2. Type a name for the app, for example **Installation issues**, and click **Create**.
 
-  **Note:** Because we've already created the fields **DivisionCodes** and **Zones** that collect data, we can connect Power BI to the list and get specific information, such as how often installation issues occur and which zones the issues occur in.
+After the app builds and opens in PowerApps Studio for Web, you can adjust the fields in the template gallery to match the view that you want. For example:
 
-4. After the app is created, add at least one item to the list before adding all the data because it'll make it easier to customize the gallery later.
+   ![Format gallery template](./media/learning-understand-basics-forms/format-gallery-template.png)
 
-  **Note:** PowerApps automatically determines which fields should go in the gallery when the app is created. In the example, the fields added include: division code, the title of the issue, comments, and how the issue was taken, such as by person or through email.
+Without doing anything else, your app is now fully functional. Test the app by running it in preview mode and opening an item for editing. Make a change to one of the fields, submit the form, and verify that the change you made now appears in the SharePoint list item. 
 
-5. To expand the space for the **Comments** field, change the property to **AutoHeight** in the property list and then type **True** in the formula bar.
 
-6. To edit the fields after the app is created, click or tap the pencil icon in the upper right-hand corner of the gallery.
+## Add a cascading drop-down control
 
-  ![Pencil icon](./media/learning-understand-basics-forms/edit-template.png)
+In left-hand navigation tree, under **EditScreen1**, select **EditForm1**. This is the form that the user will fill out when they create a new item.
 
-## Create a form ##
-Create a form to add a cascading drop-down control. Eventually, we want to have a cascading drop-down control so that when a zone is selected, the correct division codes for that zone appear in the list.
+![EditForm1 tree view](./media/learning-understand-basics-forms/editform-tree.png)
 
-1. In **IssuesLog**, click or tap the plus sign (+) in the upper right-hand corner to create a new item. A new blank form appears.
+When working with forms, you're working with independent sections of the form called **data cards**. In left-hand navigation tree, under **EditForm1**, you can see all the data cards (and other controls) that make up the form. Each data card is independent and can have its own unique formatting. This is different from a gallery where if you make a change to the template, it affects the entire gallery.
 
-  **Note:** When working with forms, you're working with independent sections of the form called data cards. When you select the form, you'll see at the lower left-hand corner a file called **EditForm1** that has several different data cards in it. Each data card is independent and can have its own unique formatting. This is different from a gallery where if you make a change to one section, it affects the entire gallery.
+Data cards can be arranged on the form by dragging the handle in the upper left of the data card, or by dragging the fields in the right-hand pane. They can also be resized or have their properties customized like any other control. 
 
-2. Select the title of a data card in the form and then drag the data card to a different location in the form. In the example, the **Title** data card is moved to the top of the form. You can also move data cards by using options in the right-hand pane.
+![Move data cards](./media/learning-understand-basics-forms/move-data-card.png)
 
-3. Click or tap **Comments** to select that data card and, in the right-hand pane, click or tap **Edit Multiline Text**. The size of the **Comments** data card automatically expands.
+Modify the data cards as follows:
 
-4. Make additional changes to the form, such as changing a title. Click or tap a title of a data card you want to change, and then in the right-hand pane, click or tap **Advanced**.
+- Select the **ID** data card and set the **Visible** property to **false**.
+- Move the **AssignedTo** field so it's above the **ContactType** field. 
+- Edit the titles for **AssignedTo**, **ContactType**, and **DivisionCode** to add a space between the words. 
+- Select **Comments**, and in the right-hand pane, select **Data**. Scroll down to the **Comments** field, select the **abc** drop-down, and select **Edit multi-line text**. This expands the text box to display the multi-line comment. 
 
-5. Click or tap **Unlock** to change properties. By default, PowerApps locks the ability to change properties to help minimize accidental mistakes.
+Your form should look similar to this now:
 
-6. In the form, edit the title.
+![Final form edit](./media/learning-understand-basics-forms/edited-form.png)
 
-7. To make the gallery larger, drag the lower edge of the gallery down since, by default, it's not a flexible height gallery.
+Some data cards may be locked by default to prevent accidental changes. To unlock a data card, select the data card, select **Advanced** in the right-hand pane, and click **Unlock to change properties**.
+
