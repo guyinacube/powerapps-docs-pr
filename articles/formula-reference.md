@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/31/2016"
+   ms.date="07/24/2017"
    ms.author="gregli"/>
 
 # Formula reference for PowerApps #
@@ -76,6 +76,8 @@ Other elements include:
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
+
+**[Coalesce](functions/function-isblank-isempty.md)** – Replaces *blank* values while leaving non-*blank* values unchanged.
 
 **[Collect](functions/function-clear-collect-clearcollect.md)** – Creates a collection or adds data to a data source.
 
@@ -138,6 +140,8 @@ Other elements include:
 **[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
+
+**[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
@@ -267,6 +271,8 @@ Other elements include:
 
 **[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
 
+**[Reset](functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
+
 **[ResetForm](functions/function-form.md)** – Resets a form control for editing of an existing item.
 
 **[Revert](functions/function-revert.md)** – Reloads and clears errors for the records of a data source.
@@ -287,7 +293,9 @@ Other elements include:
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
-**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.  
+**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
+
+**[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
@@ -311,7 +319,7 @@ Other elements include:
 
 **[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
-**[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula. 
+**[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
 
 ## T ##
 
@@ -341,7 +349,7 @@ Other elements include:
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
-**[UpdateContext](functions/function-updatecontext.md)** – Creates or updates one or more [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
+**[UpdateContext](functions/function-updatecontext.md)** – Sets the value of one or more [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
 
 **[UpdateIf](functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
 
@@ -356,6 +364,8 @@ Other elements include:
 **[Value](functions/function-value.md)** – Converts a string to a number.
 
 **[VarP](functions/function-aggregates.md)** – Returns the variance of its arguments.  
+
+**[ViewForm](functions/function-form.md)** – Resets a form control for viewing of an existing item.
 
 ## W ##
 
