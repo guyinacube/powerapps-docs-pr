@@ -76,6 +76,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Pie chart](controls/control-pie-chart.md)** – Show how values relate to each other.
 
+**[Power BI tile](controls/control-power-bi-tile.md )** – Display a Power BI tile inside an app.
+
 **[Radio](controls/control-radio.md)** – Show options that are mutually exclusive.
 
 **[Rating](controls/control-rating.md)** – Indicate a value between 1 and a specified number.
@@ -178,6 +180,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DefaultDate](controls/control-date-picker.md)** – The initial value of a date control before it is changed by the user.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
+**[DefaultMode](controls/control-form-detail.md)** – The initial mode of a form control, either **Edit**, **New**, or **View**.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
+
 **[Direction](controls/control-gallery.md)** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[Disabled](controls/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
@@ -189,6 +193,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[DisabledFill](controls/properties-color-border.md)** – The background color of a control if its **[Disabled](controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
 **[DisplayName](controls/control-card.md)** – The user friendly name for a field in a data source.  Applies to the **[Card](controls/control-card.md)** control.
+
+**[DisplayMode](controls/properties-core.md)** – Values can be Edit, View, or Disabled. Configures whether the control allows user input (Edit), only displays data (View) or is disabled (Disabled).
 
 **[Document](controls/control-pdf-viewer.md)** – The URL, enclosed in double-quotation marks, of a PDF file.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -412,7 +418,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Required](controls/control-card.md)** – Whether a card, editing the field of a data source, must contain a value.  Applies to the **[Card](controls/control-card.md)** control.
 
-**[Reset](controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.
+**[Reset](controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.  Also see the **[Reset](../functions/function-reset.md)** function.
 
 ### S ###
 
