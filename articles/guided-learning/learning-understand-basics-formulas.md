@@ -31,13 +31,13 @@ The formula bar is located at the top of PowerApps, and is similar to what you'd
 ![Formula bar](./media/learning-understand-basics-formulas/formula-bar1.png)
 
 ## Find available functions on the formula bar
-On the formula bar, click or tap the **Fx** button to browse available functions. For example, under the **Text** property, the options listed below it are typically used with text, such as **Left** or **Concatenate**.
+On the formula bar, click or tap the **Fx** button to browse available functions. For example, the options under the **Text** property are typically used with text, such as **Left** or **Concatenate**.
 
 ![Fx button on the formula bar](./media/learning-understand-basics-formulas/formula-fx-button.png)
 
 Let's look at the **Left** function first, which returns a specified number of characters from the left side of a text string.
 
-1. Add two text boxes to your screen.
+1. Add two labels to your screen.
 1. Type something into the first text field, for example **Marketing**.
 1. In the **Text** property of the second text field, type:
 
@@ -90,7 +90,7 @@ You can also apply functions to data source fields, for example:
 
 **Left(ThisItem.Department,4)**
 
-will work the same as it did with a literal text string.   
+This works the same as it did with a literal text string.   
 
 ![Data source function](./media/learning-understand-basics-formulas/data-source-function.png)
 
@@ -102,7 +102,7 @@ For our last example, we'll add a field for a drop-down item in the SharePoint l
 
 ![Choice field](./media/learning-understand-basics-formulas/sharepoint-list.png)
 
-In your gallery template, add a new text field, and set the **Text** field for:
+In your gallery template, add a new text field, and set the **Text** property to:
 
 **ThisItem.FollowUp**
 

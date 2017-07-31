@@ -1,6 +1,6 @@
 <properties
    pageTitle="Customize the height of list boxes in a gallery | Microsoft PowerApps"
-   description="Make the height of list boxes in a gallery variable using a function"
+   description="Make the height of list boxes in a gallery variable using a formula"
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/05/2017"
+   ms.date="07/31/2017"
    ms.author="v-subohe"/>
 
 # Customize the height of list boxes in a gallery
@@ -29,7 +29,7 @@ In the gallery template, click or tap inside the list box to select it, and then
 
 **CountRows(Cities) * 55**
 
-The function counts the number of rows in the list box, and then multiplies that number by a row height of 55. (55 is given as an example. The row height for an app will depend on things like font size and readability.)
+The formula counts the number of rows in the list box, and then multiplies that number by a row height of 55. (55 is given as an example. The row height for an app will depend on things like font size and readability.)
 
 When you run the app, you'll see that the list boxes adjust depending on the number of cities listed.
 
@@ -62,7 +62,7 @@ Adjust the width of the **Country** field to make room to display the sales tota
 
 ![Gallery name](./media/learning-customize-listbox-height/gallery-name.png)
 
-Copy and paste the **Country** field and move the copy to the right side of the gallery template, opposite the **Country** field. Change the **Text** property to the following function:
+Copy and paste the **Country** field and move the copy to the right side of the gallery template, opposite the **Country** field. Change the **Text** property to the following formula:
 
 **Text(Sum(Filter(CitySales,Country=ThisItem.Country),Sales), "$#,###")**
 

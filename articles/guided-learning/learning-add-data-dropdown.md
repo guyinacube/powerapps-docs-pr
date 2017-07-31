@@ -15,13 +15,13 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/20/2017"
+   ms.date="07/31/2017"
    ms.author="v-subohe"/>
 
 # Cascading drop-down lists
-In the last video, you learned some basic information about forms and how forms combine with columns in our SharePoint lists. We also learned about locking and unlocking property settings in order to customize forms.
+In the last video, you learned some basic information about forms and how forms combine with columns in our SharePoint lists. You also learned about locking and unlocking property settings in order to customize forms.
 
-In this section, you'll add a set of cascading drop-down controls so that when a user selects a Zone, a drop-down list will display the available subcodes, or Division Codes, for that zone. Then, we'll update the Division Code field with the selected subcode. 
+In this section, you'll add a set of cascading drop-down controls so that when a user selects a Zone, a drop-down list will display the available subcodes, or Division Codes, for that zone. Then, you'll update the Division Code field with the selected subcode. 
 
 ## Add a data source to use for the cascading drop-down list 
 
@@ -36,7 +36,7 @@ You already have a data source connection to **IssuesLog** that was created in t
 
 2. Under **Connect to a SharePoint site**, copy and paste the URL for the SharePoint site (in the example, it's https://microsoft.sharepoint.com/teams/PlanningTeamSite), and then click or tap **Go**.
 
-   **Note:** - Be sure to connect to the site, not the list.
+   **Note:** Be sure to connect to the site, not the list.
 
    PowerApps searches for all of the lists that are available on the SharePoint site. In the list, find **Zones** and select it. Then, click or tap **Connect**. In the right-hand pane, notice that there are now two data sources in the list.
 
@@ -75,7 +75,7 @@ When creating the second drop-down list, you can just copy the first one and mov
 
    **Filter(Zones,Title=ddZones.Selected.Value).SubCode**
 
-   This function retrieves the data in **Zones** where the **Title** field is equal to the value in **ddZones** and returns the subcodes.
+   This formula retrieves the data in **Zones** where the **Title** field is equal to the value in **ddZones** and returns the subcodes.
 
       ![Configure subcodes](./media/learning-add-data-dropdown/configure-subcodes.png)
 
@@ -84,7 +84,7 @@ When creating the second drop-down list, you can just copy the first one and mov
 ## Update the Division Code field 
 Next, configure the app to automatically update the **Division Code** field with the **SubCode** value that the user selected, so when the record is saved, the **Division Code** will also be written to the SharePoint record.   
 
-**Note:** - Remember that the **Zones** and **SubCodes** fields are part of the **Zones** list, and are not part of the records that are saved to the **IssuesLog** list, which the app uses as the main data source. However, the **Division Code** field is saved to the **IssuesLog** list.
+**Note:** Remember that the **Zones** and **SubCodes** fields are part of the **Zones** list, and are not part of the records that are saved to the **IssuesLog** list, which the app uses as the main data source. However, the **Division Code** field is saved to the **IssuesLog** list.
 
 1. In the form, drag and drop the card you created for the drop-down lists to the space above the **Division Code** field.
 
@@ -96,4 +96,4 @@ Next, configure the app to automatically update the **Division Code** field with
 
    This formula changes the default value of the **Division Code** field to whatever is selected in the **ddSubCodes** drop-down list.
 
-3. (Optional) Since the **Division Code** field simply displays the **ddSubCodes** selection, it doesn't need to be displayed to the user, and you can free up some screen space in your app by hiding it.  Select **Visible** in the property list for **Division Code**, and in the formula bar, type **False**. 
+3. (Optional) Since the **Division Code** field simply displays the **ddSubCodes** selection, it doesn't need to be displayed to the user, and you can free up some screen space in your app by hiding it.  Select **Visible** in the property list for **Division Code**, and in the formula bar, type **false**. 

@@ -24,36 +24,36 @@ When creating apps for devices with smaller screens, such as mobile devices, dro
 In this example, you'll add icons to your app so that users can select an option for **Contact Type** by clicking or tapping an icon. This is a better solution for mobile devices than making a drop-down list for the **Contact Type** field.
 
 ## Add icons to the form ##
-On the **IssuesLog** edit form, click or tap the **Contact Type** data card, select the lower edge of the field, and then drag it down to make the space large enough for the icons.
+1. On the **IssuesLog** edit form, click or tap the **Contact Type** data card, select the lower edge of the field, and then drag it down to make the space large enough for the icons.
 
-On the **Insert** tab, click or tap **Icons**. Scroll down to locate the **Mail** icon, select it, and position it under the **Contact Type** field.
+1. On the **Insert** tab, click or tap **Icons**. Scroll down to locate the **Mail** icon, select it, and position it under the **Contact Type** field.
 
-  ![Add Mail icon](./media/learning-forms-add-icons/add-mail-icon.png)
+    ![Add Mail icon](./media/learning-forms-add-icons/add-mail-icon.png)
 
-Add the **Phone** and **People** icons, and arrange all three under the **Contact Type** field.
+1. Add the **Phone** and **People** icons, and arrange all three under the **Contact Type** field.
 
-  ![Add Mail icon](./media/learning-forms-add-icons/arrange-icons.png)
+    ![Add Mail icon](./media/learning-forms-add-icons/arrange-icons.png)
 
 ## Add a variable to the icons
 
 Use the **UpdateContext** function to create a variable so that when a user clicks or taps an icon,  **Contact Type** is automatically filled in.
 
-Select the **Mail** icon and add the following formula to the **OnSelect** property:
+1. Select the **Mail** icon and add the following formula to the **OnSelect** property:
 
-**UpdateContext({ContactMethod:"eMail"})**
+    **UpdateContext({ContactMethod:"eMail"})**
 
-  ![Add Mail icon](./media/learning-forms-add-icons/configure-variable.png)
+    ![Add Mail icon](./media/learning-forms-add-icons/configure-variable.png)
 
-Update the **OnSelect** property for the remaining icons:
+1. Update the **OnSelect** property for the remaining icons:
 
-- **UpdateContext({ContactMethod:"Telephone"})**
-- **UpdateContext({ContactMethod:"In Person"})**
+    - **UpdateContext({ContactMethod:"Telephone"})**
+    - **UpdateContext({ContactMethod:"In Person"})**
 
-Select the **Contact Type** field, and type the variable name, **ContactMethod**, into the **Default** property.
+1. Select the **Contact Type** field, and type the variable name, **ContactMethod**, into the **Default** property.
 
-Test the app by selecting each icon and making sure that the selected value appears in **Contact Type**.
+1. Test the app by selecting each icon and making sure that the selected value appears in **Contact Type**.
 
-  ![Add Mail icon](./media/learning-forms-add-icons/final-form.png)
+    ![Add Mail icon](./media/learning-forms-add-icons/final-form.png)
 
 This is just one way to design your app to look more professional, and to be mobile friendly for your users. 
 

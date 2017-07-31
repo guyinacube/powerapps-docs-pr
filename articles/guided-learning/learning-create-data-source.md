@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/15/2017"
+   ms.date="07/31/2017"
    ms.author="v-subohe"/>
 
 # Create a data source using a formula
@@ -49,7 +49,7 @@ To create a collection to use in the galleries, first select all of the data in 
 
    A new app with a blank screen will open in the PowerApps workspace.
 
-1. On the **Insert** tab, click or tap **New Screen**, and select **List screen** to create a new screen. The default list template will appear in the app. 
+1. On the **Home** tab, click or tap **New Screen**, and select **List screen** to create a new screen. The default list template will appear in the app. 
 
    ![New screen](./media/learning-create-data-source/new-screen.png) 
 
