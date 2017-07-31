@@ -1,6 +1,6 @@
 <properties
    pageTitle="Filter a gallery using a drop-down control | Microsoft PowerApps"
-   description="Quickly search for data in a gallery using a filter drop down control"
+   description="Quickly filter for data in a gallery using a drop down control"
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -18,23 +18,39 @@
    ms.date="05/30/2017"
    ms.author="v-subohe"/>
 
-# Using a filter drop-down control in a gallery
-Another way to search for data in a gallery is to use a filter drop-down control. If you're using a drop-down filter in an app for mobile devices, however, drop-down controls are not always the best choice since they require precision. For mobile devices, it's better to use a radio button or a control that's larger.
+# Using a drop-down control to filter data in a gallery
+Another way to search for data in a gallery is to filter the results using a drop-down control. 
+
+**Note:** If you're creating an app for mobile devices, drop-down controls are not always the best choice since they require precision. For mobile devices, consider using radio buttons or a larger control.
 
 ## Create a drop down control
-1. On the **Insert** tab, click or tap **Controls** and then click or tap **Drop down**. When the drop-down control appears in the gallery, resize or move the drop-down control to an appropriate location.
+On the **Insert** tab, click or tap **Controls** and then click or tap **Drop down**. When the drop-down control appears in the gallery, drag and resize it so it fits below the title bar and above the gallery template.
 
-  ![Insert drop-down control](./media/learning-filter-gallery-dropdown/insert-control-dropdown.png)
+   ![Insert drop-down control](./media/learning-filter-gallery-dropdown/insert-control-dropdown.png)
 
-2. In the left-hand pane, search for **Dropdown1** and type a name for the drop-down control so that it's easy to find. For this example, the drop-down control is named **ddCountry**.
+In the left-hand pane, search for **Dropdown1**, click or tap the **...** menu, select **Rename**, and type a name for the drop-down control so that it's easy to find later. For this example, the drop-down control is named **ddCountry**, because you'll filter on the **Country** field. 
+
+   ![Rename drop-down control](./media/learning-filter-gallery-dropdown/rename-control.png)
 
 ## Select data to filter
-1. Determine the data that should be filtered on (for example, filter by country). Go to **Items** in the property list, and, in the formula bar, change the value to **CitySales**, which is the data in the collection.
+Select **Items** in the property list for the drop-down control, and, in the formula bar, change the value to **CitySales**. If you click the drop-down arrow, you'll see that only the **City** values are listed. Because a column wasn't specified in **Items**, PowerApps returned the first column by default. 
 
-2. It's a best practice to add the **Distinct** function to the **Items** property to make sure the data that's retrieved is filtered on specific items. To filter the **CitySales** data by the column **Country**, type the following in the formula bar:
-**Distinct(CitySales,Country)**
+Change the formula to **CitySales.Country**, and now the drop-down displays all the **Country** values. However, notice that there are duplicates, because there are several cities that have the same country. You can remove the duplicates by using the **Distinct** function:
 
-3. Connect the drop-down control to the gallery by changing the value in the **Items** property for the gallery. Click or tap the gallery and make sure that **BrowseGallery1** is selected in the right-hand pane. In the left-hand pane, go to **Items** in the property list. In the formula bar, delete all of the text for the **Items** property and type the following:
+**Distinct(CitySales, Country)**
+
+If the **Distinct** function detects multiple instances of a value, it will only display one of them. 
+
+![Distinct function](./media/learning-filter-gallery-dropdown/distinct.png)
+
+## Select data to display in the gallery
+
+To connect the drop-down control to the gallery, you need to configure the **Items** property for the gallery to use the **Filter** function instead of the **SortByColumn** function. 
+
+Click or tap the gallery to select it, and then select **Items** in the property list. In the formula bar, delete all of the existing text and type the following:
+
 **Filter(CitySales,ddCountry.Selected.Value in Country)**
 
-The drop-down control is set to automatically filter the **CitySales** data by country.
+The gallery is now set to filter the **CitySales** data by the country that is selected in the drop-down.
+
+![Distinct function](./media/learning-filter-gallery-dropdown/filtered-gallery.png)

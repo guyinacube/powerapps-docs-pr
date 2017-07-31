@@ -19,35 +19,58 @@
    ms.author="v-subohe"/>
 
 # Customize the height of list boxes in a gallery
-In the previous section, we created a flexible height gallery and used the **GroupBy** function to group the data by countries. Then, we added a list box to the gallery and displayed the cities for each country. Because we created a flexible height gallery, the list boxes are set to a predefined height. Some of the list boxes are too large for the data that's shown in them. In this section, we're going make the height settings for the list boxes variable.
+In the previous section, you created a flexible height gallery and used the **GroupBy** function to group the data by countries. Then, you added a list box to the gallery and displayed the cities for each country. Because it's a flexible height gallery, the list boxes are set to a predefined height, and some of the list boxes are too large for the data that's shown in them. In this section, you'll make the height settings for the list boxes variable.
 
 ## Make the height of list boxes variable
-Click or tap inside one of the list boxes to select it, and then click or tap **Height** in the property list. In the formula bar, you'll see that the **Height** property has a locked value of **225**. To make the height variable, count the rows and then multiply the number by some value that will represent the row height. In the formula bar, type **CountRows(Cities) * 55**.
 
-The function counts the rows of cities and then sets a row height of 55.
+To do this, we need to know how many rows are in the list box, and how high each row should be. We'll use the **CountRows** function to do this. 
 
-When you run the app, you'll see that the height is variable and adjusts depending on the number of cities listed with the country in each row.
+In the gallery template, click or tap inside the list box to select it, and then select **Height** in the property list. In the formula bar, you'll see that the **Height** property has a default value of **225**.  Replace it with the following formula:
+
+**CountRows(Cities) * 55**
+
+The function counts the number of rows in the list box, and then multiplies that number by a row height of 55. (55 is given as an example. The row height for an app will depend on things like font size and readability.)
+
+When you run the app, you'll see that the list boxes adjust depending on the number of cities listed.
+
+![Variable height list box](./media/learning-customize-listbox-height/variable-listbox.png)
 
 ## Customize a list box using other settings
-Other ways to customize a list box to make it adjust to the data within it include reducing the size of the text, removing the border, and dragging and moving list boxes. <!-- I'm not sure if it should be 'fields' or another term here. Ditto for all the references to 'field' in this section.-->
+
+In this section, you'll modify the list box and layout in order to add a sales total to each item. 
 
 ### Reduce text size
-On the **Home** tab, click or tap the arrow next to the **Size** icon and then click or tap a smaller value, such as **18**. Alternatively, click or tap **Size** in the property list, and then type a smaller size in the formula bar.
+With the list box selected, click or tap the arrow next to the **Size** icon and then select a smaller value, such as **18**. Alternatively, select **Size** in the property list, and then type a smaller size in the formula bar.
+
+![Reduce font](./media/learning-customize-listbox-height/reduce-font.png)
 
 ### Remove borders
-Remove the border around the list box. On the **Home** tab, click or tap **Border** and then click or tap **Border Style** and select **None**.
+On the **Home** tab, click or tap **Border**, select **Border style**, and then select **None**.
 
-### Move a list box to accommodate more fields
-Move the city list box by dragging it closer to the **country** field (which is the **United States** in the example).
+![Remove border](./media/learning-customize-listbox-height/remove-border.png)
 
-Adjust the width of fields to make room for another field. With the **country** field selected in the gallery, click or tap **Width** in the property list, and then type **Gallery2.TemplateWidth/2** in the formula bar.
+### Move the list box to accommodate more fields
+Move the list box by dragging it to the left side of the template, underneath the **Country** field.
 
-**Gallery2** is the name of the gallery that's open, and when you type **TemplateWidth/2**, you are dividing the template width in half. The **country** field is reduced by half.
+![Move listbox](./media/learning-customize-listbox-height/move-listbox.png)
 
-Copy the **country** field (Ctrl+C) and move the copy to the other side of the gallery template on the same line. The copy of this field will be **sales**. <!-- note that the item selected in the property list automatically changes to Text when the copy is moved)--> Then, create a math function that aggregates the total sales for all four cities in the country that's selected.
-With **Text** selected in the property list, type the following in the formula bar:
+Adjust the width of the **Country** field to make room to display the sales total on the right side. With the **Country** field selected in the template, select **Width** in the property list, and then type **Gallery2.TemplateWidth/2** in the formula bar. This automatically resizes the **Country** field to one half the width of the template.
 
-**Text(Sum(Filter(CitySales,Country=ThisItem.Country),Sales, "$#,###")**
+![Reduce width](./media/learning-customize-listbox-height/half-width.png) 
 
-The formula is wrapped in a **Text** function so the sales figure displays as currency with a dollar sign. Three things were accomplished by this formula: the data is filtered, the sales are aggregated, and then the sales are formatted as currency.
-<!-- add a screenshot showing the final result here -->
+**Note:** Depending on your app, your gallery may not be named **Gallery2**. You can verify the correct name in the left-hand properties pane. 
+
+![Gallery name](./media/learning-customize-listbox-height/gallery-name.png)
+
+Copy and paste the **Country** field and move the copy to the right side of the gallery template, opposite the **Country** field. Change the **Text** property to the following function:
+
+**Text(Sum(Filter(CitySales,Country=ThisItem.Country),Sales), "$#,###")**
+
+This formula accomplishes three things:
+
+- Filters all the sales numbers for a given country
+- Totals all the sales numbers
+- Formats the final total as text so it displays as currency
+
+![Final screen](./media/learning-customize-listbox-height/final-display.png)
+

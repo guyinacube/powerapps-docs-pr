@@ -23,7 +23,7 @@ In this section, you'll use a formula to create a data source, which you'll then
 
 ## Collections and records
 
-In resources, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection, or table, that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll create a collection named **CitySales**.
+In the resources for this section, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll use it to create a collection named **CitySales**.
 
 **Note:** The data in the text file is formatted specifically for the **ClearCollect** function. As an example, the complete row for Seattle sales is shown here:
 
@@ -41,7 +41,7 @@ To create a collection to use in the galleries, first select all of the data in 
    **Note:** It's recommended to use a text editor such as NotePad to open and copy the data. Using a word processor, such as Word, can introduce unintended formatting into the text which PowerApps won't recognize, for example, curly quotes.
    
 
-2. Open PowerApps, click or tap **New** on the **File** menu (near the left-hand edge).
+2. Open PowerApps, and click or tap **New** on the **File** menu (near the left-hand edge).
 
 3. On the **Blank app** tile, click or tap **Phone layout**.
 
@@ -49,7 +49,11 @@ To create a collection to use in the galleries, first select all of the data in 
 
    A new app with a blank screen will open in the PowerApps workspace.
 
-4. Select **OnVisible** in the **Property** list drop-down.
+1. On the **Insert** tab, click or tap **New Screen**, and select **List screen** to create a new screen. The default list template will appear in the app. 
+
+   ![New screen](./media/learning-create-data-source/new-screen.png) 
+
+4. With the new screen selected, click **OnVisible** in the **Property** list drop-down.
 
    ![Set OnVisible property](./media/learning-create-data-source/onvisible.png)
 
@@ -57,9 +61,10 @@ To create a collection to use in the galleries, first select all of the data in 
 
    ![Copy data](./media/learning-create-data-source/copy-data.png)
 
-6. On the **Insert** tab, click or tap **New Screen**, and select **Blank** to create a new screen. In the left-hand pane, select **Screen1**. Going back to **Screen1** this way triggers the **OnVisible** property of the screen so that the collection is built.
+1. In the left-hand pane, select the first screen, click the properties  menu **(...)**, and select **Delete**.
 
-   ![New screen](./media/learning-create-data-source/new-screen.png)
+    ![Delete screen](./media/learning-create-data-source/delete-screen.png)
+
 
 7. On the **View** tab, click or tap **Collections** and make sure the table was created. You won't see all of the data in the table, only the first five rows. Review the table to make sure all of the data is there.
 

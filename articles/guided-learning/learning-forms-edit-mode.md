@@ -20,30 +20,86 @@
 
 
 # Understand the difference between an edit form and a new form
-In the previous video, we discussed how to create cascading drop-down lists. In this section, we'll discuss some differences between an edit form and a new form and why it's important for the cascading drop-down lists.
+In the previous video, you saw how to create cascading drop-down lists. This section, discussed the differences between an edit form and a new form, and how it affects how the data is displayed in those lists and other fields.
 
-## Edit forms and a new forms 
-When you add an edit form, you're basically adding two forms at the same time because an edit form can convert to a new form when it needs to. With an existing item in a SharePoint list, if you click or tap the pencil icon, the item is in edit form. It's the same exact form but in a mode called edit. When you click the plus sign (+) in an item, you create a new form. In edit form, you want the SharePoint list to look at the data that's currently set. Be careful when you make changes to the default values as you need to be aware of what mode the form is in.
+## A quick review of screens and forms
+
+When you create an app from SharePoint, PowerApps automatically builds an app with three screens, which you can view and access in the left-hand navigation pane: a **Browse** screen, a **Details** screen, and an **Edit** screen. 
+
+The **Browse** screen contains a **gallery**, which shows all the items in your data source. 
+
+![Browse screen](./media/learning-forms-edit-mode/browse-screen.png)
+
+The **Details** screen contains a **display form**, which displays the details of a selected item. 
+
+![Details screen](./media/learning-forms-edit-mode/details-screen.png)
+
+The **Edit** screen contains an **edit form**, which can be used two ways: in **edit form mode**, to modify an existing item, or in **new form mode**, to create a new item. It's the same form, but how it displays depends on how you get there. 
+
+![Edit and new screen](./media/learning-forms-edit-mode/edit-and-new-modes.png)
+
+## Edit form mode vs. New form mode
+
+**Edit form mode** - If you click the pencil icon on the **Details** screen of an item, the **Edit** screen opens in **edit form mode**, and displays the data for the current item for you to edit.
+
+![Open edit](./media/learning-forms-edit-mode/open-for-edit.png)
+
+**New form mode** - If you click the "**+**" on the **Browse** screen,  the **Edit** screen opens in **new form mode**, and displays the empty fields that you can edit to create a new item. 
+
+![Open new](./media/learning-forms-edit-mode/open-for-new.png)
+
+Notice that in the **new form mode** example, some of the fields already have data. This is default data and isn't a problem in **new form mode**, because you can just overwrite the default values with your new values. However, when you open an item in **edit form mode**, you'll want the data that is displayed to be the current, or authoritative, data that is in the SharePoint list, not the default data.
+
+The following example shows the detail screen for another item along with the **edit form mode** of the item. 
+
+![Open new](./media/learning-forms-edit-mode/unmatch-example.png)
+
+The **DivisionCode** value of **203** in the detail screen is correct. (Although it's not shown on the detail screen, the Zone value is **Zone 2**, and the subcode is **203**.) However, when it's opened in **edit form mode**, the default form values are displayed instead of the actual values. 
+
+To make sure the correct values are displayed in **edit form mode**, the app needs to do two things:
+
+1. Determine if the form is in **edit form mode**.
+2. If it is, then set the values to the current SharePoint values. 
+
+You can do this by using an **If** function in the formulas for the **Default** properties of these fields.
 
 ## Determine whether a form is in edit mode
-In the previous video, we made the **Division Code** field invisible. To see hidden fields in a form, press and hold the **Alt** key, which shows all fields whether they're hidden or not. Then, click or tap the **Division Code** field to select it.
 
-Go to **Visible** in the property list, and in the formula bar, type **True** to make the field visible again.
+In the previous video, you made the **DivisionCode** field invisible. Before you start, you'll need to make it visible again in order to edit it.
 
-For the **Division Code** field, the value for the **Default** property is set to **ddSubCodes.Selected.Value**. As a best practice, when we're in edit mode, make sure the division code is always retrieved from the SharePoint list. To make sure this happens, we need to add an **If** statement to the **Default** property. In the formula bar, type:
+1. In the left-hand pane, under **EditScreen1**, select **EditForm1**.
+1. In the right-hand pane, select **Data**, then scroll down in **Fields** and select **DivisionCode**. 
+1. Click **Properties**, and set **Visible** to **on**. 
+
+    ![Make field visible](./media/learning-forms-edit-mode/make-visible.png)
+
+### Division Code field
+
+Select the **Division Code** field, and select **Default** from the property list. The current value is **ddSubCodes.Selected.Value**, which simply gets whatever value is in the current **ddSubCodes** field. You can use an **If** function to determine which mode the form is in, and which action to take. Change the value to this formula:
+
 **If(EditForm1.Mode=FormMode.Edit,Parent.Default,ddSubCodes.Selected.Value)**
 
-This is important because the data for the **Zones** drop-down list doesn't exist in the SharePoint list that we're pulling data from. To get the default value for **Zones**, we need to look up the zone for the division code if it's in edit form.
-For the **Default** property of the **Zones** drop-down list, type the following in the formula bar:
+- **EditForm1.Mode=FormMode.Edit**: determines if the form is in **edit form mode**. 
+- **Parent.Default**: if true, it gets the value from the SharePoint **IssuesLog** list (the SharePoint list being the *parent*, or data source).
+- **ddSubCodes.Selected.Value**: if false, then it gets the value from **ddSubCodes**.
+
+### Zones field
+
+You can also use an **If** function for the **ddZones** field. However, remember that the data source for the **ddZones** field is the **Zones** list, not the **IssuesLog** list (the *parent*). You can still access the **Zones** list, though, by using a **Lookup** function. Change the **Default** property to this formula:
+
 **If(EditForm1.Mode=FormMode.Edit,LookUp(Zones,ThisItem.DivisionCode in SubCode,Title))**
 
-This formula checks to see if the form is in edit mode and, if it is, then it looks up the values.
+- **EditForm1.Mode=FormMode.Edit**: determines if the form is in **edit form mode**.
+- **LookUp(Zones,ThisItem.DivisionCode in SubCode,Title)**: if true, it gets the value of **DivisionCode** from the current item, looks in the **SubCode** column of the **Zones** list for a match, and then gets the **Title** (or Zone) for that SubCode. 
 
-The data in the **SubCodes** drop-down list is pulled from the SharePoint list. For this drop-down list, go to **Default** in the property list, and in the formula bar, type:
+### SubCode field
+
+The **SubCodes** field uses another **If** function. Select the **Default** property, and change it to this formula:
+
 **If(EditForm1.Mode=FormMode.Edit,ThisItem.DivisionCode)**
 
-This formula says if the form is in edit form, then the default value should come from the SharePoint list.
+- **EditForm1.Mode=FormMode.Edit**: determines if the form is in **edit form mode**.
+- **ThisItem.DivisionCode**: if true, then use the value of **DivisionCode** from the current item.
 
-The key point in this video is to help you understand if a form's in edit mode, then it needs to go look up the source for the field in SharePoint. However, if it's a new form, then we want to ignore those default values and just use the actual raw data.
-
-Add a new item to **IssesLog** to test your changes and then review it in edit mode.
+Test the app after making these changes, and see how the values display differently depending on which mode you are in.
+As you create apps, keep in mind how the default values can affect what is displayed to the user when they are editing an existing item or creating a new item.
