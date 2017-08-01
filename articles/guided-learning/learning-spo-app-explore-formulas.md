@@ -37,7 +37,7 @@ To add the US currency symbol, click or tap the label control, and in the formul
 
 ![Price currency formatting](./media/learning-spo-app-explore-formulas/price-formatted.png)
 
-The formula - `Text(Price, "[$-en-US]$ ##.00"` uses the **Text** _function_ to specify how the number should be formatted. The formula is like an Excel formula, but PowerApps formulas refer to controls and other app elements rather than cells in a spreadsheet. If you click or tap a control and then click or tap the property drop down list, you see a list of properties that are relevant to the control. For example, here is a partial list of the properties for a label. Some properties are relevant across a broad range of controls and others only for a specific control.
+The formula - `Text(Price, "[$-en-US]$ ##.00"` uses the **Text** *function* to specify how the number should be formatted. The formula is like an Excel formula, but PowerApps formulas refer to controls and other app elements rather than cells in a spreadsheet. If you click or tap a control and then click or tap the property drop down list, you see a list of properties that are relevant to the control. For example, here is a partial list of the properties for a label. Some properties are relevant across a broad range of controls and others only for a specific control.
 
 ![Setting properties](./media/learning-spo-app-explore-formulas/properties.png)
 
@@ -66,7 +66,7 @@ There are many other formulas in the app, so take some time to click on controls
 ## Wrapping it all up
 This brings us to the end of exploring the generated app, and taking a look behind the scenes at the screens, controls, properties, and formulas that give the app its capabilities. If you've followed along, you should have a better understanding of how a generated app works. Now you can take this understanding into creating your own apps. 
 
-Before moving on to the next section, we want to loop back to SharePoint and show you how the app is now integrated with the list experience. As you can see **FlooringApp** now functions as a _view_ of the list, and you launch the app by clicking **Open**. This provides a simple way to manage your lists with a friendly customized experience.
+Before moving on to the next section, we want to loop back to SharePoint and show you how the app is now integrated with the list experience. As you can see **FlooringApp** now functions as a *view* of the list, and you launch the app by clicking **Open**. This provides a simple way to manage your lists with a friendly customized experience.
 
 ![App as view of Sharepoint list](./media/learning-spo-app-explore-formulas/list-view.png)
 

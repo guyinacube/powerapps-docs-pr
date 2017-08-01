@@ -20,7 +20,7 @@
 
 
 # Understand the difference between an edit form and a new form
-In the previous video, you saw how to create cascading drop-down lists. This section, discussed the differences between an edit form and a new form, and how it affects how the data is displayed in those lists and other fields.
+In the previous video, you saw how to create cascading drop-down lists. In this section, we'll discuss some differences between an edit form and a new form and why it's important for the cascading drop-down lists.
 
 ## A quick review of screens and forms
 
@@ -40,17 +40,17 @@ The **Edit** screen contains an **edit form**, which can be used two ways: in **
 
 ## Edit form mode vs. New form mode
 
-**Edit form mode** - If you click the pencil icon on the **Details** screen of an item, the **Edit** screen opens in **edit form mode**, and displays the data for the current item for you to edit.
+**Edit form mode** - If you click the pencil icon on the **Details** screen of an item, the **Edit** screen opens in **edit form mode**. The form displays data for the current item so you can edit that data.
 
 ![Open edit](./media/learning-forms-edit-mode/open-for-edit.png)
 
-**New form mode** - If you click the "**+**" on the **Browse** screen,  the **Edit** screen opens in **new form mode**, and displays the empty fields that you can edit to create a new item. 
+**New form mode** - If you click the "**+**" on the **Browse** screen,  the **Edit** screen opens in **new form mode**. The form displays empty fields so you can create a new item. 
 
 ![Open new](./media/learning-forms-edit-mode/open-for-new.png)
 
-Notice that in the **new form mode** example, some of the fields already have data. This is default data and isn't a problem in **new form mode**, because you can just overwrite the default values with your new values. However, when you open an item in **edit form mode**, you'll want the data that is displayed to be the current, or authoritative, data that is in the SharePoint list, not the default data.
+Notice that in the **new form mode** example, some of the fields already have data. This is default data and isn't a problem in **new form mode**, because you can just overwrite the default values with your new values. However, when you open an item in **edit form mode**, you want the current data from the SharePoint list, not the default data.
 
-The following example shows the detail screen for another item along with the **edit form mode** of the item. 
+The following example shows the detail screen for another item along with the edit screen (in **edit form mode**) for the item. 
 
 ![Open new](./media/learning-forms-edit-mode/unmatch-example.png)
 
@@ -59,7 +59,7 @@ The **DivisionCode** value of **203** in the detail screen is correct. (Although
 To make sure the correct values are displayed in **edit form mode**, the app needs to do two things:
 
 1. Determine if the form is in **edit form mode**.
-2. If it is, then set the values to the current SharePoint values. 
+2. If it is, then set the values to the current values in SharePoint. 
 
 You can do this by using an **If** function in the formulas for the **Default** properties of these fields.
 
@@ -69,7 +69,7 @@ In the previous video, you made the **DivisionCode** field invisible. Before you
 
 1. In the left-hand pane, under **EditScreen1**, select **EditForm1**.
 1. In the right-hand pane, select **Data**, then scroll down in **Fields** and select **DivisionCode**. 
-1. Click **Properties**, and set **Visible** to **on**. 
+1. Click **Properties**, and set **Visible** to **On**. 
 
     ![Make field visible](./media/learning-forms-edit-mode/make-visible.png)
 

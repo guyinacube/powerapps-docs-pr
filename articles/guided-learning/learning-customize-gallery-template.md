@@ -15,11 +15,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/15/2017"
+   ms.date="07/31/2017"
    ms.author="v-subohe"/>
 
 # Customize a gallery template
-In this section, you'll see how to customize the gallery template by formatting fields, aligning multiple fields, or changing a background color.
+In this section, you'll see how to customize the gallery template by formatting fields, aligning multiple fields, and changing a background color.
 
 ## Format fields
 1. In the **Flooring Sales** example we've been discussing, the sales figure may be difficult to recognize as currency in its current format. To reformat the sales figure to make it clearer that it's currency, highlight the field that shows the sales figure in the gallery. The value that exists for each sales item is represented as **ThisItem.Sales**.
@@ -43,11 +43,11 @@ In this section, you'll see how to customize the gallery template by formatting 
 
 ## Arranging the fields in a template
 
-When data is loaded into a gallery template, it's not necessarily formatted or laid out the way you may want it. In this section, you'll arrange the fields so that it's more readable for the user.
+When data is loaded into a gallery template, it's not necessarily formatted or laid out the way you want it. In this section, you'll arrange the fields so that it's more readable for the user.
 
 First, we'll change the width of the **City** and **Short** fields so they don't overlap with other fields.
 
-1. Select the **City** field, and in the left-hand pane, select **Width** in the property list. By default, this is set to **Parent.TemplateWidth - xx**. One of the ways to change the width of fields consistently is to divide it by 2 or 4, so that it only uses half or one-quarter of the width of the template. For this example, enter **Parent.TemplateWidth/4** in the formula bar, so the field occupies only one-quarter of the template width. Make the same changes to the **Short** field. 
+1. Select the **City** field, and in the left-hand pane, select **Width** in the property list. By default, this is set to **Parent.TemplateWidth - [some value]**. One of the ways to change the width of fields consistently is to divide it by 2 or 4, so that it only uses half or one-quarter of the width of the template. For this example, enter **Parent.TemplateWidth/4** in the formula bar, so the field occupies only one-quarter of the template width. Make the same changes to the **Short** field. 
 
 2. After reducing the size of the **City** and **Short** fields, move the **Short** field to the upper right of the template, and move the **City** field underneath it.
 
@@ -72,7 +72,7 @@ Hold down the Ctrl key and select both the **Country** and **Sales** fields. The
 
 ![Align fields](./media/learning-customize-gallery-template/align-left.png)
 
-  **Note:** As you move fields around the template, be careful that fields don't overlap each other. For example, if the **City** field is moved next to the **Sales** field, and the **Sales** field contains a very large number, it may hide the city name. To reduce the size of the field that's overlapping another field, using a corner of a field, drag it to make it smaller; or, to move a field, grab the edge and move it. As the field is moved, PowerApps automatically aligns it.
+  **Note:** As you move fields around the template, be careful that fields don't overlap each other. For example, if the **City** field is moved next to the **Sales** field, and the **Sales** field contains a very large number, it may hide the city name. To reduce the size of the field that's overlapping another field, drag the corner of a field to make it smaller. To move a field, grab the edge and move it. As the field is moved, PowerApps automatically aligns it.
 
 After arranging the fields, if the template has too much blank space, you can drag the bottom edge of the template up to reduce the overall size.
 
@@ -85,7 +85,7 @@ To change the background color of the template, select **TemplateFill** in the p
 
 ![Template color](./media/learning-customize-gallery-template/template-fill.png)
 
-Another way to use the **TemplateFill** property is to change the color of an item when it is selected. You can use an **If** function to set the color of an item when it is selected, and then set it back to the origianl color when it's not. Add this formula to the **TemplateFill** property: 
+Another way to use the **TemplateFill** property is to change the color of an item when it is selected. You can use an **If** function to set the color of an item when it is selected, and then set it back to the original color when it's not. Add this formula to the **TemplateFill** property: 
 
   **If(ThisItem.IsSelected,LightBlue,White)**
 
