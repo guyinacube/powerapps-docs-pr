@@ -17,26 +17,26 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/16/2017"
+   ms.date="08/03/2017"
    ms.author="v-brbene"/>
 
 # Managing security in the Common Data Service
 
-In this video, we look at how to manage security in the Common Data Service. We all know it's critical to help customers secure the data that they need, in the way that they want. And from day one, we've supported this. We'll start at the top, and talk about the different ways that administrators can secure their data, starting with the environment, then securing the database, and finally, securing individual entities. 
+In this topic, we look at how to manage security in the Common Data Service. We all know it's critical to help customers secure their data in the right way. And from day one, we've supported this. We'll talk about the different ways that administrators can secure their data - starting with the environment, then securing the database, and finally, securing individual entities. 
 
 
 ## Environment roles
 
-In PowerApps, click the settings icon and then click **Admin center**. 
+1. In PowerApps, click the settings icon and then click **Admin center**. 
 
-![Admin-center](./media/learning-common-data-service-managing-security/admin-center.png)
+    ![Admin-center](./media/learning-common-data-service-managing-security/admin-center.png)
 
-In the **Admin center**, click **Environments**, and then select your environment.
+1. In the **Admin center**, click **Environments**, and then select your environment.
 
-![Environments](./media/learning-common-data-service-managing-security/environment-roles.png)
+    ![Environments](./media/learning-common-data-service-managing-security/environment-roles.png)
  
 
-We’ll start by looking at the environment roles. There are two environment roles created automatically in each environment. 
+We’ll start by looking at the environment roles. There are two roles created automatically in each environment. 
 
 The first role is the **Environment Admin**. This role gives users all the permissions they need to perform administrative actions on an environment, including:
 
@@ -52,14 +52,12 @@ The second environment role is the **Environment Maker**. This role allows the u
 
 ## Database modes
 
-A database in PowerApps can be in one of two modes: **Open** or **Restricted**. Click **Database**.
-
-- **Open** - Can be accessed by anyone in the tenant without any authorization. 
-- **Restricted** - Requires that security is evaluated so that individual users only see the data that they need.
+Click **Database**. A database in PowerApps can be in one of two modes: **Open** or **Restricted**. 
 
 ![Database-modes](./media/learning-common-data-service-managing-security/database-modes.png)
 
-
+- **Open** - Can be accessed by anyone in the tenant without any authorization. 
+- **Restricted** - Requires that security is evaluated so that individual users only see the data that they need. This is the default and recommended setting.
 
 ## User roles in the database
 
@@ -69,52 +67,65 @@ The entire Common Data Service security model is based around **roles**.  There 
 
 
 - **Database Owner** - This role lets users access and perform any administrative actions on the database.
-- **Organization User** - This role gives users access to the database only if they are using applications that are stored there. If you share a PowerApp application with users, those users are also added to the **Organization User** role.
+- **Organization User** - This role gives users access to the database only if they are using applications that store data there. If you share a PowerApp application with users, those users are also added to the **Organization User** role.
 
 
 ## Creating a role and assigning users
 
-In earlier sessions, we created an app to manage flooring estimates. Now, we’re going to create a role that lets users see active flooring estimates. First, we’ll create a new role, then we’ll create a new permission set, and then we’ll link the permission set to the role. 
+In earlier topics, we created an app to manage flooring estimates. Now, we’re going to create a role that lets users see active flooring estimates. First, we’ll create a new role, then we’ll create a new permission set, and then we’ll link the permission set to the role.
 
-Open the PowerApps Admin center, click **Environments**, and then click on your environment. Click **User Roles**, and then click **New Role**. 
+### Create a user role 
 
-![New-user-role](./media/learning-common-data-service-managing-security/new-user-role.png) 
+1. Open the PowerApps Admin center, click **Environments**, and then click on your environment. 
 
-In **Name**, enter **Flooring Estimates – Active**, in **Description**, enter **Access to view active flooring estimates**, and then click **Create**. 
+1. Click **User Roles**, and then click **New Role**. 
 
-![New-user-configuration](./media/learning-common-data-service-managing-security/new-role-dialog.png) 
+    ![New-user-role](./media/learning-common-data-service-managing-security/new-user-role.png) 
 
-In the list of user roles, click the new role you just created, and then click **Users**. 
+1. In **Name**, enter **Flooring Estimates – Active**, in **Description**, enter **Access to view active flooring estimates**, and then click **Create**. 
 
-![Line-of-business apps](./media/learning-common-data-service-managing-security/role-users.png)
+    ![New-user-configuration](./media/learning-common-data-service-managing-security/new-role-dialog.png) 
 
-In order for users to be granted the permissions of the role, they must be specifically added to the role. You can add users from your company directory, or by email, or you can add user groups. For this session, search for your own account, select it, and click **Save**.
+1. In the list of user roles, click the new role you just created, and then click **Users**. 
 
-![Select-users](./media/learning-common-data-service-managing-security/select-role-users.png) 
+    ![Line-of-business apps](./media/learning-common-data-service-managing-security/role-users.png)
 
-Next, we’ll create a **permission set**. A permission set defines what level of permissions a user has on specific entities. Click the back arrow to return to the **User Roles** page, click **Permission sets**, and then click **New Permission set**.
+    In order for users to be granted the permissions of the role, they must be specifically added to the role. You can add users from your company directory, or by email, or you can add user groups. 
 
-![New-permission-set](./media/learning-common-data-service-managing-security/new-permission-set.png)
+1. For this topic, search for your own account, select it, and click **Save**.
 
-In **Name**, enter **Flooring Estimate Permission Set**, in **Description**, enter **Allows access to the FlooringEstitmate entity**, and then click **Create**.  
+    ![Select-users](./media/learning-common-data-service-managing-security/select-role-users.png) 
 
-![Permission-set-create](./media/learning-common-data-service-managing-security/new-permission-set-dialog.png) 
+### Create a permission set
+Next, we’ll create a **permission set**. A permission set defines what level of permissions a user has on specific entities.
 
-In the list of permission sets, click **Flooring Estimate Permission Set**. 
+1. Click the back arrow to return to the **Security** page, click **Permission sets**, and then click **New Permission set**.
 
-Scroll down to the **FlooringEstimates** entity that you created in the previous video, select the **Create**, **Read**, **Update**, and **Delete** permissions, and click **Save**. 
+    ![New-permission-set](./media/learning-common-data-service-managing-security/new-permission-set.png)
 
-![Permission-set-configuration](./media/learning-common-data-service-managing-security/configure-permission-set.png)
+1. In **Name**, enter **Flooring Estimate Permission Set**, in **Description**, enter **Allows access to the FlooringEstitmate entity**, and then click **Create**.  
 
-Next, we’ll add this permission set to the user role. Because you also added your account to the user role, this will let you have Create, Read, Update, and Delete permissions against the **FlooringEstimate** entity. 
+    ![Permission-set-create](./media/learning-common-data-service-managing-security/new-permission-set-dialog.png) 
 
-Click the back arrow to return to your environment page. Click **User roles**, then click **FlooringEstimates Active**, and then click **Permissions Sets**.
+1. In the list of permission sets, click **Flooring Estimate Permission Set**. 
 
-![Search-permission-set](./media/learning-common-data-service-managing-security/add-permission-set-to-role.png) 
+1. Scroll down to the **FlooringEstimates** entity that you created in the previous topic, select the **Create**, **Read**, **Update**, and **Delete** permissions, and click **Save**. 
 
-Search for **Flooring Estimate Permission Set**, select it, and click **Save**. 
+    ![Permission-set-configuration](./media/learning-common-data-service-managing-security/configure-permission-set.png)
 
-![Add-permission-set-to-role](./media/learning-common-data-service-managing-security/select-permission-set.png) 
+### Assign the permission set to the user role
+
+Next, we’ll assign the permission set to the user role. Because you added your account to the user role, you will have Create, Read, Update, and Delete permissions against the **FlooringEstimate** entity. 
+
+1. Click the back arrow to return to the **Security** page. 
+
+1. Click **User roles**, then click **FlooringEstimates Active**, and then click **Permissions Sets**.
+
+    ![Search-permission-set](./media/learning-common-data-service-managing-security/add-permission-set-to-role.png) 
+
+1. Search for **Flooring Estimate Permission Set**, select it, and click **Save**. 
+
+    ![Add-permission-set-to-role](./media/learning-common-data-service-managing-security/select-permission-set.png) 
 
 Now, access permissions to the **FlooringEstimates** entity can easily be managed by adding or removing users from the **Flooring Estimates – Active** user role. If you need to modify the permission levels - for example, you don't want users to be able to delete data from the entity - uncheck the related checkbox in **Flooring Estimate Permission Set** and it will affect all users in the user role.
 

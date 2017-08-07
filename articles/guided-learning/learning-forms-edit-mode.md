@@ -15,36 +15,38 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/23/2017"
+   ms.date="08/04/2017"
    ms.author="v-subohe"/>
 
 
 # Understand the difference between an edit form and a new form
-In the previous video, you saw how to create cascading drop-down lists. In this section, we'll discuss some differences between an edit form and a new form and why it's important for the cascading drop-down lists.
+In the previous topic, you saw how to create cascading drop-down lists. In this topic, we'll discuss some differences between an edit form and a new form and why it's important for the cascading drop-down lists.
 
 ## A quick review of screens and forms
 
-When you create an app from SharePoint, PowerApps automatically builds an app with three screens, which you can view and access in the left-hand navigation pane: a **Browse** screen, a **Details** screen, and an **Edit** screen. 
+When you create an app from SharePoint, PowerApps automatically builds an app with three screens, which you can view and access in the left-hand navigation pane: a **Browse** screen, a **Details** screen, and an **Edit** screen:
 
-The **Browse** screen contains a **gallery**, which shows all the items in your data source. 
+- The **Browse** screen contains a **gallery**, which shows all the items in your data source. 
 
-![Browse screen](./media/learning-forms-edit-mode/browse-screen.png)
+    ![Browse screen](./media/learning-forms-edit-mode/browse-screen.png)
 
-The **Details** screen contains a **display form**, which displays the details of a selected item. 
+    Remember that your app might display different fields by default in the gallery.
 
-![Details screen](./media/learning-forms-edit-mode/details-screen.png)
+- The **Details** screen contains a **display form**, which displays the details of a selected item. 
 
-The **Edit** screen contains an **edit form**, which can be used two ways: in **edit form mode**, to modify an existing item, or in **new form mode**, to create a new item. It's the same form, but how it displays depends on how you get there. 
+    ![Details screen](./media/learning-forms-edit-mode/details-screen.png)
 
-![Edit and new screen](./media/learning-forms-edit-mode/edit-and-new-modes.png)
+- The **Edit** screen contains an **edit form**, which can be used two ways: in **edit form mode**, to modify an existing item, or in **new form mode**, to create a new item. It's the same form, but how it displays depends on how you get there. 
+
+    ![Edit and new screen](./media/learning-forms-edit-mode/edit-and-new-modes.png)
 
 ## Edit form mode vs. New form mode
 
-**Edit form mode** - If you click the pencil icon on the **Details** screen of an item, the **Edit** screen opens in **edit form mode**. The form displays data for the current item so you can edit that data.
+In **Edit form mode** - If you click the pencil icon on the **Details** screen of an item, the **Edit** screen opens in **edit form mode**. The form displays data for the current item so you can edit that data.
 
 ![Open edit](./media/learning-forms-edit-mode/open-for-edit.png)
 
-**New form mode** - If you click the "**+**" on the **Browse** screen,  the **Edit** screen opens in **new form mode**. The form displays empty fields so you can create a new item. 
+In **New form mode** - If you click the "**+**" on the **Browse** screen,  the **Edit** screen opens in **new form mode**. The form displays empty fields so you can create a new item. 
 
 ![Open new](./media/learning-forms-edit-mode/open-for-new.png)
 
@@ -65,7 +67,7 @@ You can do this by using an **If** function in the formulas for the **Default** 
 
 ## Determine whether a form is in edit mode
 
-In the previous video, you made the **DivisionCode** field invisible. Before you start, you'll need to make it visible again in order to edit it.
+In the previous topic, you made the **DivisionCode** field invisible. Before you start, you'll need to make it visible again in order to edit it.
 
 1. In the left-hand pane, under **EditScreen1**, select **EditForm1**.
 1. In the right-hand pane, select **Data**, then scroll down in **Fields** and select **DivisionCode**. 
@@ -73,9 +75,9 @@ In the previous video, you made the **DivisionCode** field invisible. Before you
 
     ![Make field visible](./media/learning-forms-edit-mode/make-visible.png)
 
-### Division Code field
+### Set the default for the Division Code field
 
-Select the **Division Code** field, and select **Default** from the property list. The current value is **ddSubCodes.Selected.Value**, which simply gets whatever value is in the current **ddSubCodes** field. You can use an **If** function to determine which mode the form is in, and which action to take. Change the value to this formula:
+Select the **Division Code** field, and select **Default** from the property drop-down list. You can use an **If** function to determine which mode the form is in, and which action to take. Change the value to this formula:
 
 **If(EditForm1.Mode=FormMode.Edit,Parent.Default,ddSubCodes.Selected.Value)**
 
@@ -83,7 +85,7 @@ Select the **Division Code** field, and select **Default** from the property lis
 - **Parent.Default**: if true, it gets the value from the SharePoint **IssuesLog** list (the SharePoint list being the *parent*, or data source).
 - **ddSubCodes.Selected.Value**: if false, then it gets the value from **ddSubCodes**.
 
-### Zones field
+### Set the default for the Zones drop-down list
 
 You can also use an **If** function for the **ddZones** field. However, remember that the data source for the **ddZones** field is the **Zones** list, not the **IssuesLog** list (the *parent*). You can still access the **Zones** list, though, by using a **Lookup** function. Change the **Default** property to this formula:
 
@@ -92,7 +94,7 @@ You can also use an **If** function for the **ddZones** field. However, remember
 - **EditForm1.Mode=FormMode.Edit**: determines if the form is in **edit form mode**.
 - **LookUp(Zones,ThisItem.DivisionCode in SubCode,Title)**: if true, it gets the value of **DivisionCode** from the current item, looks in the **SubCode** column of the **Zones** list for a match, and then gets the **Title** (or Zone) for that SubCode. 
 
-### SubCode field
+### Set the default for the SubCode drop-down list
 
 The **SubCodes** field uses another **If** function. Select the **Default** property, and change it to this formula:
 

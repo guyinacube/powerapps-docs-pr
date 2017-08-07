@@ -15,15 +15,14 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/07/2017"
+   ms.date="08/05/2017"
    ms.author="v-subohe"/>
 
 # Building a SharePoint list to use in an app
-In previous sessions, you created two apps for Contoso hardwood flooring. The first app estimated the cost of the flooring for the size of the room, and the second displayed sales figures for the cities and countries in which flooring was sold. Next, you'll create an app for the workers who are installing the flooring. This app lets them log any issues they encounter on a job. It will store the data on your SharePoint site, and workers can add issues to SharePoint using the app.
+In previous topics, you've created apps related to flooring. Now, you'll create an app for the workers who are installing the flooring. This app lets them log any issues they encounter on a job. It will store the data in a SharePoint Online list, and workers can add issues to the list using the app.
 
 ## Add a new SharePoint list 
-
-In this session, you'll create two SharePoint lists that you'll use to build the app over the next several sessions.  
+In this topic, you'll create two SharePoint lists that you'll use to build the app over the next several topics.  
 
 On your SharePoint site, create a new custom list, and name it **IssuesLog**.  After SharePoint creates it, open the **IssuesLog** list from the site's **Contents** page. 
 
@@ -63,7 +62,7 @@ Add one new column to the list.
 
 | Data type | Column name |
 |-----------|-------------|
-| Single line of text | SubCodes |
+| Single line of text | SubCode |
 
 Click or tap **Quick edit** in the upper left-hand side to add the zones. In the table that appears: under the **Title** column type each zone, and under the **SubCode** column type each subcode. For example:
 
@@ -80,4 +79,4 @@ After saving the edits, your SharePoint list should look similar to this:
 
 ![Zones](./media/learning-prepare-to-create-sharepoint-app/zones-finish.png)
 
-In the next session, we'll discuss how to build the app.
+In the next topic, we'll discuss how to build the app.

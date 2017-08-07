@@ -17,11 +17,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/09/2017"
+   ms.date="08/03/2017"
    ms.author="v-brbene"/>
 
 # The Common Data Service
-In this series of videos, we’ll find out about the Common Data Service, explain the data model that we use, and look at the different types of entities used with the Common Data Service. Then we’ll create a custom entity and build an app together. 
+In this series of topics, we’ll find out about the Common Data Service, explain the data model that we use, and look at the different types of entities used with the Common Data Service. Then we’ll create a custom entity and build an app together. 
 
 
 ## What is the problem that we’re trying to solve today?
@@ -42,7 +42,5 @@ With the Common Data Service, you don’t necessarily need to maintain or invest
 ![What is the Common Data Service](./media/learning-common-data-service-overview/what-is-cds.png)
 
 - The Common Data Service is the focal point for all your data. We do the underlying work to pull all your data together in one place. 
-- It’s a great place to build and manage apps. We provide you with a set of tools appropriate for a novice developer all the way to a pro developers. 
-- Best of all, it just works. Building on the Common Data Service, your apps automatically work with the rest of Microsoft’s apps and services. 
-
-In the next video, we'll build an app using data from the Common Data Service.
+- It’s a great place to build and manage apps. We provide you with a set of tools appropriate for novice developers all the way up to pro developers. 
+- Best of all, it just works. Building on the Common Data Service, your apps automatically work with the rest of Microsoft’s apps and services.

@@ -15,15 +15,15 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/31/2017"
+   ms.date="08/06/2017"
    ms.author="v-subohe"/>
 
 # Create a data source using a formula
-In this section, you'll use a formula to create a data source, which you'll then use to build a gallery in the next section. The steps in this section are intended for PowerApps Studio for Windows. When using PowerApps Studio for Web, the steps may vary slightly.
+In this topic, you'll use a formula to create a data source, which you'll then use to build a gallery in the next topic. The steps in this topic are intended for PowerApps Studio for Windows. When using PowerApps Studio for web, the steps may vary slightly.
 
 ## Collections and records
 
-In the resources for this section, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll use it to create a collection named **CitySales**.
+In the Guided Learning resources, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll use it to create a collection named **CitySales**.
 
 **Note:** The data in the text file is formatted specifically for the **ClearCollect** function. As an example, the complete row for Seattle sales is shown here:
 
@@ -41,7 +41,7 @@ To create a collection to use in the galleries, first select all of the data in 
    **Note:** It's recommended to use a text editor such as NotePad to open and copy the data. Using a word processor, such as Word, can introduce unintended formatting into the text which PowerApps won't recognize, for example, curly quotes.
    
 
-2. Open PowerApps, and click or tap **New** on the **File** menu (near the left-hand edge).
+2. Open PowerApps, and click or tap **New app** (near the left-hand edge).
 
 3. On the **Blank app** tile, click or tap **Phone layout**.
 
@@ -53,7 +53,7 @@ To create a collection to use in the galleries, first select all of the data in 
 
    ![New screen](./media/learning-create-data-source/new-screen.png) 
 
-4. With the new screen selected, click **OnVisible** in the **Property** list drop-down.
+4. With the new screen selected, click **OnVisible** in the property list drop-down.
 
    ![Set OnVisible property](./media/learning-create-data-source/onvisible.png)
 
@@ -66,11 +66,11 @@ To create a collection to use in the galleries, first select all of the data in 
     ![Delete screen](./media/learning-create-data-source/delete-screen.png)
 
 
-7. On the **View** tab, click or tap **Collections** and make sure the table was created. You won't see all of the data in the table, only the first five rows. Review the table to make sure all of the data is there.
+7. On the **View** tab, click or tap **Collections** and make sure the table was created. You won't see all of the data in the table, only the first five rows. Review the table to make sure the data is there as shown in the following image.
 
    ![View collection](./media/learning-create-data-source/view-collection.png)
 
-8. In the left-hand pane, click or tap **Save As** (or press Ctrl-Shift-S) to save the app. Make sure to save the app to the cloud, give it an appropriate name, and provide a description. A helpful tip when saving an app is to change the icon. This makes the app stand out in the list and people can easily find it.
+8. In the left-hand pane, click or tap **Save as** (or press Ctrl-Shift-S) to save the app. Make sure to save the app to the cloud, give it an appropriate name, and provide a description. A helpful tip when saving an app is to change the icon. This makes the app stand out in the list and people can easily find it.
 
    ![Save as](./media/learning-create-data-source/save-as.png)
 

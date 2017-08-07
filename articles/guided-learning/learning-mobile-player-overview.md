@@ -22,7 +22,7 @@
 
 # Overview of the PowerApps mobile player
 
-In this session, we'll look an overview of the PowerApps mobile player. The mobile player is available for the iOS, Android, and Windows mobile devices. Fortunately, you only have to create one app, and the mobile player makea sure that your users can run the app on multiple devices.
+In this topic, we'll look an overview of the PowerApps mobile player. The mobile player is available for the iOS, Android, and Windows mobile devices. Fortunately, you only have to create one app, and the mobile player makes sure that your users can run the app on multiple devices.
 
 ## Getting started
 

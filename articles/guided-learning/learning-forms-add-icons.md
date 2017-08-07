@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/25/2017"
+   ms.date="08/05/2017"
    ms.author="v-subohe"/>
 
 # Adding icons to forms
@@ -24,7 +24,7 @@ When creating apps for devices with smaller screens, such as mobile devices, dro
 In this example, you'll add icons to your app so that users can select an option for **Contact Type** by clicking or tapping an icon. This is a better solution for mobile devices than making a drop-down list for the **Contact Type** field.
 
 ## Add icons to the form ##
-1. On the **IssuesLog** edit form, click or tap the **Contact Type** data card, select the lower edge of the field, and then drag it down to make the space large enough for the icons.
+1. On the **IssuesLog** edit form, click or tap the **Contact Type** data card, select the lower edge of the field, and then drag it down to make room for three icons arranged horizontally.
 
 1. On the **Insert** tab, click or tap **Icons**. Scroll down to locate the **Mail** icon, select it, and position it under the **Contact Type** field.
 
@@ -49,7 +49,9 @@ Use the **UpdateContext** function to create a variable so that when a user clic
     - **UpdateContext({ContactMethod:"Telephone"})**
     - **UpdateContext({ContactMethod:"In Person"})**
 
-1. Select the **Contact Type** field, and type the variable name, **ContactMethod**, into the **Default** property.
+1. Select the **Contact Type** field, and in the right pane on the **Advanced** tab, unlock the field so you can change its properties.  
+
+1. Type the variable name, **ContactMethod**, into the **Default** property.
 
 1. Test the app by selecting each icon and making sure that the selected value appears in **Contact Type**.
 

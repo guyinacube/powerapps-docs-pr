@@ -17,21 +17,18 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/29/2017"
+   ms.date="08/07/2017"
    ms.author="v-subohe"/>
 
 # Using an Excel data source
-In this section, we'll build an app for the sales associates of Contoso Flooring company. The app will let the sales associates show customers different videos on how the installation process works. 
-
-In our previous session, we prepared the Excel data that we'll use to build the app. As part of building the app, we'll embed the Excel data in the app.
+In this topic, we'll build an app for the sales associates of Contoso Flooring company. The app will let the sales associates show customers different videos on how the installation process works.
 
 You can either download and use the example data source, **YouTubeVideosFinal.xls**, or create your own data source in Excel. Use the column names from the following example, and add a few sample rows with some YouTube links. Be sure to select the header row and the all the data rows, and then format the selection as a table named **Videos** before saving and closing your Excel file. 
 
 ![Excel-table-example](./media/learning-create-app-excel-data-source/excel-example.png)
 
-
 ## Create an app using a data source from Excel ##
-1. In PowerApps Desktop, click or tap **New** on the **File** menu (near the left-hand edge).
+1. In PowerApps Studio, click or tap **New** on the **File** menu.
 
    ![New file](./media/learning-create-app-excel-data-source/file-new.png)
 
@@ -41,10 +38,9 @@ You can either download and use the example data source, **YouTubeVideosFinal.xl
 
 1. In the right-hand pane, click or tap **Data**, then click or tap **Add data source**, and then click or tap **Add static data to your app**.
 
-
 1. Browse to the Excel spreadsheet. In the example, the spreadsheet is called **YouTubeVideosFinal.xls**.
 
-   The table called **Videos** (that we defined in the Excel spreadsheet) appears in the right-hand pane. Click or tap **Videos** to select it.
+1. The table called **Videos** appears in the right-hand pane. Click or tap **Videos** to select it.
 
 1. At the lower edge of the right-hand pane, click or tap **Connect**. **Videos** appears as a new data source in the right-hand pane.
 
@@ -75,22 +71,28 @@ You can either download and use the example data source, **YouTubeVideosFinal.xl
 
    ![Format the gallery style](./media/learning-create-app-excel-data-source/format-gallery.png)
 
-1. With the new gallery still selected, click **Items** in the property list and then replace **TextualGallerySample** with **Videos** in the formula bar. The gallery will load all of the content from the **Videos** data source.
+1. With the new gallery still selected, click **Items** in the property list and then replace **CustomGallerySample** with **Videos** in the formula bar. The gallery will load all of the content from the **Videos** data source.
 
    ![Select the video source](./media/learning-create-app-excel-data-source/select-video.png)
 
+   **Note:** The fields that are displayed in your app might be different. We'll tackle that next.
+
+1. In the right pane, on the **Data** tab, make sure the fields match the following image.
+    
+    ![Gallery fields](./media/learning-create-app-excel-data-source/change-fields.png)
+
 1. Format the **Title**, **Language**, and **Length** fields so it looks similar to the version below:
 
-   1. Arrange the fields in the top template so the **Title** field is on top, the **Language** field is on the lower left, and the **Length** field is on the lower right. Note that the other items in the gallery all change their layouts to match. 
+   1. Arrange the fields in the top template so the **Title** field is on top, the **Language** field is on the lower left, and the **Length** field is on the lower right. **Note:** You might have to change the size of the fields before you can move them into position. 
 
     1. Click or tap the **Title** field to select it. Select **AutoHeight** in the property list, and in the formula bar, type **true**.
 
     1. With the **Title** field still selected, click or tap the **Home** tab, and then center the text, make the text bold, and make the font size larger.
 
-    1. Click or tap the **Language** field to select it. Select the **Text** property in the property list, and replace **ThisItem.ULLanguage** with **"Language: " & ThisItem.ULLanguage** in the formula bar. This adds a label to the field.
+    1. Click or tap the **Language** field to select it. Select the **Text** property in the property list, and replace **ThisItem.ULLanguage** with **"Language: " & ThisItem.ULLanguage** in the formula bar. Change the font size so that it matches the **Length** field.
 
     1. Click or tap the **Length** field to select it. Select the **Text** property in the property list, and type the following in the formula bar:
-    **"Length in Minutes.Seconds: " & ThisItem.Length**. Change the font size so that it matches the **Language** field. 
+    **"Length in Minutes.Seconds: " & ThisItem.Length**. 
 
     1. Adjust all three fields so they are evenly spaced. 
 
@@ -102,7 +104,7 @@ You can either download and use the example data source, **YouTubeVideosFinal.xl
 
 
 ## Add the videos ##
-1. On the **Insert** tab, click or tap **Media**, and then click or tap **Video**.
+1. With the first item in the gallery selected, on the **Insert** tab, click or tap **Media**, and then click or tap **Video**.
 
 1. Resize the video control so it fits the top of the gallery template, and adjust the **Title**, **Language**, and **Length** fields as necessary. 
 

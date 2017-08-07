@@ -12,16 +12,16 @@
    courseDuration=/>
 
    <tags
-      ms.service="powerapps"
-      ms.devlang="na"
-      ms.topic="get-started-article"
-      ms.tgt_pltfrm="na"
-      ms.workload="na"
-      ms.date="06/28/2017"
-      ms.author="v-subohe"/>
+   ms.service="powerapps"
+   ms.devlang="na"
+   ms.topic="get-started-article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="08/04/2017"
+   ms.author="v-subohe"/>
 
 # Hiding icons in a form
-In the past few videos, you've learned about the basic fields in forms, how to add a cascading drop-down list, and how to manage default fields (in edit form mode versus new form mode). The app you've created is working properly both in a web browser and on a mobile device.
+In the past few topics, you've learned about the basic fields in forms, how to add a cascading drop-down list, and how to manage default fields (in edit form mode versus new form mode). The app you've created is working properly both in a web browser and on a mobile device.
 
 ## Show or hide icons at different times ##
 Showing or hiding icons in an app is an optional step you can take. For example, the **Contact Type** field is set when the user selects one of the three methods for reporting an issue (by selecting either the **Phone**, **Mail**, or **People** icon). Normally, users don't go back and change their contact method, so you may want to hide the **Contact Type** icons once the item has been created. In other words, you want the field to be visible in the **new form mode**, and hidden in the **edit form mode**.
