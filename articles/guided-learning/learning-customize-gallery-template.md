@@ -15,14 +15,14 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/31/2017"
+   ms.date="08/06/2017"
    ms.author="v-subohe"/>
 
 # Customize a gallery template
-In this section, you'll see how to customize the gallery template by formatting fields, aligning multiple fields, and changing a background color.
+In this topic, you'll see how to customize the gallery template by formatting fields, aligning multiple fields, and changing a background color.
 
 ## Format fields
-1. In the **Flooring Sales** example we've been discussing, the sales figure may be difficult to recognize as currency in its current format. To reformat the sales figure to make it clearer that it's currency, highlight the field that shows the sales figure in the gallery. The value that exists for each sales item is represented as **ThisItem.Sales**.
+1. In the **Flooring Sales** example we've been discussing, the sales figure may be difficult to recognize as currency in its current format. To reformat the sales figure to make it clearer that it's currency, select the field that shows the sales figure in the gallery. The value that exists for each sales item is represented as **ThisItem.Sales**.
 
    In the formula bar, click or tap directly in front of **ThisItem** and enter this **Text** function around **ThisItem.Sales**:
 
@@ -34,7 +34,7 @@ In this section, you'll see how to customize the gallery template by formatting 
 
    **Note:** If you're familiar with Microsoft Excel, the custom number formats in PowerApps are similar.
 
-2. To further clarify what the currency value represents, you can add a text label in front of the value. Modify the formula as follows:
+2. To further clarify what the currency value represents, you can add a text in front of the value. Modify the formula as follows:
 
    **"Total Sales: " & Text(ThisItem.Sales,"$#,#00")**
 
@@ -47,13 +47,13 @@ When data is loaded into a gallery template, it's not necessarily formatted or l
 
 First, we'll change the width of the **City** and **Short** fields so they don't overlap with other fields.
 
-1. Select the **City** field, and in the left-hand pane, select **Width** in the property list. By default, this is set to **Parent.TemplateWidth - [some value]**. One of the ways to change the width of fields consistently is to divide it by 2 or 4, so that it only uses half or one-quarter of the width of the template. For this example, enter **Parent.TemplateWidth/4** in the formula bar, so the field occupies only one-quarter of the template width. Make the same changes to the **Short** field. 
+1. Select the **City** field, and select **Width** in the property drop-down list. By default, this is set to **Parent.TemplateWidth - [some value]**. One of the ways to change the width of fields consistently is to divide the template by 2 or 4, so that the field only uses half or one-quarter of the width of the template. For this example, enter **Parent.TemplateWidth/4** in the formula bar, so the field occupies only one-quarter of the template width. Make the same changes to the **Short** field. 
 
 2. After reducing the size of the **City** and **Short** fields, move the **Short** field to the upper right of the template, and move the **City** field underneath it.
 
      ![Move fields](./media/learning-customize-gallery-template/city-short-move.png)
 
-3. Select the **Country** field and increase the font size. Move the **Country** field toward the top of the template. Select the **Sales** field, and move it underneath the **Country** field. 
+3. Select the **Country** field and increase the font size (the **Size** property). Move the **Country** field toward the top of the template. Select the **Sales** field, and move it underneath the **Country** field. 
 
      ![Increase font](./media/learning-customize-gallery-template/increase-font.png)
 
@@ -103,10 +103,10 @@ The **TemplatePadding** is the space around the edge of the template. To add pad
 
 You saw earlier how to drag the handles of the template to change the size. However, you can set the size of the template to adjust automatically to the size of the data that it displays. In the **TemplateSize** property, enter this formula: 
 
-**subtitle1.height + label1.height + 20**
+**Subtitle2.Height + Label1.Height + 20**
 
-**Note:** This example assumes the **City** field is named **subtitle1** and the **Sales** field is named **label1**. Use the names that apply to your app.
+**Note:** This example assumes the **Country** field is named **Subtitle2** and the **Sales** field is named **Label1**. Use the names that apply to your app.
 
 ![Adjust size](./media/learning-customize-gallery-template/auto-adjust-size.png)
 
-This formula adds the height of the **City** field and the height of the **Sales** field, plus a buffer of **20**. If either field expands to accommodate a large of amount of data, the template will expand automatically, too. 
+This formula adds the height of the **Country** field and the height of the **Sales** field, plus a buffer of **20**. If either field expands to accommodate a large of amount of data, the template will expand automatically, too. 

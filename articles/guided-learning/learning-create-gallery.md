@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/24/2017"
+   ms.date="08/06/2017"
    ms.author="v-subohe"/>
 
 # Display data in a collection using a gallery
@@ -35,13 +35,13 @@ First, you need to select a gallery layout that best displays the data. Notice t
 ## Load the data from the data collection
 Next, we'll configure the gallery to display the data from our collection: 
 
-1. Select the gallery and look at the formula displayed in the formula bar. 
+1. Select the gallery and look at the formula displayed in the formula bar for the **Items** property. 
 
-    **SortByColumns(Search(CustomGallerySample, TextSearchBox1.Text, "SampleText"), "SampleText", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+    **SortByColumns(Search(CustomGallerySample, TextSearchBox1.Text, "SampleText"), "SampleText", If(SortDescending1, Descending, Ascending))**
 
-    The **SortByColumns** function is described in detail in the documentation, but let's look at just the three fields that affect the gallery. 
+    The **SortByColumns** function is described in detail in the documentation, but let's look at three parts of the formula right now: 
 
-    - **CustomGallerySample** - this indicates the data source in which to look for the search term. **CustomGallerySample** is the default sample data that loads when you create a gallery. 
+    - **CustomGallerySample** - is the default sample data that loads when you create a gallery. This is the data source in which to look for the search term entered in the search box. **CustomGallerySample** 
     - **SampleText** and **SampleText** - these are both column names in the data source. The first one indicates which column to use during a search, and the second indicates which column to use when sorting. 
 
 1. Modify the formula as follows so that it uses the **CitySales** data collection, searches on **City**, and sorts by **Country**. 

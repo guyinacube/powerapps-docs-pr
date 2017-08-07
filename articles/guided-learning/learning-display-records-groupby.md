@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/31/2017"
+   ms.date="08/06/2017"
    ms.author="v-subohe"/>
 
 # Sorting data in a gallery using the GroupBy function
@@ -43,13 +43,14 @@ Using the **CitySales** example, you'll group the sales data by country so that 
 Note that the country for each item is displayed in the gallery, and because there are multiple cities for each country, each country is displayed multiple times. You can use the **GroupBy** function to group all the items for a country together. 
 
 1. Select the gallery (not the gallery template), and replace **CitySales** in the **Items** property with this **GroupBy** function:
-**GroupBy(CitySales,"Country","Cities")**
+
+    **GroupBy(CitySales,"Country","Cities")**
 
     This formula takes the data from **CitySales** and groups it together by country. It also creates a group named **Cities** that holds the rest of the data for each country group.  
 
     ![Country groups](./media/learning-display-records-groupby/groupedby.png)
 
-1. Next, add a **List box** control to the gallery template. On the **Insert** tab, click or tap **Controls**, and then click or tap **List box**. Resize or move the list box control so that it fits in the template next to the **Country** field.
+1. Next, add a **List box** control to the gallery template. Select the template, then on the **Insert** tab, click or tap **Controls**, and then click or tap **List box**. Resize or move the list box control so that it fits in the template next to the **Country** field.
 
     ![Format list box](./media/learning-display-records-groupby/format-list-box.png)
 

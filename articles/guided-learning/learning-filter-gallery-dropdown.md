@@ -15,11 +15,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/31/2017"
+   ms.date="08/05/2017"
    ms.author="v-subohe"/>
 
 # Using a drop-down control to filter data in a gallery
-Another way to search for data in a gallery is to filter the results using a drop-down control. 
+When you generate an app from a data source, the gallery that is created includes a search box. Another way to search for data in a gallery is to filter the results using a drop-down control. We'll look at filtering in this topic.
 
 **Note:** If you're creating an app for mobile devices, drop-down controls are not always the best choice because they require precision. For mobile devices, consider using radio buttons or a larger control.
 

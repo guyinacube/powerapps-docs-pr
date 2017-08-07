@@ -17,83 +17,89 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/20/2017"
+   ms.date="08/03/2017"
    ms.author="v-brbene"/>
 
 # Building advanced applications with the Common Data Service
 
-In this video, we’re going to talk about the different ways that you can build your apps with the Common Data Service. One of the great things about the Common Data Service is that we have application creation experiences for different skill levels. We’ll look at some of these experiences in this session. 
-
-Let’s take a quick tour of some of these options.
+In this topic, we’re going to talk about the different ways that you can build your apps with the Common Data Service. One of the great things about the Common Data Service is that we have application creation experiences for different skill levels. Let’s take a quick tour of some of these options:
 
 - First, you can build your apps with PowerApps. Most of the steps in this process are automated. To create your application, you select the desired layout, choose the Common Data Service data source, find the entity you want to use, and then let PowerApps automatically build your app.
-- Next, you can build what we call a **powered-up** PowerApp. In this case, you can hook an Azure function into your app via custom APIs. The Azure function can have custom logic and complex queries that use the Common Data Service C# SDK.  To use this method, first register the app with Azure AD, and then build your Azure function. 
-- A third way is to use the Common Data Service C# SDK in a middle tier, deploy that middle-tier, and then build a Rich Client Application on top of that. 
+- Next, you can build an app that takes advantage of Azure Functions and custom connectors. The Azure Function can contain custom logic and complex queries that use the Common Data Service C# SDK.  To use this method, first register the app with Azure Active Directory, and then build your Azure Function. 
+- A third way is to use the Common Data Service C# SDK in a middle tier, deploy that middle-tier, and then build a rich client application on top of that. 
 - And finally, you can use the Common Data Service C# SDK directly in your web apps or SaaS applications. 
 
 Let’s look at two of these options, starting with the PowerApps experience. 
 
 ## Create an app with PowerApps
 
-On the **PowerApps page**, click **New app**.
+1. On the PowerApps **Home** page, click **New app**.
 
-![Create a new app](./media/learning-common-data-service-advanced-apps/powerapps-new-app.png)
+    ![Create a new app](./media/learning-common-data-service-advanced-apps/powerapps-new-app.png)
 
-In the **Blank app** template, click **Tablet layout**. 
+1. Under **Blank app**, click **Tablet layout**. 
 
-![Tablet layout](./media/learning-common-data-service-advanced-apps/tablet-layout.png)
+    ![Tablet layout](./media/learning-common-data-service-advanced-apps/tablet-layout.png)
 
-In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+1. In the right pane, click the **Data** tab.
 
-![Toggle the views](./media/learning-common-data-service-advanced-apps/toggle-view.png)
+1. Click **Add Data Source**, click **Common Data Services**, select **Flooring Estimates**, and click **Connect**.
 
+    ![Connect to CDS](./media/learning-common-data-service-advanced-apps/add-data-source.png)
 
-Click **Add Data Source**, click **Common Data Services**, select **Flooring Estimates**, and click **Connect**.
+1. Click **Insert**, click **Forms**, and then select **Entity form**.
 
-![Connect to CDS](./media/learning-common-data-service-advanced-apps/add-data-source.png)
+    ![Add entity form](./media/learning-common-data-service-advanced-apps/insert-entity-form.png)
 
-Click **Insert**, click **Forms**, and then select **Entity form**.
+1. With the form selected, expand the data source list and select the entity that you connected to above. 
 
-![Add entity form](./media/learning-common-data-service-advanced-apps/insert-entity-form.png)
+    ![Select data source](./media/learning-common-data-service-advanced-apps/select-data-source.png)
 
-Expand the data source list and select the Common Data Service that you connected to above. 
+    The screen should now look like the following image.
 
-![Select data source](./media/learning-common-data-service-advanced-apps/select-data-source.png)
+    ![Screen with entity form](./media/learning-common-data-service-advanced-apps/entity-form.png)
 
 Next, we’ll create a second screen to view the details of each item. 
 
-Click **New screen**, and click **Blank**. Add an entity form to this new screen and bind it to the Common Data Service using the same steps as above. 
+1. Click **New screen**, and click **Blank**. 
 
-![Add new screen](./media/learning-common-data-service-advanced-apps/new-blank-screen.png)
+    ![Add new screen](./media/learning-common-data-service-advanced-apps/new-blank-screen.png)
 
-Click **Advanced**, and search for **pattern**. In the **Pattern** field, enter **FormPattern.Details** as the value. 
+1. Add an entity form to this new screen and bind it to the Common Data Service entity using the same steps as above.
 
-![Configure pattern value](./media/learning-common-data-service-advanced-apps/pattern-value.png)
+1. Select the form and click the **Properties** tab. Select **Details** from the **Pattern** drop-down list. 
 
-Click on the first screen, click on the entity form, and then click **Options**. Under **PrimaryID**, select **Screen2** as the value for **Navigate**. This will set the **PrimaryID** column as a clickable link that will take you to the second screen. 
+    ![Configure pattern value](./media/learning-common-data-service-advanced-apps/pattern-value.png)
 
-![Configure navigation](./media/learning-common-data-service-advanced-apps/options-screen.png)
+    The second screen should now look like the following image.
 
+    ![Screen with details form](./media/learning-common-data-service-advanced-apps/details-form.png)
 
-Click on the second screen, click the entity form, and select **Advanced**. Search for **item**, and in the **Item** field, add **NavigationContext** as the value.  This tells the form to load the data from the item that was previously clicked on the first screen. 
+1. Click on the first screen, click the entity form, and then click the **Data** tab. Under **PrimaryID**, select **Screen2** from the **Navigate** drop-down list. This sets the **PrimaryID** column as a clickable link that takes you to the second screen. 
 
-![Load form](./media/learning-common-data-service-advanced-apps/navigation-setting.png)
+    ![Configure navigation](./media/learning-common-data-service-advanced-apps/options-screen.png)
 
-Remaining on the second screen, click **Insert**, and then click **Button**. Drag the button to an empty space on the screen, and in the button's **OnSelect** field, enter **Navigate(Screen1, ScreenTransition.Fade)**. 
+1. Click on the second screen, click the entity form, and then click the **Advanced** tab. Search for **Item**, and in the **Item** field, enter **NavigationContext**. 
 
-![Navigation button](./media/learning-common-data-service-advanced-apps/navigation-button.png)
+    ![Load form](./media/learning-common-data-service-advanced-apps/navigation-setting.png)
 
-Click the play button and test the app. Although this is a simple app, it shows how quickly you can create a tablet view that shows all the information inside of the Flooring Estimates entity, provide a deeper look into the details, and navigate back and forth. 
+    This tells the form to load the data from the item that was previously clicked on the first screen.
+
+1. Remaining on the second screen, click **Insert**, and then click **Button**. Drag the button to an empty space on the screen, and in the button's **OnSelect** field, enter **Navigate(Screen1, ScreenTransition.Fade)**. 
+
+    ![Navigation button](./media/learning-common-data-service-advanced-apps/navigation-button.png)
+
+1. Click the play button and test the app. Although this is a simple app, it shows how quickly you can create a tablet view that shows all the information inside of the Flooring Estimates entity, provide a deeper look into the details, and navigate back and forth. 
 
 ## Create an app with the Common Data Service C# SDK
 
-Pro developers can use the Common Data Service C# SDK to either increase the complexity of logic that is used in a PowerApp, or for building Rich Clients or SaaS and web applications. 
+Pro developers can use the Common Data Service C# SDK to either increase the complexity of logic that is used in an app, or for building rich clients or SaaS and web applications. 
 
-Apps that are using the SDK need to be registered with Azure AD, so they can make requests and use the Common Data Service. We won’t build an entire SDK-based app in this session, but we will look at a few of the patterns you can support with the SDK, including rich queries. The SDK is built on a link-based syntax, and supports actions such as create, delete, insert, and update.  
+Apps that use the SDK must be registered with Azure Active Directory, so they can make requests and use the Common Data Service. We won’t build an SDK-based app in this topic, but we will look at a few of the patterns you can support with the SDK, including rich queries. The SDK is built on a LINQ-based syntax, and supports actions such as create, delete, insert, and update.  
 
 ![Visual Studio example](./media/learning-common-data-service-advanced-apps/vs-sdk-example.png)
  
-1. This is an example of how you can query the Common Data Service. In this case, the query looks for two product categories – **Surfaces** or **Phones**. In general, you’ll create a query builder, provide the **where** clauses, (in this case where the name of the product category is either **Surface** or **Phone**), and get back the category ID and name for the product category.
+1. This is an example of how you can query the Common Data Service. In this case, the query looks for two product categories – **Surfaces** or **Phones**. In general, you’ll create a query builder, provide the **Where** clauses, (in this case where the name of the product category is either **Surface** or **Phone**), and get back the category ID and name for the product category.
 
 2. This is a Delete action to clean up any existing cateogories.
 

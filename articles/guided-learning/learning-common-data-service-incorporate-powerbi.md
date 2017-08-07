@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/09/2017"
+   ms.date="08/03/2017"
    ms.author="v-brbene"/>
 
 # Integrating Other Services
@@ -29,46 +29,48 @@ The Power BI service talks to the Common Data Service via **perspectives**. Pers
 
 
 ## Create a New Perspective
-To create a new perspective, open **PowerApps**, and in the left navigation pane, under **Common Data Service**, click **Perspectives**.  In the upper right-hand corner of the page, click **New Perspective**. 
+1. To create a new perspective, open **PowerApps**, and in the left navigation pane, under **Common Data Service**, click **Perspectives**.  In the upper right-hand corner of the page, click **New Perspective**. 
 
 
-![Create new perspective list](./media/learning-common-data-service-incorporate-powerbi/perspective-list-create-new.png)
+    ![Create new perspective list](./media/learning-common-data-service-incorporate-powerbi/perspective-list-create-new.png)
 
-In both the **Root Entity** and **Name** fields, enter **FlooringEstimates**, and in **Display Name**, enter **Flooring Estimates**. Click **Next** to create the new Perspective.
+1. In both the **Root Entity** and **Name** fields, enter **FlooringEstimates**, and in **Display Name**, enter **Flooring Estimates**. Click **Next** to create the new Perspective.
 
-![New perspective list](./media/learning-common-data-service-incorporate-powerbi/new-perspective.png)
+    ![New perspective list](./media/learning-common-data-service-incorporate-powerbi/new-perspective.png)
 
-When a new Perspective is created, PowerApps discovers the relationships and displays the related entities and related fields, which you can select or deselect. For this example, leave **Products** selected and click **Create**. 
+    When a new Perspective is created, PowerApps discovers the relationships and displays the related entities and related fields, which you can select or deselect. 
+    
+1. For this example, leave **Products** selected and click **Create**. 
 
-![Related entities](./media/learning-common-data-service-incorporate-powerbi/related-entities.png)
+    ![Related entities](./media/learning-common-data-service-incorporate-powerbi/related-entities.png)
 
-The **Flooring Estimates** perspective now shows up with the other standard perspectives that come with PowerApps. 
+    The **Flooring Estimates** perspective now shows up with the other standard perspectives that come with PowerApps. 
 
-![Perspectives](./media/learning-common-data-service-incorporate-powerbi/new-perspective-list.png)
-
+    ![Perspectives](./media/learning-common-data-service-incorporate-powerbi/new-perspective-list.png)
 
 
 ## Configure Power BI
 
-Next, open the **Power BI Desktop** client. Click **Get Dat**a, then click **More…**, and then click **Online Services**. Select **Common Data Service**, and then click **Connect**.
+1. Next, open **Power BI Desktop**. 
+
+1. Click **Get Data**, then click **More…**, and then click **Online Services**. Select **Common Data Service**, and then click **Connect**.
   
-![Connect to Common Data Service](./media/learning-common-data-service-incorporate-powerbi/pbi-getdata.png)
+    ![Connect to Common Data Service](./media/learning-common-data-service-incorporate-powerbi/pbi-getdata.png)
 
-Select your Common Data Service environment, and click **OK**. 
+1. Select your Common Data Service environment, and click **OK**. 
 
-![Load your environment](./media/learning-common-data-service-incorporate-powerbi/pbi-loadenvironment.png)
+    ![Load your environment](./media/learning-common-data-service-incorporate-powerbi/pbi-loadenvironment.png)
 
+1. On the **Navigator** page, expand your test environment, select the **SalesOrders** perspective, and click **OK**.  
 
-On the **Navigator** page, expand your test environment, select the **SalesOrders** perspective, and click **OK**.  
+    ![Select the perspective](./media/learning-common-data-service-incorporate-powerbi/pbi-navigator.png)
 
-![Select the perspective](./media/learning-common-data-service-incorporate-powerbi/pbi-navigator.png)
+1. In the Power BI Desktop client, in the **Fields** column on the right-hand side, expand **Opportunity**. 
 
-In the Power BI Desktop client, in the **Fields** column on the right-hand side, expand **Opportunity**. 
+    ![Data fields](./media/learning-common-data-service-incorporate-powerbi/data-fields.png)
 
-![Data fields](./media/learning-common-data-service-incorporate-powerbi/data-fields.png)
+1. Drag the **EstimatedClosing**, **IndustryCode**, and **Name** fields to the desktop area to build the report.
 
-Drag the **EstimatedClosing**, **IndustryCode**, and **Name** fields to the desktop area to build the report.
+    ![Build a report](./media/learning-common-data-service-incorporate-powerbi/build-report.png)
 
-![Build a report](./media/learning-common-data-service-incorporate-powerbi/build-report.png)
-
-This feature is currently in preview. Please let us know if you have any feedback, and check back often because we add content over time. Power BI is the first of many experiences that we expect to share over the coming months to demonstrate how the Common Data Service can help you build your apps quickly and effectively. 
+This feature is currently in preview. Please let us know if you have any feedback, and check back often because we add content over time. Power BI is the first of many experiences that we expect to share, demonstrating how the Common Data Service can help you build your apps quickly and effectively. 

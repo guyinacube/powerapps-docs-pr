@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/09/2016"
+   ms.date="08/03/2017"
    ms.author="mblythe"/>
 
 # Guided Learning for PowerApps
@@ -45,7 +45,7 @@ We will follow this flow of creating, sharing, administering, and running apps a
 
 
 ## How PowerApps matches your role
-PowerApps makes it easy for **business analysts** and other subject matter experts to **create apps using the skills you already have**. But this is not the only type of PowerApps user. Some people simply run apps that others create. Other people, who write code for a living (professional developers), take advantage of PowerApps to rapidly build sophisticated apps.
+Whether you're a **business analyst** or have other subject matter expertise, PowerApps makes it easy to **create apps using the skills you already have**. But this is not the only type of PowerApps user. Some people simply run apps that others create. Other people, who write code for a living (professional developers), take advantage of PowerApps to rapidly build sophisticated apps.
 
 How you use PowerApps may depend on your role in a project or on a team, and your role can change. For example, one of your coworkers creates an app that is tied into your company-wide customer relationship management (CRM) system, and you use this app regularly to track promising sales leads. But you might also write apps yourself and share them within your workgroup because your close colleagues find those apps very useful.
 

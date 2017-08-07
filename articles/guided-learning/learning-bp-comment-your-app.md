@@ -17,12 +17,12 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/10/2017"
+   ms.date="08/07/2017"
    ms.author="v-brbene"/>
 
 # Commenting and testing your apps
 
-In this session, we’ll look at some best practices for documenting and testing your apps. As you’re building an app, it’s easy to keep track of things like data source locations, permissions for screens, and so on. However, you may not remember those details two months later when you update the app, or when someone else on your team may need to update it. So, you’ll want to document some details while you’re building the app to make it easy for other people to see what you’ve done. 
+In this topic, we’ll look at some best practices for documenting and testing your apps. As you’re building an app, it’s easy to keep track of things like data source locations, permissions for screens, and so on. However, you may not remember those details two months later when you update the app, or when someone else on your team may need to update it. So, you’ll want to document some details while you’re building the app to make it easy for other people to see what you’ve done. 
 
 ## Create a hidden screen
 

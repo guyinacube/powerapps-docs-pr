@@ -15,11 +15,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/31/2017"
+   ms.date="08/06/2017"
    ms.author="v-subohe"/>
 
 # Customize the height of list boxes in a gallery
-In the previous section, you created a flexible height gallery and used the **GroupBy** function to group the data by countries. Then, you added a list box to the gallery and displayed the cities for each country. Because it's a flexible height gallery, the list boxes are set to a predefined height, and some of the list boxes are too large for the data that's shown in them. In this section, you'll make the height settings for the list boxes variable.
+In the previous topic, you created a flexible height gallery and used the **GroupBy** function to group the data by countries. Then, you added a list box to the gallery and displayed the cities for each country. The list boxes are set to a predefined height, and some of the list boxes are too large for the data that's shown in them. In this topics, you'll make the height settings for the list boxes variable, and customize the app further.
 
 ## Make the height of list boxes variable
 
@@ -40,7 +40,7 @@ When you run the app, you'll see that the list boxes adjust depending on the num
 In this section, you'll modify the list box and layout in order to add a sales total to each item. 
 
 ### Reduce text size
-With the list box selected, click or tap the arrow next to the **Size** icon and then select a smaller value, such as **18**. Alternatively, select **Size** in the property list, and then type a smaller size in the formula bar.
+With the list box selected, on the **Home** tab, click or tap font size, and change it from **21** as **18**. Alternatively, select **Size** in the property list, and then type a smaller size in the formula bar.
 
 ![Reduce font](./media/learning-customize-listbox-height/reduce-font.png)
 

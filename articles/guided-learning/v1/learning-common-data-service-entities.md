@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/09/2016"
+   ms.date="08/03/2017"
    ms.author="mblythe"/>
 
 # Understand entities
@@ -31,13 +31,15 @@ The common data model comes with a set of standard entities that cover a range o
 
 The entities are grouped into categories so it's easy to see which ones typically work together in a solution.
 
-| Functional group                  | Description                                                                                                                                                                                     |
-|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer Service                  | The Customer Service entities manage issues from your customers, including tracking, escalation, and documentation.                                                                             |
-| Foundation                        | The Foundation entities contain information that is relevant to nearly every other entity group. This group contains entities such as Address and Currency.                                     |
-| People, Organizations, and Groups | These entities encompass a rich set of people and organizations that you might interact with, including employees, contractors, donors, volunteers, fans, alumni, and families.                 |
-| Purchasing                        | The Purchasing entities let you create purchasing solutions.                                                                                                                                    |
-| Sales                             | The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, accepting and delivering orders, and sending invoices. |
+| Functional Group                | Description                                                                                                                                                                                       |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Customer service                | The customer service entities manage issues from your customers, including tracking, escalation, and documentation.                                                                               |
+| Foundation                      | The Foundation entities contain information that is relevant to nearly every other entity group. This group contains entities such as Address and Currency.                                       |
+| Human resources                 | The human resources entities let you manage employment information, jobs, leaves, and positions.                                                                                                  |
+| Person, organization, and group | These entities encompass a rich set of people and organizations that you might interact with, including workers, vendors, tenants, fans, alumni, and families.                                    |
+| Productivity                    | The productivity entities let you track events and messages.                                                                                                                                      |
+| Purchasing                      | The Purchasing entities let you create purchasing solutions.                                                                                                                                      |
+| Sales                           | The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, to accepting and delivering orders, to sending invoices. |
 
 
 ## Fields and data types
@@ -60,9 +62,9 @@ When you open an entity, you see a lot of information and several actions that y
 ![Entity tabs](./media/learning-common-data-service-entities/entity-tabs.png)
 
 - **Fields**: see fields and data types, and add fields, all of which we discussed above.
-- **Key**: the field that identifies each row in an entity, like Contact ID for the Contact entity.
-- **Relationships**: connections between related entities like Product and Product category. We'll see an example in the next topic.
 - **Field groups**: used to control various behaviors, like which fields to automatically show when you create an app screen in PowerApps.
+- **Keys**: fields that identify each row in an entity, like Contact ID for the Contact entity.
+- **Relationships**: connections between related entities like Product and Product category. We'll see an example in the next topic.
 - **Data**: browse sample data and your own data after it's imported.
 
 ![Entity actions](./media/learning-common-data-service-entities/entity-actions.png)
