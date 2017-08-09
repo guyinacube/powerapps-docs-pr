@@ -65,12 +65,14 @@ The Power BI service talks to the Common Data Service via **perspectives**. Pers
 
     ![Select the perspective](./media/learning-common-data-service-incorporate-powerbi/pbi-navigator.png)
 
-1. In the Power BI Desktop client, in the **Fields** column on the right-hand side, expand **Opportunity**. 
+1. In the Power BI Desktop client, in the **Fields** pane on the right-hand side, expand **Opportunity**. 
 
     ![Data fields](./media/learning-common-data-service-incorporate-powerbi/data-fields.png)
 
-1. Drag the **EstimatedClosing**, **IndustryCode**, and **Name** fields to the desktop area to build the report.
+1. Select the **EstimatedClosing**, **IndustryCode**, and **Name** fields.
 
     ![Build a report](./media/learning-common-data-service-incorporate-powerbi/build-report.png)
+
+    Power BI uses a table visualization to display three columns of data from the **SalesOrder** entity.
 
 This feature is currently in preview. Please let us know if you have any feedback, and check back often because we add content over time. Power BI is the first of many experiences that we expect to share, demonstrating how the Common Data Service can help you build your apps quickly and effectively. 
