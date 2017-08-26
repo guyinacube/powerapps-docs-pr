@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/09/2016"
+   ms.date="08/03/2017"
    ms.author="mblythe"/>
 
 # A quick look at creating apps in PowerApps
@@ -35,7 +35,7 @@ Each sample app is designed for a specific purpose, such as managing a budget, i
 
 
 ## Create an app from a template
-Another good way to start is by **building an app from a template**. Templates are basically sample apps that you can open to understand how they are put together. They use sample data to help you get a sense of what's possible, and opening them in PowerApps Studio will help you **see hands-on how an app is built**. Note that templates are available only in PowerApps Studio for Windows at this time, not PowerApps Studio for web.
+Another good way to start is by **building an app from a template**. Templates are basically sample apps that you can open to understand how they are put together. They use sample data to help you get a sense of what's possible, and opening them in PowerApps Studio will help you **see hands-on how an app is built**.
 
 ![PowerApps app template](./media/learning-quick-look-powerapps/powerapps-templates.png)
 
@@ -60,4 +60,4 @@ A great way to get started is to **generate an app from your own data**. Just po
 ![PowerApps three screen app](./media/learning-quick-look-powerapps/powerapps-three-screen-app.png)
 
 
-You can also build applications from scratch and add all the pieces as you go, but **the easiest way to learn about PowerApps is to start with a sample or a template**, or connect to your data source and have PowerApps generate the app for you. Then you can branch out and let your imagination run wild—there will be plenty of that later in the course! In the next topic, you will learn how to generate an app from data.
+You can also build applications from scratch and add all the pieces as you go, but **the easiest way to learn about PowerApps is to start with a sample or a template**, or connect to your data source and have PowerApps generate the app for you. Then you can branch out and let your imagination run wild - there will be plenty of that later in the course! In the next topic, you will learn how to generate an app from data.

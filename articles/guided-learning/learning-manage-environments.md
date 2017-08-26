@@ -56,4 +56,4 @@ As an admin, you grant access to an environment from the **Environments** tab. F
 
 ![Manage environment access](./media/learning-manage-environments/environment-access.png)
 
-You now understand the benefits of environments, and how to create them and grant access to them. Even if you're not in an admin role, it's helpful to know how this works. This brings us to the end of the Managing apps section, and you're well prepared to move on to the next section, "Managing data", which focuses on the Common Data Service.
+You now understand the benefits of environments, and how to create them and grant access to them. Even if you're not in an admin role, it's helpful to know how this works.

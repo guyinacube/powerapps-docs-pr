@@ -17,11 +17,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/09/2016"
+   ms.date="08/03/2017"
    ms.author="mblythe"/>
 
 # The parts of PowerApps
-In the first Guided Learning topic you read about the main parts of PowerApps. Now we're going to provide a little more detail on each of the parts. PowerApps is a set of software services and apps that work together, and there are related technologies that help make this a powerful ecosystem. The PowerApps components are:
+In the first Guided Learning topic you learned about the main parts of PowerApps. Now we're going to provide a little more detail on each of the parts. PowerApps is a set of software services and apps that work together, and there are related technologies that help make this a powerful ecosystem. The PowerApps components are:
 
 - **web.powerapps.com** - manage and share the apps you build
 - **PowerApps Studio** - build powerful apps with easy to use visual tools
@@ -32,7 +32,7 @@ We don't expect you to take a ton of time just to learn what PowerApps _is_, but
 
 
 ## web.powerapps.com
-If you build apps, this is where you spend most of your time. You learn from the **sample apps and templates** that are available here, and see all the apps you have created. You create apps in **PowerApps Studio for web** or **PowerApps Studio for Windows**, and share those apps with individuals and organizations. You manage data: **connections**, **gateways**, and **entities** (all of which we'll cover shortly.) And you see all the **flows** created in **flows.microsoft.com**, which you can integrate with your apps.
+If you build apps, this is where you spend most of your time. You learn from the **sample apps and templates** that are available here, and see all the apps you have created. You create apps in **PowerApps Studio for web** or **PowerApps Studio for Windows**, and share those apps with individuals and organizations. You manage data: **connections**, **gateways**, and **entities** (all of which we'll cover shortly.) And you see all the **flows** created in **flow.microsoft.com**, which you can integrate with your apps.
 
 ![The web.powerapps.com site](./media/learning-powerapps-parts/powerapps-web-site.png)
 
