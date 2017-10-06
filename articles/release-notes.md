@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="aftowen"
+    authors="skjerland"
     manager="anneta"
     editor=""
     tags=""/>
@@ -14,13 +14,24 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="08/15/2017"
-    ms.author="anneta"/>
+    ms.date="09/24/2017"
+    ms.author="sharik"/>
 
 # What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+
+## Release 2.0.700-2.0.701 ##
+1. After you [save an app](save-publish-app.md) for the first time, additional changes are saved every two minutes automatically by default.
+1. Easily [create rules](working-with-rules.md) for conditional formatting without writing expressions - just set your condition and then design the results right on the PowerApps canvas.
+1. More easily configure forms, galleries, and data tables with a full-height data pane that pops out when a control is added.
+1. Get contextual quick-tips to help you create an app, whether starting from a blank app, a template, a data source, or SharePoint.
+
+## Release 2.0.690-2.0.691 ##
+1. For apps that you create, [track usage](app-analytics.md) in an embedded dashboard from Power BI.
+1. Use a delimiter to break a text string into parts by using the **[Split](function-split.md)** function.
 
 ## Release 2.0.680-2.0.681 ##
 1. Download a [list of apps](admin-view-apps.md) used in your organization.
@@ -29,7 +40,7 @@ For information about known limitations, see [Common issues and resolutions](com
 ## Release 2.0.670-2.0.671 ##
 1. Display a [Power BI tile](control-power-bi-tile.md) inside an app.
 1. Use the **[Coalesce](function-isblank-isempty.md)** function to more easily replace a blank value but leave other values as they were.
-1. Use the **[EndsWith](function-startswith)** function to test whether a text string ends another text string.
+1. Use the **[EndsWith](function-startswith.md)** function to test whether a text string ends another text string.
 1. Use the **[And](operators.md)**, **[Or](operators.md)**, or **[Not](operators.md)** operator in a formula.
 
 ## Release 2.0.660-2.0.661 ##

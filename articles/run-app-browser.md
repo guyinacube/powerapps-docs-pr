@@ -7,21 +7,30 @@
     authors="linhtranms"
     manager="anneta"
     editor=""
-    tags=""
- />
+    tags=""/>
 <tags
     ms.service="powerapps"
     ms.devlang="na"
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="02/01/2017"
+    ms.date="10/05/2017"
     ms.author="litran"/>
 
 # Use PowerApps in a web browser #
 If you create an app in PowerApps, you can run that app in a browser by opening [Dynamics 365](https://home.dynamics.com) and then clicking or tapping the tile for the app on the home page.
 
 **Note**: You can find general information about [Microsoft Dynamics 365](https://docs.microsoft.com/en-us/dynamics365/) or [contact support](https://www.microsoft.com/en-us/dynamics365/contact-us) if you have a question about a Dynamics 365 app, such as Sales.
+
+The following browsers and operating systems are supported:
+
+| **Browser** | **Operating system** |
+| --- | --- |
+| Google Chrome (latest version) | Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
+| Microsoft Edge| Windows 10 |
+| Microsoft Internet Explorer 11| Windows 7 SP1, 8.1, and 10 |
+| Mozilla Firefox (latest version) | Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
+| Apple Safari (latest version) | macOS <br> iOS 8 or later |
 
 If your browser doesn't support all the controls used in the app, use it on a mobile device (such as a phone) by downloading PowerApps Mobile for iOS, Android, or Windows.
 
@@ -37,12 +46,12 @@ After you find the app, you can pin it to the task pane for easier access. To pi
 
 ![](./media/run-app-browser/homepage-pin.png)
 
-The app will then appear in the task pane, which you open by clicking or tapping **Dynamics 365** in the upper-left corner.
+The app will then appear under **My apps** in the task pane, which you open by clicking or tapping **Dynamics 365** in the upper-left corner.
 
 ![](./media/run-app-browser/taskpane.png)
 
 ## Open an app from a URL ##
-You can also save the app's URL as a bookmark or send the URL as a link over email. If someone else created an app in PowerApps and shared that app with you, you can run that app by clicking or tapping the link in the mail that you receive. In any of these cases, you might be prompted to sign in using your Azure Active Directory credentials.
+You can also save the app's URL as a bookmark in your browser, or send the URL as a link over email. If someone else created an app in PowerApps and shared that app with you, you can run that app by clicking or tapping the link in the mail that you receive. In any of these cases, you might be prompted to sign in using your Azure Active Directory credentials.
 
 ![](./media/run-app-browser/web-login.png)
 
