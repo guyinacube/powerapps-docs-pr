@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/09/2016"
+   ms.date="08/07/2016"
    ms.author="mblythe"/>
 
 # Share your apps
@@ -25,19 +25,19 @@ It's great to build apps that address your own business needs, but the real magi
 
 
 ## Prepare to share an app
-You must save an app to the cloud before you can share it with anyone. Give the app a meaningful name and description, so people know what your app is about and can easily pick it out from a list. In PowerApps Studio, click or tap **File**, then enter a description.
+You must save an app to the cloud before you can share it with anyone. Give the app a meaningful name and description, so people know what your app is about and can easily pick it out from a list. In PowerApps Studio, click or tap **File**, then enter a description on the **App Settings** tab.
 
 ![App description](./media/learning-manage-share-apps/app-description.png)
 
-Be aware that any changes you make to a shared app will flow through to the people you shared it with as soon as you save the changes. This can be great if you improve the app, but can also impact others if you remove or significantly change features.
+Be aware that any changes you make to a shared app will flow through to the people you shared it with if you save and then publish your changes. This can be great if you improve the app, but can also impact others if you remove or significantly change features. If you want to make updates without affecting others, save your app but don't publish the updated version.
 
 
 ## Share an app
-In web.powerapps.com, on an app tile, click the ellipsis (. . .), and then click **Share**.
+In web.powerapps.com, on an app tile, click the ellipsis (**. . .**), and then click **Share**.
  
 ![Share app from web.powerapps.com](./media/learning-manage-share-apps/share-app.png)
 
-From here, you can share an app and also control app versioning, which we'll cover in the next topic. Specify the users and groups to share the app with and what role they should each have - **User** or **Contributor**. Click or tap **Save**.
+From here, you can share an app and also control app versioning. Specify the users and groups to share the app with and what role they should each have - **Can use** or **Can edit**. Click or tap **Save**.
  
 ![Select users and groups](./media/learning-manage-share-apps/select-users.png)
 
