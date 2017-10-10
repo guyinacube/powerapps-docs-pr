@@ -4,7 +4,7 @@
    services=""
    suite="powerapps"
    documentationCenter="na"
-   authors="v-subohe"
+   authors="skjerland"
    manager="anneta"
    editor=""
    tags=""/>
@@ -15,63 +15,36 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="08/06/2017"
-   ms.author="v-subohe"/>
+   ms.date="10/10/2017"
+   ms.author="sharik"/>
 
 # Create a data source using a formula
-In this topic, you'll use a formula to create a data source, which you'll then use to build a gallery in the next topic. The steps in this topic are intended for PowerApps Studio for Windows. When using PowerApps Studio for web, the steps may vary slightly.
+In this topic, you'll use a formula to create a collection in PowerApps Studio for Windows, which you'll then use as a data source to build a gallery in the next topic. When using PowerApps Studio for web, the process may vary slightly.
 
 ## Collections and records
-
-In the Guided Learning resources, you'll find a text file named *CollectionDataFormula.txt*. This file contains a large formula that you'll use to create a collection that lists the sales figures for different cities. The formula uses the **ClearCollect** function, which clears, or deletes, all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection. In this example, you'll use it to create a collection named **CitySales**.
-
-**Note:** The data in the text file is formatted specifically for the **ClearCollect** function. As an example, the complete row for Seattle sales is shown here:
-
-  ![Example of a single record](./media/learning-create-data-source/single-record.png)
-  - The data between each set of curly braces "**{ }**" is a single record, or row. 
-  - Column names are immediately followed by a colon (**:**), for example "**City:**".
-  - The value for each column in a record comes after the colon (**:**) and ends with a comma (**,**). Numerical values are written without quotes, but text values must be in quotes, for example, **City:"Seattle",** and **Sales:1657500**. 
+A collection stores data that your app uses. In this example, you'll use a formula to create a collection named **CitySales**. The formula uses the **ClearCollect** function, which clears (deletes) all the records from a collection and then adds a different set of records to the same collection. If the collection doesn't exist, it will create the collection.
 
 ## Create a collection
+Open PowerApps and click or tap **New app**, and then on the **Blank app** tile, click or tap **Phone layout**. On the **Home** tab, click or tap **New Screen**, and then click or tap **List screen** to create a new screen. You'll see the default list template appear in the app.
 
-To create a collection to use in the galleries, first select all of the data in the text file.
+![New screen](./media/learning-create-data-source/new-screen.png)
 
-1. Use NotePad to open *CollectionDataFormula.txt*, select all of the text in the file (for example, press Ctrl+A), and copy it (Ctrl+C).
+With the new screen selected, click **OnVisible** in the property list drop-down, and then copy the following text and paste it into the formula bar next to **OnVisible**:
 
-   **Note:** It's recommended to use a text editor such as NotePad to open and copy the data. Using a word processor, such as Word, can introduce unintended formatting into the text which PowerApps won't recognize, for example, curly quotes.
-   
+ClearCollect(CitySales,{City:"New York", Country:"United States", Short: "NY", Sales:73165400},{City:"Los Angeles", Country:"United States", Short: "LA", Sales:3065500},{City:"Seattle", Country:"United States", Short: "Sea", Sales:1657500},{City:"Boston", Country:"United States", Short: "Bos", Sales:5965200},{City:"Berlin", Country:"Germany", Short: "Ber", Sales:3562000},{City:"Rome", Country:"Italy", Short: "Rom", Sales:2874000},{City:"Paris", Country:"France", Short: "Par", Sales:2273000},{City:"Dijon", Country:"France", Short: "Dij", Sales:1602000},{City:"Hamburg", Country:"Germany", Short: "Ham", Sales:1760000},{City:"Munich", Country:"Germany", Short: "Mun", Sales:1494000},{City:"Milan", Country:"Italy", Short: "Mil", Sales:1344000})
 
-2. Open PowerApps, and click or tap **New app** (near the left-hand edge).
+**Note:** This text is properly formatted for PowerApps, but in general when you're copying text for use in PowerApps, it's a good idea to copy it from a text editor, and not a word processor. Using a word processor, such as Word, can introduce unintended formatting (for example, curly quotes) into the text, which PowerApps won't recognize.
 
-3. On the **Blank app** tile, click or tap **Phone layout**.
+The text you copied and pasted into the formula bar contains the **ClearCollect** function with a list of sales figures from several countries and cities. To see the entire formula, expand the formula bar by dragging down the bottom edge.
 
-   ![Insert drop-down](./media/learning-create-data-source/blank-app.png)
+![Copy data](./media/learning-create-data-source/copy-data.png)
 
-   A new app with a blank screen will open in the PowerApps workspace.
+In the left-hand pane, select **Screen1**, click the properties menu **(...)**, and then select **Delete**.
 
-1. On the **Home** tab, click or tap **New Screen**, and select **List screen** to create a new screen. The default list template will appear in the app. 
+To review the collection to ensure that the data is there, click or tap the **View** tab, and then click or tap **Collections**. You won't see all of the data in the table, only the first five rows.
 
-   ![New screen](./media/learning-create-data-source/new-screen.png) 
+![View collection](./media/learning-create-data-source/view-collection.png)
 
-4. With the new screen selected, click **OnVisible** in the property list drop-down.
+To save the app to the cloud, click or tap **Save as**, give it an appropriate name, and then provide a description. A helpful tip when saving an app is to change the icon. This makes the app stand out in the list and people can easily find it.
 
-   ![Set OnVisible property](./media/learning-create-data-source/onvisible.png)
-
-5. In the formula bar next to **OnVisible**, paste the data that you copied from *CollectionDataFormula.txt*. (The data contains the  **ClearCollect** function with a list of sales figures from several countries and cities). To see the entire formula, expand the formula bar by dragging down the bottom edge. Notice that the information displays in different colors - column names in black, text values in red, and so on - to make it easier to see the information.
-
-   ![Copy data](./media/learning-create-data-source/copy-data.png)
-
-1. In the left-hand pane, select the first screen, click the properties  menu **(...)**, and select **Delete**.
-
-    ![Delete screen](./media/learning-create-data-source/delete-screen.png)
-
-
-7. On the **View** tab, click or tap **Collections** and make sure the table was created. You won't see all of the data in the table, only the first five rows. Review the table to make sure the data is there as shown in the following image.
-
-   ![View collection](./media/learning-create-data-source/view-collection.png)
-
-8. In the left-hand pane, click or tap **Save as** (or press Ctrl-Shift-S) to save the app. Make sure to save the app to the cloud, give it an appropriate name, and provide a description. A helpful tip when saving an app is to change the icon. This makes the app stand out in the list and people can easily find it.
-
-   ![Save as](./media/learning-create-data-source/save-as.png)
-
-
+Now that you've created a collection, let's move on to the next topic, where you'll use the collection to build a gallery.
