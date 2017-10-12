@@ -4,7 +4,7 @@
    services=""
    suite="powerapps"
    documentationCenter="na"
-   authors="v-subohe"
+   authors="skjerland"
    manager="anneta"
    editor=""
    tags=""/>
@@ -15,69 +15,53 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="08/06/2017"
-   ms.author="v-subohe"/>
+   ms.date="10/06/2017"
+   ms.author="sharik"/>
 
 # Display data in a collection using a gallery
-In this topic, you'll use the data in a collection to populate a gallery and then change some of the fields in the gallery template.
-
-If the app created in the previous topic isn't saved, save it now. In the left-hand pane, click or tap **Save As** (or press Ctrl-Shift-S). Make sure to save the app to the cloud, give it an appropriate name, and provide a description.
+In the first topic in this section, you created a collection using a formula. Now you're going to use the data in that collection to populate a gallery, and then change some of the fields in the gallery template.
 
 ## Select a gallery layout and theme
 First, you need to select a gallery layout that best displays the data. Notice that the default gallery layout contains a graphic placeholder. The data doesn't need to display any graphics, so select a layout that only displays text.
 
-1. Make sure that the gallery is selected, and in the right-hand pane, click or tap **Data**, click or tap the **Layout** drop-down, and select the **Title, subtitle, and body** layout. Note that the layout changes to a group of text fields.
+Make sure that the gallery is selected, and in the right-hand pane, click or tap **Data**, click or tap the **Layout** drop-down, and then select the **Title, subtitle, and body** layout. You'll see the layout change to a group of text fields.
 
-    ![Add layout](./media/learning-create-gallery/add-layout.png)
+![Add layout](./media/learning-create-gallery/add-layout.png)
 
-1. (Optional) On the **Home** tab, click or tap **Theme**. Select a color theme to use for the app. The theme can be changed at any time, and PowerApps will automatically color the controls to fit the new theme.
+If you want, you can select a color theme to use for the app. On the **Home** tab, click or tap **Theme**. You can change the theme at any time, and PowerApps will automatically color the controls to fit the new theme.
 
-## Load the data from the data collection
-Next, we'll configure the gallery to display the data from our collection: 
+## Load data from the data collection
+Next, you'll configure the gallery to display the data from the collection you created in the last topic. Select the gallery and look at the formula displayed in the formula bar for the **Items** property. The value of this property determines the source of the data that appears on the screen, as well as the filter and sort columns.
 
-1. Select the gallery and look at the formula displayed in the formula bar for the **Items** property. 
+**SortByColumns(Search(CustomGallerySample, TextSearchBox1.Text, "SampleText"), "SampleText", If(SortDescending1, Descending, Ascending))**
 
-    **SortByColumns(Search(CustomGallerySample, TextSearchBox1.Text, "SampleText"), "SampleText", If(SortDescending1, Descending, Ascending))**
+Modify the formula so that it uses the **CitySales** data collection, searches on **City**, and sorts by **Country**:
 
-    The **SortByColumns** function is described in detail in the documentation, but let's look at three parts of the formula right now: 
+SortByColumns(Search(**CitySales**, TextSearchBox1.Text, "**City**"), "**Country**", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))
 
-    - **CustomGallerySample** - is the default sample data that loads when you create a gallery. This is the data source in which to look for the search term entered in the search box. **CustomGallerySample** 
-    - **SampleText** and **SampleText** - these are both column names in the data source. The first one indicates which column to use during a search, and the second indicates which column to use when sorting. 
+Your app should now look similar to this:
 
-1. Modify the formula as follows so that it uses the **CitySales** data collection, searches on **City**, and sorts by **Country**. 
-
-    SortByColumns(Search(**CitySales**, TextSearchBox1.Text, "**City**"), "**Country**", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))
-
-Your app should now display something similar to this:
-
-  ![Data layout](./media/learning-create-gallery/data-layout.png)
+![Data layout](./media/learning-create-gallery/data-layout.png)
 
 ## Change elements in the gallery template
 You can customize the gallery by changing some of the elements, and adding or removing fields.
 
-You may have noticed that the layout only has three fields, while the data collection has four columns. To add another field to the gallery template:
+You may have noticed that the layout only has three fields, while the data collection has four columns. To add another field to the gallery template, select the first item and drag the bottom down to make some extra room, and then add a new text label from the **Insert** tab.
 
-1. Select the first item and drag the bottom down to make some extra room.
+![New label](./media/learning-create-gallery/new-label.png)
 
-   ![Expand gallery](./media/learning-create-gallery/expand-gallery.png)
+In the right-hand pane, select the drop-down for the new label, and then select the field that isn't displayed yet.
 
-2. Add a new text label from the **Insert** tab. 
+![Update layout](./media/learning-create-gallery/updated-layout.png)
 
-   ![New label](./media/learning-create-gallery/new-label.png)
+Now, let's change the title of the gallery. Double-click or tap in the title area of the gallery to select it, and then type a new title, for example **Flooring Sales**.
 
-3. In the right-hand pane, select the drop-down for the new label and select the field that isn't displayed yet. 
+![New title](./media/learning-create-gallery/new-title.png)
 
-   ![Update layout](./media/learning-create-gallery/updated-layout.png)
+Since you won't be adding new items to the data using this app, you can hide the "add new" (**+**) icon in the title area of the gallery. To do this, click or tap the (**+**) icon to select it, and then select **Visible** in the property list. Then, in the formula bar, change the variable to **false** to hide the icon. If there are other icons that your app doesn't need, you can hide them the same way.
 
+![Hide icon](./media/learning-create-gallery/hide-icon.png)
 
-4. To change the title of the gallery, double-click or tap in the title area of the gallery to select it, then type a new title, for example **Flooring Sales**.
+You're done! Press **Ctrl+S** to save your work.
 
-    ![New title](./media/learning-create-gallery/new-title.png)
-
-5. Since you won't be adding new items to the data using this app, you can hide the "add new" (**+**) icon in the title area of the gallery. To do this, click or tap the (**+**) icon to select it, and select **Visible** in the property list. Then, in the formula bar, change the variable to **false** to hide the icon.
-
-    ![Hide icon](./media/learning-create-gallery/hide-icon.png)
-
-6. Similarly, since all the information for an item is on the gallery screen, you won't need the "**>**" icon in the gallery template to view the details of an item. Select the ""**>**" icon, and set the **Visible** property to **false**. 
-
-7. Click **File** and **Save** to save your work, or press **Ctrl+S**. 
+In the next topic, you'll learn how to customize a gallery template further by adjusting the formatting and overall appearance.
