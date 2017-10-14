@@ -87,7 +87,7 @@ Actions define what happens when the rule is applied. PowerApps can create actio
 ## See all rules ##
 Rules in the Rules tab are initially filtered based on the selected control.  This causes the selected control and all child controls that are used in a rule action to be shown.  By unchecking "Show rules for this control only" at the bottom of the Rules tab, all rules in the app are shown.
 
-![Remove filter](./media/working-with-rules/open-preview.png)
+![Remove filter](./media/working-with-rules/rules-filter.png)
 
 ## Known limitations ##
 As of this writing:
