@@ -85,7 +85,7 @@ Actions define what happens when the rule is applied. PowerApps can create actio
 	For this topic, set the slider to a value that's greater than 70, and confirm that the label text changes color.
 
 ## See all rules ##
-By default, the Rules tab shows only the rules for the selected control and all child controls that are used in a rule action. To show all rules in the app, clear the **Show rules for this control only** check box.
+By default, the **Rules** tab shows only the rules for the selected control and all child controls that are used in a rule action. To show all rules in the app, clear the **Show rules for this control only** check box.
 
 ![Remove filter](./media/working-with-rules/rules-filter.png)
 
