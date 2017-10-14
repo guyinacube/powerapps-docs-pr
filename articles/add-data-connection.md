@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/09/2017"
+   ms.date="10/02/2017"
    ms.author="archanan"/>
 
 # Add a data connection in PowerApps #
@@ -49,11 +49,9 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 	![Create an app from scratch](./media/add-data-connection/blank-app.png)
 
-1. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
+1. In the center pane, click or tap **connect to data**.
 
-	**Note**: If you're updating an existing app and **Add data source** doesn't appear in the right-hand pane, click or tap **Data sources** on the **View** tab of the ribbon.
-
-1. If the list of connections includes the one that you want, click or tap it to add it to the app. Otherwise, skip to the next step.
+1. If the list of connections in the **Data** pane includes the one that you want, click or tap it to add it to the app. Otherwise, skip to the next step.
 
 	![Add data source](./media/add-data-connection/choose-existing-connections.png)
 
@@ -67,9 +65,24 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 1. Click or tap **Create** to both create the connection and add it to your app.
 
-	![Connect button](./media/add-data-connection/connect-button.png)
-
 	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
+
+## View or change a data source ##
+If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control that has an **Item** property. For example, you might be working on an app that someone else created, or you might want to remind yourself of a data source that you configured a while ago.
+
+1. Select the control for which you want to identify the data source.
+
+	For example, select a gallery (not a control within the gallery) by clicking or tapping it in the hierarchical list of screens and controls near the left edge.
+
+	The name of the data source appears on the **Properties** tab of the right-hand pane.
+
+	![Data source on Properties tab](./media/add-data-connection/properties-tab.png)
+
+1. To show more information about the data source or change it, click or tap **Data** in the right-hand pane.
+
+	![Data pane](./media/add-data-connection/data-pane.png)
+
+1. To change the data source, click or tap the down arrow next to the data source, and then choose or create another source.
 
 ## Next steps ##
 - To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
